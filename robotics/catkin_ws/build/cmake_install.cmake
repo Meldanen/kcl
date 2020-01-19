@@ -1,8 +1,8 @@
-# Install script for directory: /home/meldanen/megus_repo/megus/robotics/catkin_ws/src
+# Install script for directory: F:/KCL/kcl/robotics/catkin_ws/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "F:/KCL/kcl/robotics/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -25,11 +25,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   else()
     set(CMAKE_INSTALL_COMPONENT)
   endif()
-endif()
-
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -49,89 +44,65 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/_setup_util.py")
+   "F:/KCL/kcl/robotics/catkin_ws/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install" TYPE PROGRAM FILES "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "F:/KCL/kcl/robotics/catkin_ws/install" TYPE PROGRAM FILES "F:/KCL/kcl/robotics/catkin_ws/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/env.sh")
+   "F:/KCL/kcl/robotics/catkin_ws/install/_setup_util.py.exe")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install" TYPE PROGRAM FILES "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "F:/KCL/kcl/robotics/catkin_ws/install" TYPE EXECUTABLE FILES "F:/KCL/kcl/robotics/catkin_ws/build/catkin_generated/windows_wrappers/_setup_util.py_executable_install_python/_setup_util.py.exe")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/setup.bash;/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/local_setup.bash")
+   "F:/KCL/kcl/robotics/catkin_ws/install/env.bat")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install" TYPE FILE FILES
-    "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/setup.bash"
-    "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "F:/KCL/kcl/robotics/catkin_ws/install" TYPE PROGRAM FILES "F:/KCL/kcl/robotics/catkin_ws/build/catkin_generated/installspace/env.bat")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "F:/KCL/kcl/robotics/catkin_ws/install/setup.bat;F:/KCL/kcl/robotics/catkin_ws/install/local_setup.bat")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "F:/KCL/kcl/robotics/catkin_ws/install" TYPE FILE FILES
+    "F:/KCL/kcl/robotics/catkin_ws/build/catkin_generated/installspace/setup.bat"
+    "F:/KCL/kcl/robotics/catkin_ws/build/catkin_generated/installspace/local_setup.bat"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/setup.sh;/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/local_setup.sh")
+   "F:/KCL/kcl/robotics/catkin_ws/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install" TYPE FILE FILES
-    "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/setup.sh"
-    "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/local_setup.sh"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/setup.zsh;/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/local_setup.zsh")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install" TYPE FILE FILES
-    "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/setup.zsh"
-    "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/local_setup.zsh"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install/.rosinstall")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/meldanen/megus_repo/megus/robotics/catkin_ws/install" TYPE FILE FILES "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/catkin_generated/installspace/.rosinstall")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/gtest/cmake_install.cmake")
-
+file(INSTALL DESTINATION "F:/KCL/kcl/robotics/catkin_ws/install" TYPE FILE FILES "F:/KCL/kcl/robotics/catkin_ws/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -142,5 +113,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/meldanen/megus_repo/megus/robotics/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "F:/KCL/kcl/robotics/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
