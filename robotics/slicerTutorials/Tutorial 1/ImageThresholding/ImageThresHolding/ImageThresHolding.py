@@ -142,8 +142,9 @@ class ImageThresHoldingWidget(ScriptedLoadableModuleWidget):
   def onApplyButton(self):
     logic = ImageThresHoldingLogic()
     enableScreenshotsFlag = self.enableScreenshotsFlagCheckBox.checked
-    imageThreshold = self.imageThresholdSliderWidget.value
-    logic.run(self.inputSelector.currentNode(), self.outputSelector.currentNode(), imageThreshold, enableScreenshotsFlag)
+    imageThresholdLow = self.imageThresholdSliderLowWidget.value
+    imageThresholdHigh = self.imageThresholdSliderHighWidget.value
+    logic.run(self.inputSelector.currentNode(), self.outputSelector.currentNode(), imageThresholdLow, imageThresholdHigh, enableScreenshotsFlag)
 
 #
 # ImageThresHoldingLogic
@@ -186,7 +187,7 @@ class ImageThresHoldingLogic(ScriptedLoadableModuleLogic):
       return False
     return True
 
-  def run(self, inputVolume, outputVolume, imageThreshold, enableScreenshots=0):
+  def run(self, inputVolume, outputVolume, imageThresholdLow, imageThresholdHigh, enableScreenshots=0):
     """
     Run the actual algorithm
     """
@@ -202,12 +203,9 @@ class ImageThresHoldingLogic(ScriptedLoadableModuleLogic):
     # cliParams = {'InputVolume': inputVolume.GetID(), 'OutputVolume': outputVolume.GetID(), 'ThresholdValue' : imageThreshold, 'ThresholdType' : 'Above'}
     # cliNode = slicer.cli.run(slicer.modules.thresholdscalarvolume, None, cliParams, wait_for_completion=True)
     inputImage = sitkUtils.PullFromSlicer('brain')
-    filter = sitk.SigmoidImageFilter()
+    filter = sitk.DoubleThresholdImageFilter()
     outputImage = filter.Execute(inputImage)
     sitkUtils.PushToSlicer(outputImage, 'outputImage')
-    logic = HelloPythonLogic()
-    result = logic.process()
-    qt.QMessageBox.information(slicer.util.mainWindow(), 'Slicer Python', result)
 
     # Capture screenshot
     if enableScreenshots:
