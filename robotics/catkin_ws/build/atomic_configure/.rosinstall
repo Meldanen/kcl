@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/meldanen/megus_repo/megus/robotics/catkin_ws/devel/setup.sh
