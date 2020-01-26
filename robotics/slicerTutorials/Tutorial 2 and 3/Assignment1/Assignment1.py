@@ -9,17 +9,17 @@ import time
 
 
 #
-# Task1
+# Assignment1
 #
 
-class Task1(ScriptedLoadableModule):
+class Assignment1(ScriptedLoadableModule):
     """Uses ScriptedLoadableModule base class, available at:
     https://github.com/Slicer/Slicer/blob/master/Base/Python/slicer/ScriptedLoadableModule.py
     """
 
     def __init__(self, parent):
         ScriptedLoadableModule.__init__(self, parent)
-        self.parent.title = "Task1"  # TODO make this more human readable by adding spaces
+        self.parent.title = "Assignment1"  # TODO make this more human readable by adding spaces
         self.parent.categories = ["Examples"]
         self.parent.dependencies = []
         self.parent.contributors = ["John Doe (AnyWare Corp.)"]  # replace with "Firstname Lastname (Organization)"
@@ -35,10 +35,10 @@ and Steve Pieper, Isomics, Inc. and was partially funded by NIH grant 3P41RR0132
 
 
 #
-# Task1Widget
+# Assignment1Widget
 #
 
-class Task1Widget(ScriptedLoadableModuleWidget):
+class Assignment1Widget(ScriptedLoadableModuleWidget):
     """Uses ScriptedLoadableModuleWidget base class, available at:
     https://github.com/Slicer/Slicer/blob/master/Base/Python/slicer/ScriptedLoadableModule.py
     """
@@ -115,15 +115,15 @@ class Task1Widget(ScriptedLoadableModuleWidget):
         # self.applyButton.enabled = self.inputSelector.currentNode() and self.outputSelector.currentNode()
 
     def onApplyButton(self):
-        logic = Task1Logic()
+        logic = Assignment1Logic()
         logic.run(self.inputSelector.currentNode(), self.outputSelector.currentNode())
 
 
 #
-# Task1Logic
+# Assignment1Logic
 #
 
-class Task1Logic(ScriptedLoadableModuleLogic):
+class Assignment1Logic(ScriptedLoadableModuleLogic):
     """This class should implement all the actual
     computation done by your module.  The interface
     should be such that other python code can import
@@ -174,34 +174,40 @@ class Task1Logic(ScriptedLoadableModuleLogic):
         targetsNode = slicer.util.getNode('targets')
         entryNode = slicer.util.getNode('entries')
         ventricles = slicer.util.getNode('ventriclesTest')
+        # bloodVessels = slicer.util.getNode('vesselsTest')
         [x, y, z] = ventricles.GetImageData().GetDimensions()
-        ventriclesCoordinates = []
+        # [x, y, z] = bloodVessels.GetImageData().GetDimensions()
         startTime = time.time()
-        for i in range(0, x):
-            for j in range(0, y):
-                for k in range(0, z):
-                    imageVoxelID = ventricles.GetImageData().FindPoint(i, j, k)
-                    xIndex = int(imageVoxelID % x)
-                    yIndex = int((imageVoxelID / x) % y)
-                    zIndex = int((imageVoxelID / (x * y)) % z)
-                    if ventricles.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0) == 1.0:
-                        ventriclesCoordinates.append([xIndex * 4, yIndex * 4, zIndex * 4])
+        ventriclesCoordinates = self.getDangerAreaCoordinates(ventricles, x, y, z)
+        # bloodVesselCoordinates = self.getDangerAreaCoordinates(bloodVessels, x, y, z)
         # print(len(ventriclesCoordinates))
         endTime = time.time()
         print('Time: ', endTime - startTime, 'seconds')
-        self.getIncisions(entryNode, targetsNode, ventriclesCoordinates)
+        ventricleIncisions = self.getIncisions(entryNode, targetsNode, ventriclesCoordinates)
+        # bloodVesselIncisions = self.getIncisions(entryNode, targetsNode, bloodVesselCoordinates)
         # overlappingPoints = self.getOverlappingTargetPoints(targetsNode, hippo)
         logging.info('Processing completed')
         return True
 
-    def getCoordinates(self, points, pointIndex):
+    def getDangerAreaCoordinates(self, dangerArea, x, y, z):
+        dangerAreaCoordinates = []
+        for i in range(0, x):
+            for j in range(0, y):
+                for k in range(0, z):
+                    imageVoxelID = dangerArea.GetImageData().FindPoint(i, j, k)
+                    xIndex, yIndex, zIndex = self.convertToIntegerIndices(imageVoxelID, x, y, z)
+                    if dangerArea.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0) == 1.0:
+                        dangerAreaCoordinates.append([xIndex * 4, yIndex * 4, zIndex * 4])
+        return dangerAreaCoordinates
+
+    @staticmethod
+    def getCoordinates(points, pointIndex):
         world = [0, 0, 0, 0]
         points.GetNthFiducialWorldCoordinates(pointIndex, world)
         return world
 
+    # Task 2 & 3
     def getIncisions(self, entryPoints, targetPoints, ventricles):
-        # directionVectors = targetPoints - entryPoints
-        # pointsBetweenThePoints = entryPoints + step * directionVector
         print("entry: ", entryPoints.GetNumberOfMarkups())
         print("target: ", targetPoints.GetNumberOfMarkups())
         incisions = {}
@@ -209,28 +215,19 @@ class Task1Logic(ScriptedLoadableModuleLogic):
         for i in range(0, 25):  # entryPoints.GetNumberOfMarkups()):
             entry = self.getCoordinates(entryPoints, i)
             for j in range(0, 25):  # targetPoints.GetNumberOfMarkups()):
-
                 target = self.getCoordinates(targetPoints, j)
-                # self.pass
                 if not self.passThroughVentricles(entry, target, ventricles):
-                    kappa = 1
                     key = tuple(entry)
                     if key in incisions:
                         incisions[key].append(target)
                     else:
                         incisions[key] = target
-                    # print(entry,target)
-                else:
-                    kappa = 2
-                #     print(entry, target)
-                # x = entryX + step * (targetX - entryX)
-                # y = entryY + step * (targetY - entryY)
-                # z = entryZ + step * (targetZ - entryZ)
-                # lines.append([x,y,z])
         endTime = time.time()
         print('Entry - Target: ', endTime - startTime, 'seconds')
+        return incisions
 
-    def passThroughVentricles(self, entry, target, ventricles):
+    @staticmethod
+    def passThroughVentricles(entry, target, ventricles):
         xEntry, yEntry, zEntry = entry[0], entry[1], entry[2]
         xTarget, yTarget, zTarget = target[0], target[1], target[2]
         size = 10  # en(ventricles)
@@ -241,43 +238,37 @@ class Task1Logic(ScriptedLoadableModuleLogic):
             # if line.contains(Point3D(x, y, z)):
             #     return True
             # asd = line.contains(Point3D(0, 0, 0))
-            if (xTarget - xEntry) != 0:
-                tx = (x - xEntry) / (xTarget - xEntry)
-                xIsNonZero = True
-            else:
-                xIsNonZero = False
+            xDivision = xTarget - xEntry
+            yDivision = yTarget - yEntry
+            zDivision = zTarget - zEntry
+            if xDivision != 0:
+                tx = (x - xEntry) / xDivision
 
-            if (yTarget - yEntry) != 0:
-                ty = (y - yEntry) / (yTarget - yEntry)
-                yIsNonZero = True
-            else:
-                yIsNonZero = False
+            if yDivision != 0:
+                ty = (y - yEntry) / yDivision
 
-            if (zTarget - zEntry) != 0:
-                tz = (z - zEntry) / (zTarget - zEntry)
-                zIsNonZero = True
-            else:
-                zIsNonZero = False
+            if zDivision != 0:
+                tz = (z - zEntry) / zDivision
 
-            if not xIsNonZero:
+            if xDivision == 0:
                 if (ty == tz):
-                    if (ty > 0 or ty < 1):
+                    if ty > 0 or ty < 1:
                         return True
                     else:
                         continue
                 else:
                     continue
 
-            if not yIsNonZero:
+            if yDivision == 0:
                 if (tx == tz):
-                    if (tx > 0 or tx < 1):
+                    if tx > 0 or tx < 1:
                         return True
                     else:
                         continue
                 else:
                     continue
 
-            if not zIsNonZero:
+            if zDivision == 0:
                 if (ty == tx):
                     if (ty > 0 or ty < 1):
                         return True
@@ -286,85 +277,62 @@ class Task1Logic(ScriptedLoadableModuleLogic):
                 else:
                     continue
 
-            if (tx == ty and ty == tz):
-                if (tx > 0 or ty < 1):
+            if tx == ty and ty == tz:
+                if tx > 0 or ty < 1:
                     return True
         return False
+
+    @staticmethod
+    def isNotZero(value):
+        return value != 0
 
     # ventriclesTest = slicer.util.getNode('ventriclesTest')
     # ventriclesTest.GetImageData().GetScalarComponentAsDouble(33,40,27,0)
     # for i, entry in enumerate(entryPoints):
     # get coordinates between the two points
 
-    def getOverlappingTargetPoints(self, targetPoints, targetArea):
-        [xmax, ymax, zmax] = targetArea.GetImageData().GetDimensions()
+    # Task 1
+    def targetArea(self, targetPointName, areaName):
+        # targetsNode = slicer.util.getNode('targets')
+        # hippo = slicer.util.getNode('r_hippoTest_1')
+        targetNodes = slicer.util.getNode(targetPointName)
+        area = slicer.util.getNode(areaName)
+        areaArray = slicer.util.arrayFromVolume(area)
+
+        [xMax, yMax, zMax] = area.GetImageData().GetDimensions()
 
         goodTarget = []
 
-        for x in range(0, targetPoints.GetNumberOfMarkups()):
-            xIndex, yIndex, zIndex = self.getCoordinates(targetPoints, x)
-
-            imageVal = targetArea.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0)
-
+        for x in range(0, targetNodes.GetNumberOfMarkups()):
+            xIndex, yIndex, zIndex = self.getXYZIndices(area, targetNodes, x, xMax, yMax, zMax)
+            imageVal = area.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0)
             if imageVal != 0:
                 goodTarget.append(x)
+        print(goodTarget, "LENGTH OF ARRAY =", len(goodTarget))
 
-        print(goodTarget, 'LENGTH OF ARRAY =', len(goodTarget))
-        return goodTarget
-
-    def getXYZIndices(self, points, pointIndex):
-        world = [0, 0, 0, 0]
-        points.GetNthFiducialWorldCoordinates(pointIndex, world)
+    def getXYZIndices(self, area, targetNodes, x, xMax, yMax, zMax):
+        coordinates = self.getCoordinates(targetNodes, x)
         subsampleFactor = 4
-        # imageVoxelID = hippo.GetImageData().FindPoint(world[0]/subsampleFactor,world[1]/subsampleFactor,world[2]/subsampleFactor)
-        # xIndex = int(imageVoxelID%xmax)
-        # yIndex = int((imageVoxelID/xmax)%ymax)
-        # zIndex = int((imageVoxelID/(xmax*ymax))%zmax)
-        # return xIndex, yIndex, zIndex
+        imageVoxelID = area.GetImageData().FindPoint(coordinates[0] / subsampleFactor, coordinates[1] / subsampleFactor,
+                                                     coordinates[2] / subsampleFactor)
+        return self.convertToIntegerIndices(imageVoxelID, xMax, yMax, zMax)
+
+    @staticmethod
+    def convertToIntegerIndices(imageVoxelID, xMax, yMax, zMax):
+        xIndex = int(imageVoxelID % xMax)
+        yIndex = int((imageVoxelID / xMax) % yMax)
+        zIndex = int((imageVoxelID / (xMax * yMax)) % zMax)
+        return xIndex, yIndex, zIndex
 
 
-class Task1Test(ScriptedLoadableModuleTest):
-    """
-    This is the test case for your scripted module.
-    Uses ScriptedLoadableModuleTest base class, available at:
-    https://github.com/Slicer/Slicer/blob/master/Base/Python/slicer/ScriptedLoadableModule.py
-    """
+class Assignment1Test(ScriptedLoadableModuleTest):
 
     def setUp(self):
-        """ Do whatever is needed to reset the state - typically a scene clear will be enough.
-        """
         slicer.mrmlScene.Clear(0)
 
     def runTest(self):
-        """Run as few or as many tests as needed here.
-        """
         self.setUp()
-        self.test_Task11()
+        self.test_Assignment1()
 
-    def test_Task11(self):
-        """ Ideally you should have several levels of tests.  At the lowest level
-        tests should exercise the functionality of the logic with different inputs
-        (both valid and invalid).  At higher levels your tests should emulate the
-        way the user would interact with your code and confirm that it still works
-        the way you intended.
-        One of the most important features of the tests is that it should alert other
-        developers when their changes will have an impact on the behavior of your
-        module.  For example, if a developer removes a feature that you depend on,
-        your test should break so they know that the feature is needed.
-        """
-
-        self.delayDisplay("Starting the test")
-        #
-        # first, get some data
-        #
-        import SampleData
-        SampleData.downloadFromURL(
-            nodeNames='FA',
-            fileNames='FA.nrrd',
-            uris='http://slicer.kitware.com/midas3/download?items=5767')
-        self.delayDisplay('Finished with download and loading')
-
-        volumeNode = slicer.util.getNode(pattern="FA")
-        logic = Task1Logic()
-        self.assertIsNotNone(logic.hasImageData(volumeNode))
-        self.delayDisplay('Test passed!')
+    def test_Assignment1(self):
+        self.assertTrue(True)
