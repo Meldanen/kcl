@@ -200,9 +200,11 @@ class ImageThresHoldingLogic(ScriptedLoadableModuleLogic):
     logging.info("lel")
 
     # # Compute the thresholded output volume using the Threshold Scalar Volume CLI module
-    # cliParams = {'InputVolume': inputVolume.GetID(), 'OutputVolume': outputVolume.GetID(), 'ThresholdValue' : imageThreshold, 'ThresholdType' : 'Above'}
+    # cliParams = {'InputVolume': inputVolume.GetID(), 'OutputVolume': outputVolume.GetID(), 'ThresholdValue' : imageThresholdLow, 'ThresholdType' : 'Above'}
     # cliNode = slicer.cli.run(slicer.modules.thresholdscalarvolume, None, cliParams, wait_for_completion=True)
-    inputImage = sitkUtils.PullFromSlicer('brain')
+    # inputImage = sitkUtils.PullFromSlicer('brain')
+    myNodeFullITKAddress = self.getSlicerITKReadWriteAddress(inputVolume)
+    inputImage = sitk.ReadImage(myNodeFullITKAddress)
     filter = sitk.DoubleThresholdImageFilter()
     outputImage = filter.Execute(inputImage)
     sitkUtils.PushToSlicer(outputImage, 'outputImage')
@@ -215,6 +217,15 @@ class ImageThresHoldingLogic(ScriptedLoadableModuleLogic):
 
 
     return True
+
+  def getSlicerITKReadWriteAddress(self, inputNode):
+    node = inputNode if isinstance(inputNode, slicer.vtkMRMLNode) else slicer.util.getNode(
+      inputNode)
+    nodeSceneAddress = node.GetScene().GetAddressAsString("").replace('Addr=', '')
+    nodeSceneID = node.GetID()
+    nodeFullITKAddress = 'slicer:' + nodeSceneAddress + '#' + nodeSceneID
+    print(nodeFullITKAddress)
+    return nodeFullITKAddress
 
 
 class ImageThresHoldingTest(ScriptedLoadableModuleTest):
