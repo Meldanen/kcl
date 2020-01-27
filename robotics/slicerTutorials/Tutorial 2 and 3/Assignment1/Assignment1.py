@@ -124,20 +124,8 @@ class Assignment1Widget(ScriptedLoadableModuleWidget):
 #
 
 class Assignment1Logic(ScriptedLoadableModuleLogic):
-    """This class should implement all the actual
-    computation done by your module.  The interface
-    should be such that other python code can import
-    this class and make use of the functionality without
-    requiring an instance of the Widget.
-    Uses ScriptedLoadableModuleLogic base class, available at:
-    https://github.com/Slicer/Slicer/blob/master/Base/Python/slicer/ScriptedLoadableModule.py
-    """
 
     def hasImageData(self, volumeNode):
-        """This is an example logic method that
-        returns true if the passed in volume
-        node has valid image data
-        """
         if not volumeNode:
             logging.debug('hasImageData failed: no volume node')
             return False
@@ -147,8 +135,6 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         return True
 
     def isValidInputOutputData(self, inputVolumeNode, outputVolumeNode):
-        """Validates if the output is not the same as input
-        """
         if not inputVolumeNode:
             logging.debug('isValidInputOutputData failed: no input volume node defined')
             return False
@@ -162,9 +148,6 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         return True
 
     def run(self, inputVolume, outputVolume):
-        """
-        Run the actual algorithm
-        """
         # if not self.isValidInputOutputData(inputVolume, outputVolume):
         #     slicer.util.errorDisplay('Input volume is the same as output volume. Choose a different output volume.')
         #     return False
@@ -187,6 +170,7 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         # bloodVesselIncisions = self.getIncisions(entryNode, targetsNode, bloodVesselCoordinates)
         # overlappingPoints = self.getOverlappingTargetPoints(targetsNode, hippo)
         logging.info('Processing completed')
+        print(ventricleIncisions)
         return True
 
     def getDangerAreaCoordinates(self, dangerArea, x, y, z):
@@ -230,14 +214,13 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
     def passThroughVentricles(entry, target, ventricles):
         xEntry, yEntry, zEntry = entry[0], entry[1], entry[2]
         xTarget, yTarget, zTarget = target[0], target[1], target[2]
-        size = 10  # en(ventricles)
+        size = 10  # len(ventricles)
         # line = Line3D(Point3D(xEntry, yEntry, zEntry), Point3D(xTarget, yTarget, zTarget))
         for i in range(0, size):
             [x, y, z] = ventricles[i]
             # EvaluatePosition(): VTKLine
             # if line.contains(Point3D(x, y, z)):
             #     return True
-            # asd = line.contains(Point3D(0, 0, 0))
             xDivision = xTarget - xEntry
             yDivision = yTarget - yEntry
             zDivision = zTarget - zEntry
@@ -251,7 +234,7 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
                 tz = (z - zEntry) / zDivision
 
             if xDivision == 0:
-                if (ty == tz):
+                if ty == tz:
                     if ty > 0 or ty < 1:
                         return True
                     else:
@@ -260,7 +243,7 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
                     continue
 
             if yDivision == 0:
-                if (tx == tz):
+                if tx == tz:
                     if tx > 0 or tx < 1:
                         return True
                     else:
@@ -269,8 +252,8 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
                     continue
 
             if zDivision == 0:
-                if (ty == tx):
-                    if (ty > 0 or ty < 1):
+                if ty == tx:
+                    if ty > 0 or ty < 1:
                         return True
                     else:
                         continue
@@ -278,7 +261,7 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
                     continue
 
             if tx == ty and ty == tz:
-                if tx > 0 or ty < 1:
+                if tx > 0 or tx < 1:
                     return True
         return False
 
