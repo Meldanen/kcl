@@ -2,13 +2,13 @@ import numpy as np
 import PointUtils
 
 
-def getPaths(self, entryPoints, targetPoints, ventricles):
+def getPaths(entryPoints, targetPoints, ventricles):
     paths = {}
     for i in range(0, entryPoints.GetNumberOfMarkups()):
-        entry = self.getCoordinates(entryPoints, i)
+        entry = PointUtils.getCoordinates(entryPoints, i)
         for j in range(0, targetPoints.GetNumberOfMarkups()):
-            target = self.getCoordinates(targetPoints, j)
-            if not self.passThroughArea(entry, target, ventricles):
+            target = PointUtils.getCoordinates(targetPoints, j)
+            if not passThroughArea(entry, target, ventricles, 4, 0.0001):
                 key = tuple(entry)
                 if key in paths:
                     paths[key].append(target)
@@ -16,24 +16,26 @@ def getPaths(self, entryPoints, targetPoints, ventricles):
                     paths[key] = target
     return paths
 
-def passThroughArea(self, entry, target, area, subSampling, stepSize):
+
+def passThroughArea(entry, target, area, subSampling, stepSize):
     xEntry, yEntry, zEntry = entry[0], entry[1], entry[2]
     xTarget, yTarget, zTarget = target[0], target[1], target[2]
     for t in np.arange(0, 1, stepSize):
-        x, y, z = self.getXYZCoordinatesOnLine(xEntry, xTarget, yEntry, yTarget, zEntry, zTarget, t)
+        x, y, z = getXYZCoordinatesOnLine(xEntry, xTarget, yEntry, yTarget, zEntry, zTarget, t)
         pixelValue = PointUtils.getPixelValue(area, x, y, z, subSampling)
         if pixelValue == 1:
             return True
     return False
 
-@staticmethod
+
 def getCoordinateOnLine(entry, target, t):
     return entry + t * (target - entry)
 
-def getXYZCoordinatesOnLine(self, xEntry, xTarget, yEntry, yTarget, zEntry, zTarget, t):
-    x = self.getCoordinateOnLine(xEntry, xTarget, t)
-    y = self.getCoordinateOnLine(yEntry, yTarget, t)
-    z = self.getCoordinateOnLine(zEntry, zTarget, t)
+
+def getXYZCoordinatesOnLine(xEntry, xTarget, yEntry, yTarget, zEntry, zTarget, t):
+    x = getCoordinateOnLine(xEntry, xTarget, t)
+    y = getCoordinateOnLine(yEntry, yTarget, t)
+    z = getCoordinateOnLine(zEntry, zTarget, t)
     return x, y, z
 
 # @staticmethod

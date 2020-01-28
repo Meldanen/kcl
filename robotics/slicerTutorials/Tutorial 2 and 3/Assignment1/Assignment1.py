@@ -7,6 +7,7 @@ import sympy
 from sympy import Line3D, Point3D
 import time
 import PointUtils
+import PathPlanning
 
 
 #
@@ -156,23 +157,20 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         logging.info('Processing started')
 
         targetsNode = slicer.util.getNode('targets')
+        hippo = slicer.util.getNode('r_hippoTest')
         entryNode = slicer.util.getNode('entries')
-        ventricles = slicer.util.getNode('ventriclesTest')
+        ventricles = slicer.util.getNode('ventricles')
         # bloodVessels = slicer.util.getNode('vesselsTest')
         [x, y, z] = ventricles.GetImageData().GetDimensions()
         # [x, y, z] = bloodVessels.GetImageData().GetDimensions()
         startTime = time.time()
-        points = PointUtils.getPoints(inputVolume, targetsNode, entryNode)
-        # ventriclesCoordinates = self.getDangerAreaCoordinates(ventricles, x, y, z)
-        # # bloodVesselCoordinates = self.getDangerAreaCoordinates(bloodVessels, x, y, z)
-        # # print(len(ventriclesCoordinates))
+        points = PointUtils.getPoints(hippo, targetsNode, entryNode)
+        paths = PathPlanning.getPaths(entryNode, targetsNode, ventricles)
         # endTime = time.time()
         # print('Time: ', endTime - startTime, 'seconds')
-        # ventricleIncisions = self.getIncisions(entryNode, targetsNode, ventriclesCoordinates)
-        # # bloodVesselIncisions = self.getIncisions(entryNode, targetsNode, bloodVesselCoordinates)
-        # # overlappingPoints = self.getOverlappingTargetPoints(targetsNode, hippo)
-        # logging.info('Processing completed')
-        # print(ventricleIncisions)
+        logging.info('Processing completed')
+        print(outputVolume.GetNumberOfFiducials())
+        print(len(paths))
         return True
 
 class Assignment1Test(ScriptedLoadableModuleTest):
