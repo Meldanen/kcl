@@ -6,6 +6,7 @@ import logging
 import sympy
 from sympy import Line3D, Point3D
 import time
+import PointUtils
 
 
 #
@@ -161,152 +162,18 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         [x, y, z] = ventricles.GetImageData().GetDimensions()
         # [x, y, z] = bloodVessels.GetImageData().GetDimensions()
         startTime = time.time()
-        ventriclesCoordinates = self.getDangerAreaCoordinates(ventricles, x, y, z)
-        # bloodVesselCoordinates = self.getDangerAreaCoordinates(bloodVessels, x, y, z)
-        # print(len(ventriclesCoordinates))
-        endTime = time.time()
-        print('Time: ', endTime - startTime, 'seconds')
-        ventricleIncisions = self.getIncisions(entryNode, targetsNode, ventriclesCoordinates)
-        # bloodVesselIncisions = self.getIncisions(entryNode, targetsNode, bloodVesselCoordinates)
-        # overlappingPoints = self.getOverlappingTargetPoints(targetsNode, hippo)
-        logging.info('Processing completed')
-        print(ventricleIncisions)
+        points = PointUtils.getPoints(inputVolume, targetsNode, entryNode)
+        # ventriclesCoordinates = self.getDangerAreaCoordinates(ventricles, x, y, z)
+        # # bloodVesselCoordinates = self.getDangerAreaCoordinates(bloodVessels, x, y, z)
+        # # print(len(ventriclesCoordinates))
+        # endTime = time.time()
+        # print('Time: ', endTime - startTime, 'seconds')
+        # ventricleIncisions = self.getIncisions(entryNode, targetsNode, ventriclesCoordinates)
+        # # bloodVesselIncisions = self.getIncisions(entryNode, targetsNode, bloodVesselCoordinates)
+        # # overlappingPoints = self.getOverlappingTargetPoints(targetsNode, hippo)
+        # logging.info('Processing completed')
+        # print(ventricleIncisions)
         return True
-
-    def getDangerAreaCoordinates(self, dangerArea, x, y, z):
-        dangerAreaCoordinates = []
-        for i in range(0, x):
-            for j in range(0, y):
-                for k in range(0, z):
-                    imageVoxelID = dangerArea.GetImageData().FindPoint(i, j, k)
-                    xIndex, yIndex, zIndex = self.convertToIntegerIndices(imageVoxelID, x, y, z)
-                    if dangerArea.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0) == 1.0:
-                        dangerAreaCoordinates.append([xIndex * 4, yIndex * 4, zIndex * 4])
-        return dangerAreaCoordinates
-
-    @staticmethod
-    def getCoordinates(points, pointIndex):
-        world = [0, 0, 0, 0]
-        points.GetNthFiducialWorldCoordinates(pointIndex, world)
-        return world
-
-    # Task 2 & 3
-    def getIncisions(self, entryPoints, targetPoints, ventricles):
-        print("entry: ", entryPoints.GetNumberOfMarkups())
-        print("target: ", targetPoints.GetNumberOfMarkups())
-        incisions = {}
-        startTime = time.time()
-        for i in range(0, 25):  # entryPoints.GetNumberOfMarkups()):
-            entry = self.getCoordinates(entryPoints, i)
-            for j in range(0, 25):  # targetPoints.GetNumberOfMarkups()):
-                target = self.getCoordinates(targetPoints, j)
-                if not self.passThroughVentricles(entry, target, ventricles):
-                    key = tuple(entry)
-                    if key in incisions:
-                        incisions[key].append(target)
-                    else:
-                        incisions[key] = target
-        endTime = time.time()
-        print('Entry - Target: ', endTime - startTime, 'seconds')
-        return incisions
-
-    @staticmethod
-    def passThroughVentricles(entry, target, ventricles):
-        xEntry, yEntry, zEntry = entry[0], entry[1], entry[2]
-        xTarget, yTarget, zTarget = target[0], target[1], target[2]
-        size = 10  # len(ventricles)
-        # line = Line3D(Point3D(xEntry, yEntry, zEntry), Point3D(xTarget, yTarget, zTarget))
-        for i in range(0, size):
-            [x, y, z] = ventricles[i]
-            # EvaluatePosition(): VTKLine
-            # if line.contains(Point3D(x, y, z)):
-            #     return True
-            xDivision = xTarget - xEntry
-            yDivision = yTarget - yEntry
-            zDivision = zTarget - zEntry
-            if xDivision != 0:
-                tx = (x - xEntry) / xDivision
-
-            if yDivision != 0:
-                ty = (y - yEntry) / yDivision
-
-            if zDivision != 0:
-                tz = (z - zEntry) / zDivision
-
-            if xDivision == 0:
-                if ty == tz:
-                    if ty > 0 or ty < 1:
-                        return True
-                    else:
-                        continue
-                else:
-                    continue
-
-            if yDivision == 0:
-                if tx == tz:
-                    if tx > 0 or tx < 1:
-                        return True
-                    else:
-                        continue
-                else:
-                    continue
-
-            if zDivision == 0:
-                if ty == tx:
-                    if ty > 0 or ty < 1:
-                        return True
-                    else:
-                        continue
-                else:
-                    continue
-
-            if tx == ty and ty == tz:
-                if tx > 0 or tx < 1:
-                    return True
-        return False
-
-    @staticmethod
-    def isNotZero(value):
-        return value != 0
-
-    # ventriclesTest = slicer.util.getNode('ventriclesTest')
-    # ventriclesTest.GetImageData().GetScalarComponentAsDouble(33,40,27,0)
-    # for i, entry in enumerate(entryPoints):
-    # get coordinates between the two points
-
-    # Task 1
-    def targetArea(self, targetPointName, areaName):
-        # targetsNode = slicer.util.getNode('targets')
-        # hippo = slicer.util.getNode('r_hippoTest_1')
-        targetNodes = slicer.util.getNode(targetPointName)
-        area = slicer.util.getNode(areaName)
-        areaArray = slicer.util.arrayFromVolume(area)
-
-        [xMax, yMax, zMax] = area.GetImageData().GetDimensions()
-
-        goodTarget = []
-
-        for x in range(0, targetNodes.GetNumberOfMarkups()):
-            xIndex, yIndex, zIndex = self.getXYZIndices(area, targetNodes, x, xMax, yMax, zMax)
-            imageVal = area.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0)
-            if imageVal != 0:
-                goodTarget.append(x)
-        print(goodTarget, "LENGTH OF ARRAY =", len(goodTarget))
-
-    def getXYZIndices(self, area, targetNodes, x, xMax, yMax, zMax):
-        coordinates = self.getCoordinates(targetNodes, x)
-        subsampleFactor = 4
-        imageVoxelID = area.GetImageData().FindPoint(coordinates[0] / subsampleFactor, coordinates[1] / subsampleFactor,
-                                                     coordinates[2] / subsampleFactor)
-        return self.convertToIntegerIndices(imageVoxelID, xMax, yMax, zMax)
-
-    @staticmethod
-    def convertToIntegerIndices(imageVoxelID, xMax, yMax, zMax):
-        xIndex = int(imageVoxelID % xMax)
-        yIndex = int((imageVoxelID / xMax) % yMax)
-        zIndex = int((imageVoxelID / (xMax * yMax)) % zMax)
-        return xIndex, yIndex, zIndex
-
 
 class Assignment1Test(ScriptedLoadableModuleTest):
 
