@@ -1,6 +1,16 @@
 import vtk
 
 
+def getFilteredTargets(targets, area):
+    filteredTargets = []
+    [xMax, yMax, zMax] = area.GetImageData().GetDimensions()
+    for i in range(0, targets.GetNumberOfMarkups()):
+        target = getCoordinates(targets, i)
+        if getPixelValue(area, target, xMax, yMax, zMax) == 1:
+            filteredTargets.append(target)
+    return filteredTargets
+
+
 def getCoordinates(points, pointIndex):
     pos = [0, 0, 0]
     points.GetNthFiducialPosition(pointIndex, pos)
@@ -20,16 +30,6 @@ def getXYZCoordinateFromVoxelId(area, target, xMax, yMax, zMax):
     return xIndex, yIndex, zIndex
 
 
-def getFilteredTargets(targetsNode, area):
-    filteredTargets = []
-    [xMax, yMax, zMax] = area.GetImageData().GetDimensions()
-    for i in range(0, targetsNode.GetNumberOfMarkups()):
-        target = getCoordinates(targetsNode, i)
-        if getPixelValue(area, target, xMax, yMax, zMax) != 0:
-            filteredTargets.append(target)
-    return filteredTargets
-
-
 # Provided code
 def printEntryAndTargetsInDict(entriesAndTargets):
     # we are going to create a poly data defined by a set of points and lines
@@ -46,24 +46,24 @@ def printEntryAndTargetsInDict(entriesAndTargets):
             line.GetPointIds().SetId(1, targetInd)
             lines.InsertNextCell(line)
 
-    myPaths = vtk.vtkPolyData()
-    myPaths.SetPoints(points)
-    myPaths.SetLines(lines)
-    return myPaths
+    paths = vtk.vtkPolyData()
+    paths.SetPoints(points)
+    paths.SetLines(lines)
+    return paths
 
 
 def getEntriesAndTargetsInDict(entries, targets):
-    paths = {}
+    entryTargetDictionary = {}
     for i in range(0, entries.GetNumberOfMarkups()):
         entry = getCoordinates(entries, i)
         for target in targets:
             key = tuple(entry)
-            if key in paths:
-                paths[key].append(target)
+            if key in entryTargetDictionary:
+                entryTargetDictionary[key].append(target)
             else:
-                paths[key] = [target]
+                entryTargetDictionary[key] = [target]
 
-    return paths
+    return entryTargetDictionary
 
 
 def convertMarkupNodeToPoints(markupNode):

@@ -2,8 +2,8 @@ import vtk
 import GeometryUtils
 
 
-def applySpecifiedConstraints(entriesAndTargets, ventricles, vessels, cortex, specifiedAngle):
-    paths = {}
+def applyAllConstraints(entriesAndTargets, ventricles, vessels, cortex, specifiedAngle):
+    entryTargetDictionary = {}
     ventriclesTree, _ = getTree(ventricles)
     bloodVesselTree, _ = getTree(vessels)
     cortexTree, cortexPolyData = getTree(cortex, (0, 0.5))
@@ -16,25 +16,25 @@ def applySpecifiedConstraints(entriesAndTargets, ventricles, vessels, cortex, sp
             if not isValidAngle(cortexTree, cortexPolyData, entry, target, specifiedAngle):
                 continue
             key = tuple(entry)
-            if key in paths:
-                paths[key].append(target)
+            if key in entryTargetDictionary:
+                entryTargetDictionary[key].append(target)
             else:
-                paths[key] = [target]
-    return paths
+                entryTargetDictionary[key] = [target]
+    return entryTargetDictionary
 
 
 def getEntryTargetDictionaryAvoidingArea(entriesAndTargets, area):
-    paths = {}
+    entryTargetDictionary = {}
     tree, _ = getTree(area)
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             if not isPassThroughArea(tree, entry, target):
                 key = tuple(entry)
-                if key in paths:
-                    paths[key].append(target)
+                if key in entryTargetDictionary:
+                    entryTargetDictionary[key].append(target)
                 else:
-                    paths[key] = [target]
-    return paths
+                    entryTargetDictionary[key] = [target]
+    return entryTargetDictionary
 
 
 def getTree(area, value=None):
@@ -74,17 +74,17 @@ def isPassThroughArea(tree, entry, target):
 
 
 def getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, specifiedAngle):
-    paths = {}
+    entryTargetDictionary = {}
     tree, polyData = getTree(cortex, (0, 0.5))
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             if GeometryUtils.isValidAngle(tree, polyData, entry, target, specifiedAngle):
                 key = tuple(entry)
-                if key in paths:
-                    paths[key].append(target)
+                if key in entryTargetDictionary:
+                    entryTargetDictionary[key].append(target)
                 else:
-                    paths[key] = [target]
-    return paths
+                    entryTargetDictionary[key] = [target]
+    return entryTargetDictionary
 
 
 def isValidAngle(tree, polyData, entry, target, specifiedAngle):
