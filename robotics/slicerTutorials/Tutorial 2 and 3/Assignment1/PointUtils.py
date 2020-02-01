@@ -46,24 +46,24 @@ def printEntryAndTargetsInDict(entriesAndTargets):
             line.GetPointIds().SetId(1, targetInd)
             lines.InsertNextCell(line)
 
-    paths = vtk.vtkPolyData()
-    paths.SetPoints(points)
-    paths.SetLines(lines)
-    return paths
+    trajectories = vtk.vtkPolyData()
+    trajectories.SetPoints(points)
+    trajectories.SetLines(lines)
+    return trajectories
 
 
-def getEntriesAndTargetsInDict(entries, targets):
-    entryTargetDictionary = {}
+def getTrajectoryDictionary(entries, targets):
+    trajectories = {}
     for i in range(0, entries.GetNumberOfMarkups()):
         entry = getCoordinates(entries, i)
         for target in targets:
             key = tuple(entry)
-            if key in entryTargetDictionary:
-                entryTargetDictionary[key].append(target)
+            if key in trajectories:
+                trajectories[key].append(target)
             else:
-                entryTargetDictionary[key] = [target]
+                trajectories[key] = [target]
 
-    return entryTargetDictionary
+    return trajectories
 
 
 def convertMarkupNodeToPoints(markupNode):

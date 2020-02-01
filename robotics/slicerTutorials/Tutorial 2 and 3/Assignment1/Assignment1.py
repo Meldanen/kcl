@@ -215,35 +215,32 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
 
         logging.info('Processing started')
 
-        entriesAndTargets = {}
-        combinedEntriesAndTargets = {}
-
         startTime = time.time()
         PointUtils.getFilteredTargets(targets, hippocampus)
         endTime = time.time()
         print('Filtered targets time: ', endTime - startTime, 'seconds')
 
-        entriesAndTargets = PointUtils.getEntriesAndTargetsInDict(entries,
-                                                                  PointUtils.convertMarkupNodeToPoints(targets))
+        entriesAndTargets = PointUtils.getTrajectoryDictionary(entries,
+                                                               PointUtils.convertMarkupNodeToPoints(targets))
 
         startTime = time.time()
-        PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+        PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, ventricles)
         endTime = time.time()
         print('Avoid area - Ventricles: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, bloodVessels)
+        PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
         endTime = time.time()
         print('Avoid area - Blood Vessels: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, angle)
+        PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, angle)
         endTime = time.time()
         print('Use only specified angle: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
-        combinedEntriesAndTargets = PointUtils.getEntriesAndTargetsInDict(entries, filteredTargets)
+        combinedEntriesAndTargets = PointUtils.getTrajectoryDictionary(entries, filteredTargets)
         combinedEntriesAndTargets = PathPlanner.applyAllConstraints(combinedEntriesAndTargets, ventricles,
                                                                     bloodVessels, cortex,
                                                                     angle)
@@ -251,9 +248,9 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         print('All together: ', endTime - startTime, 'seconds')
 
         # so that we can display the paths in slicer
-        allPaths = PointUtils.printEntryAndTargetsInDict(combinedEntriesAndTargets)
+        trajectories = PointUtils.printEntryAndTargetsInDict(combinedEntriesAndTargets)
         pathNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLModelNode', 'GoodPaths')
-        pathNode.SetAndObserveMesh(allPaths)
+        pathNode.SetAndObserveMesh(trajectories)
         # you can add something here to output the good entry target pairs
         logging.info('Processing completed')
         return True
@@ -267,15 +264,15 @@ class Assignment1Test(ScriptedLoadableModuleTest):
     def runTest(self):
         self.setUp()
         self.testLoadAllData("C:\Users\dorit\BrainParcellation")
-        # self.testGetFilteredHippocampusTargets()
-        # self.testAvoidVentriclesValidPath()
-        # self.testAvoidVentriclesInvalidPath()
-        # self.testAvoidBloodVesselsValidPath()
-        # self.testAvoidBloodVesselsInvalidPath()
-        # self.testAngleValidPath()
-        # self.testAngleInvalidPath()
-        self.testCountRejectedTrajectories()  # slow test
-        # self.testAllTogether()  # slow test
+        self.testGetFilteredHippocampusTargets()
+        self.testAvoidVentriclesValidPath()
+        self.testAvoidVentriclesInvalidPath()
+        self.testAvoidBloodVesselsValidPath()
+        self.testAvoidBloodVesselsInvalidPath()
+        self.testAngleValidPath()
+        self.testAngleInvalidPath()
+        self.testCountRejectedTrajectories(False)  # slow test
+        self.testAllTogether()  # slow test
         self.delayDisplay('Finished testing')
         self.setUp()  # to reclear data
 
@@ -306,7 +303,7 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         targets = self.getNode("targets")
         angle = 55
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
-        entryTargetDictionary = PointUtils.getEntriesAndTargetsInDict(entries, filteredTargets)
+        entryTargetDictionary = PointUtils.getTrajectoryDictionary(entries, filteredTargets)
         PathPlanner.applyAllConstraints(entryTargetDictionary, ventricles, bloodVessels, cortex, angle)
         self.delayDisplay('testAllTogether passed!')
 
@@ -320,47 +317,47 @@ class Assignment1Test(ScriptedLoadableModuleTest):
     def testAvoidVentriclesValidPath(self):
         ventricles = self.getNode("ventricles")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
-        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+        result = PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, ventricles)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidVentriclesValidPath passed!')
 
     def testAvoidVentriclesInvalidPath(self):
         ventricles = self.getNode("ventricles")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 128.0, 82.0]]}
-        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+        result = PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, ventricles)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidVentriclesInvalidPath passed!')
 
     def testAvoidBloodVesselsValidPath(self):
         vessels = self.getNode("vessels")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
-        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
+        result = PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, vessels)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidBloodVesselsValidPath passed!')
 
     def testAvoidBloodVesselsInvalidPath(self):
         vessels = self.getNode("vessels")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 133.0, 82.0]]}
-        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
+        result = PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, vessels)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidBloodVesselsInvalidPath passed!')
 
     def testAngleValidPath(self):
         cortex = self.getNode("cortex")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
-        result = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
+        result = PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAngleValidPath passed!')
 
     def testAngleInvalidPath(self):
         cortex = self.getNode("cortex")
         entriesAndTargets = {(208.654, 134.777, 61.762): [[162.0, 128.0, 106.0]]}
-        result = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
+        result = PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAngleInvalidPath passed!')
 
     # Slow test
-    def testCountRejectedTrajectories(self):
+    def testCountRejectedTrajectories(self, printCounts):
         hippocampus = self.getNode("r_hippo")
         ventricles = self.getNode("ventricles")
         bloodVessels = self.getNode("vessels")
@@ -369,67 +366,80 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         targets = self.getNode("targets")
         angle = 55
         total = entries.GetNumberOfMarkups() * targets.GetNumberOfMarkups()
-        print("Total: ", total)
-        self.testCountRejectedTrajectoriesForHippocampus(entries, targets, hippocampus, total)
+        if printCounts:
+            print("Total: ", total)
+        self.testCountRejectedTrajectoriesForHippocampus(entries, targets, hippocampus, total, printCounts)
         self.testCountRejectedByHardConstraints(entries, targets, hippocampus, ventricles, bloodVessels, cortex,
-                                                angle, total)
+                                                angle, total, printCounts)
+        self.delayDisplay('testCountRejectedTrajectories passed!')
 
-    def testCountRejectedTrajectoriesForHippocampus(self, entries, targets, hippocampus, total):
+    def testCountRejectedTrajectoriesForHippocampus(self, entries, targets, hippocampus, total, printCounts):
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
         totalTrajectoriesOnHippocampus = entries.GetNumberOfMarkups() * len(filteredTargets)
-        print("Total accepted filtering hippocampus: ", totalTrajectoriesOnHippocampus)
-        print("Total rejected filtering hippocampus: ", total - totalTrajectoriesOnHippocampus)
+        if printCounts:
+            print("Total accepted filtering hippocampus: ", totalTrajectoriesOnHippocampus)
+            print("Total rejected filtering hippocampus: ", total - totalTrajectoriesOnHippocampus)
         self.assertTrue(total - totalTrajectoriesOnHippocampus == 78336)
+        self.delayDisplay('testCountRejectedTrajectoriesForHippocampus passed!')
 
     def testCountRejectedByHardConstraints(self, entries, targets, hippocampus, ventricles, bloodVessels, cortex,
-                                           angle, total):
-        entriesAndTargets = PointUtils.getEntriesAndTargetsInDict(entries,
-                                                                  PointUtils.convertMarkupNodeToPoints(targets))
-        self.testCountRejectedTrajectoriesForVentricles(entriesAndTargets, ventricles, total)
-        self.testCountRejectedTrajectoriesForBloodVessels(entriesAndTargets, bloodVessels, total)
-        self.testCountRejectedTrajectoriesForAngle(entriesAndTargets, cortex, angle, total)
+                                           angle, total, printCounts):
+        entriesAndTargets = PointUtils.getTrajectoryDictionary(entries,
+                                                               PointUtils.convertMarkupNodeToPoints(targets))
+        self.testCountRejectedTrajectoriesForVentricles(entriesAndTargets, ventricles, total, printCounts)
+        self.testCountRejectedTrajectoriesForBloodVessels(entriesAndTargets, bloodVessels, total, printCounts)
+        self.testCountRejectedTrajectoriesForAngle(entriesAndTargets, cortex, angle, total, printCounts)
         self.testCountRejectedTrajectoriesCombiningAll(entries, targets, hippocampus, ventricles, bloodVessels, cortex,
-                                                       angle, total)
+                                                       angle, total, printCounts)
 
-    def testCountRejectedTrajectoriesForVentricles(self, entriesAndTargets, ventricles, total):
-        filteredForVentricles = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+    def testCountRejectedTrajectoriesForVentricles(self, entriesAndTargets, ventricles, total, printCounts):
+        filteredForVentricles = PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, ventricles)
         totalTrajectoriesFilteringVentricles = 0
         for _, targetValues in filteredForVentricles.items():
             totalTrajectoriesFilteringVentricles += len(targetValues)
-        print("Total accepted filtering ventricles: ", totalTrajectoriesFilteringVentricles)
-        print("Total rejected filtering ventricles: ", total - totalTrajectoriesFilteringVentricles)
+        if printCounts:
+            print("Total accepted filtering ventricles: ", totalTrajectoriesFilteringVentricles)
+            print("Total rejected filtering ventricles: ", total - totalTrajectoriesFilteringVentricles)
         self.assertTrue(total - totalTrajectoriesFilteringVentricles == 10205)
+        self.delayDisplay('testCountRejectedTrajectoriesForVentricles passed!')
 
-    def testCountRejectedTrajectoriesForBloodVessels(self, entriesAndTargets, bloodVessels, total):
-        filteredForBloodVessels = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, bloodVessels)
+    def testCountRejectedTrajectoriesForBloodVessels(self, entriesAndTargets, bloodVessels, total, printCounts):
+        filteredForBloodVessels = PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
         totalTrajectoriesFilteringBloodVessels = 0
         for _, targetValues in filteredForBloodVessels.items():
             totalTrajectoriesFilteringBloodVessels += len(targetValues)
-        print("Total accepted filtering blood vessels: ", totalTrajectoriesFilteringBloodVessels)
-        print("Total rejected filtering blood vessels: ", total - totalTrajectoriesFilteringBloodVessels)
+        if printCounts:
+            print("Total accepted filtering blood vessels: ", totalTrajectoriesFilteringBloodVessels)
+            print("Total rejected filtering blood vessels: ", total - totalTrajectoriesFilteringBloodVessels)
         self.assertTrue(total - totalTrajectoriesFilteringBloodVessels == 47855)
+        self.delayDisplay('testCountRejectedTrajectoriesForBloodVessels passed!')
 
-    def testCountRejectedTrajectoriesForAngle(self, entriesAndTargets, cortex, angle, total):
-        filteredForAngles = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, angle)
+    def testCountRejectedTrajectoriesForAngle(self, entriesAndTargets, cortex, angle, total, printCounts):
+        filteredForAngles = PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, angle)
         totalTrajectoriesFilteringAngles = 0
         for _, targetValues in filteredForAngles.items():
             totalTrajectoriesFilteringAngles += len(targetValues)
-        print("Total accepted filtering angles: ", totalTrajectoriesFilteringAngles)
-        print("Total rejected filtering angles: ", total - totalTrajectoriesFilteringAngles)
+        if printCounts:
+            print("Total accepted filtering angles: ", totalTrajectoriesFilteringAngles)
+            print("Total rejected filtering angles: ", total - totalTrajectoriesFilteringAngles)
         self.assertTrue(total - totalTrajectoriesFilteringAngles == 17426)
+        self.delayDisplay('testCountRejectedTrajectoriesForAngle passed!')
 
     def testCountRejectedTrajectoriesCombiningAll(self, entries, targets, hippocampus, ventricles, bloodVessels, cortex,
-                                                  angle, total):
+                                                  angle, total, printCounts):
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
-        entryTargetDictionary = PointUtils.getEntriesAndTargetsInDict(entries, filteredTargets)
+        entryTargetDictionary = PointUtils.getTrajectoryDictionary(entries, filteredTargets)
         totalTrajectoriesForAllConstraints = PathPlanner.applyAllConstraints(entryTargetDictionary, ventricles,
                                                                              bloodVessels, cortex, angle)
         totalTrajectoriesFilteringAllConstraints = 0
         for _, targets in totalTrajectoriesForAllConstraints.items():
             totalTrajectoriesFilteringAllConstraints += len(targets)
-        print("Total accepted filtering all constraints: ", totalTrajectoriesFilteringAllConstraints)
-        print("Total rejected filtering all constraints: ", total - totalTrajectoriesFilteringAllConstraints)
+        if printCounts:
+            print("Total accepted filtering all constraints: ", totalTrajectoriesFilteringAllConstraints)
+            print("Total rejected filtering all constraints: ", total - totalTrajectoriesFilteringAllConstraints)
         self.assertTrue(total - totalTrajectoriesFilteringAllConstraints == 88603)
+        self.delayDisplay('testCountRejectedTrajectoriesCombiningAll passed!')
 
-    def getNode(self, fileName):
+    @staticmethod
+    def getNode(fileName):
         return slicer.util.getNode(fileName)

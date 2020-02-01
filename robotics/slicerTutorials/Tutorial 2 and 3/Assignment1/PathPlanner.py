@@ -3,7 +3,7 @@ import GeometryUtils
 
 
 def applyAllConstraints(entriesAndTargets, ventricles, vessels, cortex, specifiedAngle):
-    entryTargetDictionary = {}
+    trajectoryDictionary = {}
     ventriclesTree, _ = getTree(ventricles)
     bloodVesselTree, _ = getTree(vessels)
     cortexTree, cortexPolyData = getTree(cortex, (0, 0.5))
@@ -16,25 +16,25 @@ def applyAllConstraints(entriesAndTargets, ventricles, vessels, cortex, specifie
             if not isValidAngle(cortexTree, cortexPolyData, entry, target, specifiedAngle):
                 continue
             key = tuple(entry)
-            if key in entryTargetDictionary:
-                entryTargetDictionary[key].append(target)
+            if key in trajectoryDictionary:
+                trajectoryDictionary[key].append(target)
             else:
-                entryTargetDictionary[key] = [target]
-    return entryTargetDictionary
+                trajectoryDictionary[key] = [target]
+    return trajectoryDictionary
 
 
-def getEntryTargetDictionaryAvoidingArea(entriesAndTargets, area):
-    entryTargetDictionary = {}
+def getTrajectoriesAvoidingArea(entriesAndTargets, area):
+    trajectoryDictionary = {}
     tree, _ = getTree(area)
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             if not isPassThroughArea(tree, entry, target):
                 key = tuple(entry)
-                if key in entryTargetDictionary:
-                    entryTargetDictionary[key].append(target)
+                if key in trajectoryDictionary:
+                    trajectoryDictionary[key].append(target)
                 else:
-                    entryTargetDictionary[key] = [target]
-    return entryTargetDictionary
+                    trajectoryDictionary[key] = [target]
+    return trajectoryDictionary
 
 
 def getTree(area, value=None):
@@ -73,18 +73,18 @@ def isPassThroughArea(tree, entry, target):
     return tree.IntersectWithLine(entry, target, trianglePoints, trianglePointsId) != 0
 
 
-def getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, specifiedAngle):
-    entryTargetDictionary = {}
+def getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, specifiedAngle):
+    trajectoryDictionary = {}
     tree, polyData = getTree(cortex, (0, 0.5))
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             if GeometryUtils.isValidAngle(tree, polyData, entry, target, specifiedAngle):
                 key = tuple(entry)
-                if key in entryTargetDictionary:
-                    entryTargetDictionary[key].append(target)
+                if key in trajectoryDictionary:
+                    trajectoryDictionary[key].append(target)
                 else:
-                    entryTargetDictionary[key] = [target]
-    return entryTargetDictionary
+                    trajectoryDictionary[key] = [target]
+    return trajectoryDictionary
 
 
 def isValidAngle(tree, polyData, entry, target, specifiedAngle):
