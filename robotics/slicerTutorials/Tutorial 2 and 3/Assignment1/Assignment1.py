@@ -1,7 +1,8 @@
 import vtk, qt, ctk, slicer
 from slicer.ScriptedLoadableModule import *
 import logging
-import numpy as np
+import PointUtils
+import PathPlanner
 import time
 
 
@@ -171,208 +172,6 @@ class Assignment1Widget(ScriptedLoadableModuleWidget):
                   self.angleSlider.value)
 
 
-class GeometryUtils():
-
-    def isValidAngle(self, tree, polyData, entryPoint, targetPoint, specifiedAngle):
-        entry = [entryPoint[0], entryPoint[1], entryPoint[2]]
-        target = [targetPoint[0], targetPoint[1], targetPoint[2]]
-        trianglePoints = vtk.vtkPoints()
-        trianglePointIds = vtk.vtkIdList()
-        trianglePointsCell = vtk.vtkIdList()
-
-        tree.IntersectWithLine(entry, target, trianglePoints, trianglePointIds)
-        intersectionPoint = trianglePoints.GetPoint(0)
-        polyData.GetCellPoints(trianglePointIds.GetId(0), trianglePointsCell)
-
-        p1, p2, p3 = GeometryUtils().getTrianglePoints(trianglePointsCell, polyData)
-        angle = GeometryUtils().getAngle(entryPoint, intersectionPoint, p1, p2, p3)
-        return angle < specifiedAngle
-
-    def getAngle(self, entryPoint, intersectionPoint, p1, p2, p3):
-        trianglePerpendicularVector = GeometryUtils().getTrianglePerpendicularVector(p1, p2, p3)
-        vectorFromPoints = GeometryUtils().getVectorFromPoints(intersectionPoint, entryPoint)
-        return self.getAngleOfTwoVectors(trianglePerpendicularVector, vectorFromPoints)
-
-    def getTrianglePoints(self, pointsInCell, polyData):
-        p1 = polyData.GetPoint(pointsInCell.GetId(0))
-        p2 = polyData.GetPoint(pointsInCell.GetId(1))
-        p3 = polyData.GetPoint(pointsInCell.GetId(2))
-        return p1, p2, p3
-
-    def getAngleOfTwoVectors(self, vector1, vector2):
-        vectorProduct = np.dot(vector1, vector2)
-        vectorMagnitude1 = GeometryUtils().getVectorMagnitude(vector1)
-        vectorMagnitude2 = GeometryUtils().getVectorMagnitude(vector2)
-        return np.degrees(vectorProduct / (vectorMagnitude1 * vectorMagnitude2))
-
-    def getVectorMagnitude(self, vector):
-        return np.sqrt(vector[0] ** 2 + vector[1] ** 2 + vector[2] ** 2)
-
-    def getTrianglePerpendicularVector(self, point1, point2, point3):
-        vector1 = GeometryUtils().getVectorFromPoints(point1, point2)
-        vector2 = GeometryUtils().getVectorFromPoints(point1, point3)
-        return np.cross(vector1, vector2)
-
-    def getVectorFromPoints(self, point1, point2):
-        return [point2[0] - point1[0], point2[1] - point1[1], point2[2] - point1[2]]
-
-
-class PathPlanner():
-
-    def applySpecifiedConstraints(self, entriesAndTargets, ventricles, vessels, cortex, specifiedAngle):
-        paths = {}
-        ventriclesTree, _ = PathPlanner().getTree(ventricles)
-        bloodVesselTree, _ = PathPlanner().getTree(vessels)
-        cortexTree, cortexPolyData = PathPlanner().getTree(cortex, (0, 0.5))
-        for entry, targets in entriesAndTargets.items():
-            for target in targets:
-                if PathPlanner().isPassThroughArea(ventriclesTree, entry, target):
-                    continue
-                if PathPlanner().isPassThroughArea(bloodVesselTree, entry, target):
-                    continue
-                if not PathPlanner().isValidAngle(cortexTree, cortexPolyData, entry, target, specifiedAngle):
-                    continue
-                key = tuple(entry)
-                if key in paths:
-                    paths[key].append(target)
-                else:
-                    paths[key] = [target]
-        return paths
-
-    def getEntryTargetDictionaryAvoidingArea(self, entriesAndTargets, area):
-        paths = {}
-        tree, _ = PathPlanner().getTree(area)
-        for entry, targets in entriesAndTargets.items():
-            for target in targets:
-                if not PathPlanner().isPassThroughArea(tree, entry, target):
-                    key = tuple(entry)
-                    if key in paths:
-                        paths[key].append(target)
-                    else:
-                        paths[key] = [target]
-        return paths
-
-    def getTree(self, area, value=None):
-        polyData = PathPlanner().getMesh(area, value).GetOutput()
-        tree = vtk.vtkOBBTree()
-        tree.SetDataSet(polyData)
-        tree.BuildLocator()
-        return tree, polyData
-
-    def getMesh(self, area, value):
-        if value is not None:
-            mesh = PathPlanner().getStandardMesh(area, value)
-        else:
-            mesh = PathPlanner().getDiscreteMesh(area)
-        mesh.Update()
-        return mesh
-
-    def getDiscreteMesh(self, area):
-        mesh = vtk.vtkDiscreteMarchingCubes()
-        mesh.SetInputData(area.GetImageData())
-        return mesh
-
-    def getStandardMesh(self, area, value):
-        mesh = vtk.vtkMarchingCubes()
-        mesh.SetInputData(area.GetImageData())
-        mesh.SetValue(value[0], value[1])
-        return mesh
-
-    def isPassThroughArea(self, tree, entry, target):
-        trianglePoints = vtk.vtkPoints()
-        trianglePointsId = vtk.vtkIdList()
-        return tree.IntersectWithLine(entry, target, trianglePoints, trianglePointsId) != 0
-
-    def getEntryTargetDictionaryWithSpecifiedAngle(self, entriesAndTargets, cortex, specifiedAngle):
-        paths = {}
-        tree, polyData = PathPlanner().getTree(cortex, (0, 0.5))
-        for entry, targets in entriesAndTargets.items():
-            for target in targets:
-                if GeometryUtils().isValidAngle(tree, polyData, entry, target, specifiedAngle):
-                    key = tuple(entry)
-                    if key in paths:
-                        paths[key].append(target)
-                    else:
-                        paths[key] = [target]
-        return paths
-
-    def isValidAngle(self, tree, polyData, entry, target, specifiedAngle):
-        return GeometryUtils().isValidAngle(tree, polyData, entry, target, specifiedAngle)
-
-
-class PointUtils():
-
-    @staticmethod
-    def getCoordinates(points, pointIndex):
-        pos = [0, 0, 0]
-        points.GetNthFiducialPosition(pointIndex, pos)
-        return pos
-
-    @staticmethod
-    def getPixelValue(area, target, xMax, yMax, zMax):
-        xIndex, yIndex, zIndex = PointUtils().getXYZCoordinateFromVoxelId(area, target, xMax, yMax, zMax)
-        return area.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0)
-
-    @staticmethod
-    def getXYZCoordinateFromVoxelId(area, target, xMax, yMax, zMax):
-        imageVoxelID = area.GetImageData().FindPoint(target[0], target[1], target[2])
-        xIndex = int(imageVoxelID % xMax)
-        yIndex = int((imageVoxelID / xMax) % yMax)
-        zIndex = int((imageVoxelID / (xMax * yMax)) % zMax)
-        return xIndex, yIndex, zIndex
-
-    @staticmethod
-    def getFilteredTargets(targetsNode, area):
-        filteredTargets = []
-        [xMax, yMax, zMax] = area.GetImageData().GetDimensions()
-        for i in range(0, targetsNode.GetNumberOfMarkups()):
-            target = PointUtils().getCoordinates(targetsNode, i)
-            if PointUtils().getPixelValue(area, target, xMax, yMax, zMax) != 0:
-                filteredTargets.append(target)
-        return filteredTargets
-
-    # Provided code
-    def printEntryAndTargetsInDict(self, entriesAndTargets):
-        # we are going to create a poly data defined by a set of points and lines
-        points = vtk.vtkPoints()  # these are our end/start points
-        lines = vtk.vtkCellArray()  # these are the lines connecting them
-        for entry, targets in entriesAndTargets.items():
-            entryId = points.InsertNextPoint(entry[0], entry[1], entry[2])
-            for target in targets:
-                targetInd = points.InsertNextPoint(target[0], target[1], target[2])
-
-                # how to connect my points
-                line = vtk.vtkLine()
-                line.GetPointIds().SetId(0, entryId)
-                line.GetPointIds().SetId(1, targetInd)
-                lines.InsertNextCell(line)
-
-        myPaths = vtk.vtkPolyData()
-        myPaths.SetPoints(points)
-        myPaths.SetLines(lines)
-        return myPaths
-
-    def getEntriesAndTargetsInDict(self, entries, targets):
-        paths = {}
-        for i in range(0, entries.GetNumberOfMarkups()):
-            entry = PointUtils().getCoordinates(entries, i)
-            for target in targets:
-                key = tuple(entry)
-                if key in paths:
-                    paths[key].append(target)
-                else:
-                    paths[key] = [target]
-
-        return paths
-
-    def convertMarkupNodeToPoints(self, markupNode):
-        newTargets = []
-        for i in range(0, markupNode.GetNumberOfMarkups()):
-            target = PointUtils().getCoordinates(markupNode, i)
-            newTargets.append(target)
-        return newTargets
-
-
 #
 # Assignment1Logic
 #
@@ -420,7 +219,7 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         combinedEntriesAndTargets = {}
 
         startTime = time.time()
-        PointUtils().getFilteredTargets(targets, hippocampus)
+        PointUtils.getFilteredTargets(targets, hippocampus)
         endTime = time.time()
         print('Filtered targets time: ', endTime - startTime, 'seconds')
 
@@ -428,31 +227,31 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
                                                                     PointUtils().convertMarkupNodeToPoints(targets))
 
         startTime = time.time()
-        PathPlanner().getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+        PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
         endTime = time.time()
         print('Avoid area - Ventricles: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        PathPlanner().getEntryTargetDictionaryAvoidingArea(entriesAndTargets, bloodVessels)
+        PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, bloodVessels)
         endTime = time.time()
         print('Avoid area - Blood Vessels: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        PathPlanner().getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, angle)
+        PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, angle)
         endTime = time.time()
         print('Use only specified angle: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        filteredTargets = PointUtils().getFilteredTargets(targets, hippocampus)
-        combinedEntriesAndTargets = PointUtils().getEntriesAndTargetsInDict(entries, filteredTargets)
-        combinedEntriesAndTargets = PathPlanner().applySpecifiedConstraints(combinedEntriesAndTargets, ventricles,
+        filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
+        combinedEntriesAndTargets = PointUtils.getEntriesAndTargetsInDict(entries, filteredTargets)
+        combinedEntriesAndTargets = PathPlanner.applySpecifiedConstraints(combinedEntriesAndTargets, ventricles,
                                                                             bloodVessels, cortex,
                                                                             angle)
         endTime = time.time()
         print('All together: ', endTime - startTime, 'seconds')
 
         # good to have some way of seeing our results
-        allPaths = PointUtils().printEntryAndTargetsInDict(combinedEntriesAndTargets)
+        allPaths = PointUtils.printEntryAndTargetsInDict(combinedEntriesAndTargets)
         pathNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLModelNode', 'GoodPaths')
         pathNode.SetAndObserveMesh(allPaths)
         # you can add something here to output the good entry target pairs
@@ -504,56 +303,56 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         entries = slicer.util.getNode("entries")
         targets = slicer.util.getNode("targets")
         angle = 55
-        filteredTargets = PointUtils().getFilteredTargets(targets, hippocampus)
-        entryTargetDictionary = PointUtils().getEntriesAndTargetsInDict(entries, filteredTargets)
-        PathPlanner().applySpecifiedConstraints(entryTargetDictionary, ventricles, bloodVessels, cortex, angle)
+        filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
+        entryTargetDictionary = PointUtils.getEntriesAndTargetsInDict(entries, filteredTargets)
+        PathPlanner.applySpecifiedConstraints(entryTargetDictionary, ventricles, bloodVessels, cortex, angle)
         self.delayDisplay('testAllTogether passed!')
 
     def testGetFilteredHippocampusTargets(self):
         hippocampus = slicer.util.getNode("r_hippo")
         targets = slicer.util.getNode("targets")
-        filteredTargets = PointUtils().getFilteredTargets(targets, hippocampus)
+        filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
         self.assertTrue(targets.GetNumberOfMarkups() > len(filteredTargets))
         self.delayDisplay('testGetFilteredHippocampusTargets passed!')
 
     def testAvoidVentriclesValidPath(self):
         ventricles = slicer.util.getNode("ventricles")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
-        result = PathPlanner().getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidVentriclesValidPath passed!')
 
     def testAvoidVentriclesInvalidPath(self):
         ventricles = slicer.util.getNode("ventricles")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 128.0, 82.0]]}
-        result = PathPlanner().getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
+        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidVentriclesInvalidPath passed!')
 
     def testAvoidBloodVesselsValidPath(self):
         vessels = slicer.util.getNode("vessels")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
-        result = PathPlanner().getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
+        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidBloodVesselsValidPath passed!')
 
     def testAvoidBloodVesselsInvalidPath(self):
         vessels = slicer.util.getNode("vessels")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 133.0, 82.0]]}
-        result = PathPlanner().getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
+        result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidBloodVesselsInvalidPath passed!')
 
     def testAngleValidPath(self):
         cortex = slicer.util.getNode("cortex")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
-        result = PathPlanner().getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
+        result = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAngleValidPath passed!')
 
     def testAngleInvalidPath(self):
         cortex = slicer.util.getNode("cortex")
         entriesAndTargets = {(208.654, 134.777, 61.762): [[162.0, 128.0, 106.0]]}
-        result = PathPlanner().getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
+        result = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAngleInvalidPath passed!')
