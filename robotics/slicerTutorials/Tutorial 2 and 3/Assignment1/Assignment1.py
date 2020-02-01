@@ -1,4 +1,4 @@
-import vtk, qt, ctk, slicer
+import qt, ctk, slicer
 from slicer.ScriptedLoadableModule import *
 import logging
 import PointUtils
@@ -296,12 +296,12 @@ class Assignment1Test(ScriptedLoadableModuleTest):
 
     # This is just to make sure all constraints run together. It doesn't actually validate the results
     def testAllTogether(self):
-        hippocampus = slicer.util.getNode("r_hippo")
-        ventricles = slicer.util.getNode("ventricles")
-        bloodVessels = slicer.util.getNode("vessels")
-        cortex = slicer.util.getNode("cortex")
-        entries = slicer.util.getNode("entries")
-        targets = slicer.util.getNode("targets")
+        hippocampus = self.getNode("r_hippo")
+        ventricles = self.getNode("ventricles")
+        bloodVessels = self.getNode("vessels")
+        cortex = self.getNode("cortex")
+        entries = self.getNode("entries")
+        targets = self.getNode("targets")
         angle = 55
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
         entryTargetDictionary = PointUtils.getEntriesAndTargetsInDict(entries, filteredTargets)
@@ -309,50 +309,53 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         self.delayDisplay('testAllTogether passed!')
 
     def testGetFilteredHippocampusTargets(self):
-        hippocampus = slicer.util.getNode("r_hippo")
-        targets = slicer.util.getNode("targets")
+        hippocampus = self.getNode("r_hippo")
+        targets = self.getNode("targets")
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
         self.assertTrue(targets.GetNumberOfMarkups() > len(filteredTargets))
         self.delayDisplay('testGetFilteredHippocampusTargets passed!')
 
     def testAvoidVentriclesValidPath(self):
-        ventricles = slicer.util.getNode("ventricles")
+        ventricles = self.getNode("ventricles")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
         result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidVentriclesValidPath passed!')
 
     def testAvoidVentriclesInvalidPath(self):
-        ventricles = slicer.util.getNode("ventricles")
+        ventricles = self.getNode("ventricles")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 128.0, 82.0]]}
         result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, ventricles)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidVentriclesInvalidPath passed!')
 
     def testAvoidBloodVesselsValidPath(self):
-        vessels = slicer.util.getNode("vessels")
+        vessels = self.getNode("vessels")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
         result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidBloodVesselsValidPath passed!')
 
     def testAvoidBloodVesselsInvalidPath(self):
-        vessels = slicer.util.getNode("vessels")
+        vessels = self.getNode("vessels")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 133.0, 82.0]]}
         result = PathPlanner.getEntryTargetDictionaryAvoidingArea(entriesAndTargets, vessels)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidBloodVesselsInvalidPath passed!')
 
     def testAngleValidPath(self):
-        cortex = slicer.util.getNode("cortex")
+        cortex = self.getNode("cortex")
         entriesAndTargets = {(212.09, 147.385, 76.878): [[162.0, 133.0, 90.0]]}
         result = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAngleValidPath passed!')
 
     def testAngleInvalidPath(self):
-        cortex = slicer.util.getNode("cortex")
+        cortex = self.getNode("cortex")
         entriesAndTargets = {(208.654, 134.777, 61.762): [[162.0, 128.0, 106.0]]}
         result = PathPlanner.getEntryTargetDictionaryWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAngleInvalidPath passed!')
+
+    def getNode(self, fileName):
+        return slicer.util.getNode(fileName)
