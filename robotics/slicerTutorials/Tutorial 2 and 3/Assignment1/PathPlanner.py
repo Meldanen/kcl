@@ -142,13 +142,18 @@ def getDistanceOfClosestPointToPath(entry, target, tree, precision):
     xTarget, yTarget, zTarget = target[0], target[1], target[2]
     for step in np.arange(0, 1, precision):
         x, y, z = PointUtils.getXYZPointsOnLine(step, xEntry, xTarget, yEntry, yTarget, zEntry, zTarget)
-        closestPoint = [0.0, 0.0, 0.0]
+        distance = getClosestPointDistance(tree, x, y, z)
         vector = GeometryUtils.getVectorFromPoints(entry, target)
         minDistance = GeometryUtils.getVectorMagnitude(vector)
-        cellId = vtk.reference(0)
-        subId = vtk.reference(0)
-        closestPointDistance = vtk.reference(0)
-        tree.FindClosestPoint((x, y, z), closestPoint, cellId, subId, closestPointDistance)
-        if closestPointDistance < minDistance:
-            minDistance = closestPointDistance
+        if distance < minDistance and distance != 0:
+            minDistance = distance
     return minDistance
+
+
+def getClosestPointDistance(tree, x, y, z):
+    closestPoint = [0.0, 0.0, 0.0]
+    cellId = vtk.reference(0)
+    subId = vtk.reference(0)
+    distance = vtk.reference(0)
+    tree.FindClosestPoint((x, y, z), closestPoint, cellId, subId, distance)
+    return distance

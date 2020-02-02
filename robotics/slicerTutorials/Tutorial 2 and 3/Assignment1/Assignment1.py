@@ -267,14 +267,14 @@ class Assignment1Test(ScriptedLoadableModuleTest):
     def runTest(self):
         self.setUp()
         self.testLoadAllData("C:\Users\dorit\BrainParcellation")
-        # self.testGetFilteredHippocampusTargets()
-        # self.testAvoidVentriclesValidPath()
-        # self.testAvoidVentriclesInvalidPath()
-        # self.testAvoidBloodVesselsValidPath()
-        # self.testAvoidBloodVesselsInvalidPath()
-        # self.testAngleValidPath()
-        # self.testAngleInvalidPath()
-        # self.testCountRejectedTrajectories(True)  # slow test
+        self.testGetFilteredHippocampusTargets()
+        self.testAvoidVentriclesValidPath()
+        self.testAvoidVentriclesInvalidPath()
+        self.testAvoidBloodVesselsValidPath()
+        self.testAvoidBloodVesselsInvalidPath()
+        self.testAngleValidPath()
+        self.testAngleInvalidPath()
+        self.testCountRejectedTrajectories(True)  # slow test
         self.testAllTogether()  # slow test
         self.delayDisplay('Finished testing')
         self.setUp()  # to reclear data
