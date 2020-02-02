@@ -1,13 +1,27 @@
 import vtk
 
 
+# Filter for targets that are within the specified area
 def getFilteredTargets(targets, area):
     filteredTargets = []
-    [xMax, yMax, zMax] = area.GetImageData().GetDimensions()
-    for i in range(0, targets.GetNumberOfMarkups()):
-        target = getCoordinates(targets, i)
-        if getPixelValue(area, target, xMax, yMax, zMax) == 1:
-            filteredTargets.append(target)
+    mat = vtk.vtkMatrix4x4()
+    area.GetRASToIJKMatrix(mat)
+
+    # set it to a transform type
+    transform = vtk.vtkTransform()
+    transform.SetMatrix(mat)
+
+    for x in range(0, targets.GetNumberOfFiducials()):
+        pos = [0, 0, 0]
+        targets.GetNthFiducialPosition(x, pos)
+        # get index from position using our transformation
+        index = transform.TransformPoint(pos)
+        xIndex, yIndex, zIndex = int(index[0]), int(index[1]), int(index[2])
+
+        # get pixel using that index
+        pixelValue = area.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0)
+        if pixelValue == 1:
+            filteredTargets.append(index)
     return filteredTargets
 
 
@@ -52,7 +66,7 @@ def printEntryAndTargetsInDict(entriesAndTargets):
     return trajectories
 
 
-def getTrajectoryDictionary(entries, targets):
+def convertEntryAndTargetPointsToDictionary(entries, targets):
     trajectories = {}
     for i in range(0, entries.GetNumberOfMarkups()):
         entry = getCoordinates(entries, i)
@@ -62,7 +76,6 @@ def getTrajectoryDictionary(entries, targets):
                 trajectories[key].append(target)
             else:
                 trajectories[key] = [target]
-
     return trajectories
 
 
@@ -72,3 +85,14 @@ def convertMarkupNodeToPoints(markupNode):
         target = getCoordinates(markupNode, i)
         newTargets.append(target)
     return newTargets
+
+
+def getXYZPointsOnLine(step, xEntry, xTarget, yEntry, yTarget, zEntry, zTarget):
+    x = getPointsOnLine(xTarget, xEntry, step)
+    y = getPointsOnLine(yTarget, yEntry, step)
+    z = getPointsOnLine(zTarget, zEntry, step)
+    return x, y, z
+
+
+def getPointsOnLine(step, entry, target):
+    return entry + step * (target - entry)

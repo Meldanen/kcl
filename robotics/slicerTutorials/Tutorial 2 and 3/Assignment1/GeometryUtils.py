@@ -13,22 +13,22 @@ def isValidAngle(tree, polyData, entryPoint, targetPoint, specifiedAngle):
     intersectionPoint = trianglePoints.GetPoint(0)
     polyData.GetCellPoints(trianglePointIds.GetId(0), trianglePointsCell)
 
-    p1, p2, p3 = getTrianglePoints(trianglePointsCell, polyData)
-    angle = getAngle(entryPoint, intersectionPoint, p1, p2, p3)
+    point1, point2, point3 = getTrianglePoints(trianglePointsCell, polyData)
+    angle = getAngle(entryPoint, intersectionPoint, point1, point2, point3)
     return angle < specifiedAngle
 
 
-def getAngle(entryPoint, intersectionPoint, p1, p2, p3):
-    trianglePerpendicularVector = getTrianglePerpendicularVector(p1, p2, p3)
+def getAngle(entryPoint, intersectionPoint, point1, point2, point3):
+    trianglePerpendicularVector = getTrianglePerpendicularVector(point1, point2, point3)
     vectorFromPoints = getVectorFromPoints(intersectionPoint, entryPoint)
     return getAngleOfTwoVectors(trianglePerpendicularVector, vectorFromPoints)
 
 
 def getTrianglePoints(pointsInCell, polyData):
-    p1 = polyData.GetPoint(pointsInCell.GetId(0))
-    p2 = polyData.GetPoint(pointsInCell.GetId(1))
-    p3 = polyData.GetPoint(pointsInCell.GetId(2))
-    return p1, p2, p3
+    point1 = polyData.GetPoint(pointsInCell.GetId(0))
+    point2 = polyData.GetPoint(pointsInCell.GetId(1))
+    point3 = polyData.GetPoint(pointsInCell.GetId(2))
+    return point1, point2, point3
 
 
 def getAngleOfTwoVectors(vector1, vector2):

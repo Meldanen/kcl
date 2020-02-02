@@ -1,20 +1,32 @@
 import vtk
 import GeometryUtils
+import PointUtils
+import numpy as np
+import sitkUtils as su
+import SimpleITK as sitk
 
 
-def applyAllConstraints(entriesAndTargets, ventricles, vessels, cortex, specifiedAngle):
+def applyAllConstraints(entries, targets, hippocampus, ventricles, vessels, cortex, specifiedAngle):
     trajectoryDictionary = {}
+    # Filter targets
+    entriesAndTargets = preProcessing(entries, hippocampus, targets)
+
+    # Create the OBB tree for each part
     ventriclesTree, _ = getTree(ventricles)
     bloodVesselTree, _ = getTree(vessels)
     cortexTree, cortexPolyData = getTree(cortex, (0, 0.5))
     for entry, targets in entriesAndTargets.items():
         for target in targets:
+            # First check if it passes through a ventricle - fastest check
             if isPassThroughArea(ventriclesTree, entry, target):
                 continue
+            # Then check if it passes through a blood vessel - medium speed check
             if isPassThroughArea(bloodVesselTree, entry, target):
                 continue
+            # finally check for the specified angle - slow check
             if not isValidAngle(cortexTree, cortexPolyData, entry, target, specifiedAngle):
                 continue
+            # Add to dictionary of accepted paths
             key = tuple(entry)
             if key in trajectoryDictionary:
                 trajectoryDictionary[key].append(target)
@@ -23,6 +35,12 @@ def applyAllConstraints(entriesAndTargets, ventricles, vessels, cortex, specifie
     return trajectoryDictionary
 
 
+def preProcessing(entries, hippocampus, targets):
+    filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
+    return PointUtils.convertEntryAndTargetPointsToDictionary(entries, filteredTargets)
+
+
+# Checks if the trajectory passes through an undesired area
 def getTrajectoriesAvoidingArea(entriesAndTargets, area):
     trajectoryDictionary = {}
     tree, _ = getTree(area)
@@ -73,6 +91,7 @@ def isPassThroughArea(tree, entry, target):
     return tree.IntersectWithLine(entry, target, trianglePoints, trianglePointsId) != 0
 
 
+# Checks if the trajectory passes enters at an undesired angle
 def getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, specifiedAngle):
     trajectoryDictionary = {}
     tree, polyData = getTree(cortex, (0, 0.5))
@@ -89,3 +108,47 @@ def getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, specifiedAngle)
 
 def isValidAngle(tree, polyData, entry, target, specifiedAngle):
     return GeometryUtils.isValidAngle(tree, polyData, entry, target, specifiedAngle)
+
+
+def getBestTrajectory(entriesAndTargets, area, precision):
+    tree, _ = getTree(area)
+    combinedEntriesAndTargets = {}
+    sortedPointsAccordingToDistance = getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision)
+    for point in sortedPointsAccordingToDistance:
+        key = tuple(point[1][0])
+        if key not in combinedEntriesAndTargets:
+            combinedEntriesAndTargets[key] = [point[1][1]]
+    return combinedEntriesAndTargets
+
+
+def getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision):
+    pointsByDistance = {}
+    for entry, targets in entriesAndTargets.items():
+        for target in targets:
+            distance = 0
+            distance += getDistanceOfClosestPointToPath(entry, target, tree, precision)
+            key = float(distance)
+            if key in pointsByDistance.keys():
+                pointsByDistance[key].append([entry, target])
+            else:
+                pointsByDistance[key] = [entry, target]
+    sortedPoints = sorted(pointsByDistance.items(), reverse=True)
+    return sortedPoints
+
+
+def getDistanceOfClosestPointToPath(entry, target, tree, precision):
+    minDistance = 0
+    xEntry, yEntry, zEntry = entry[0], entry[1], entry[2]
+    xTarget, yTarget, zTarget = target[0], target[1], target[2]
+    for step in np.arange(0, 1, precision):
+        x, y, z = PointUtils.getXYZPointsOnLine(step, xEntry, xTarget, yEntry, yTarget, zEntry, zTarget)
+        closestPoint = [0.0, 0.0, 0.0]
+        vector = GeometryUtils.getVectorFromPoints(entry, target)
+        minDistance = GeometryUtils.getVectorMagnitude(vector)
+        cellId = vtk.reference(0)
+        subId = vtk.reference(0)
+        closestPointDistance = vtk.reference(0)
+        tree.FindClosestPoint((x, y, z), closestPoint, cellId, subId, closestPointDistance)
+        if closestPointDistance < minDistance:
+            minDistance = closestPointDistance
+    return minDistance
