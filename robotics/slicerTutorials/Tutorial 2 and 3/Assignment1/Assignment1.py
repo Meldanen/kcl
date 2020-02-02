@@ -5,8 +5,6 @@ import PointUtils
 import PathPlanner
 import GeometryUtils
 import time
-import sitkUtils as su
-import SimpleITK as sitk
 import numpy as np
 
 
@@ -247,6 +245,7 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         trajectoriesForAllConstraints = PathPlanner.applyAllConstraints(entries, targets, hippocampus, ventricles,
                                                                         bloodVessels, cortex,
                                                                         angle)
+        # finalTrajectories = PathPlanner.getBestTrajectory(trajectoriesForAllConstraints, bloodVessels, 0.01)
         endTime = time.time()
         print('All together: ', endTime - startTime, 'seconds')
 

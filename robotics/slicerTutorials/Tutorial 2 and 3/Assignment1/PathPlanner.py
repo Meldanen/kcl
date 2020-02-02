@@ -112,28 +112,25 @@ def isValidAngle(tree, polyData, entry, target, specifiedAngle):
 
 def getBestTrajectory(entriesAndTargets, area, precision):
     tree, _ = getTree(area)
-    combinedEntriesAndTargets = {}
     sortedPointsAccordingToDistance = getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision)
-    for point in sortedPointsAccordingToDistance:
-        key = tuple(point[1][0])
-        if key not in combinedEntriesAndTargets:
-            combinedEntriesAndTargets[key] = [point[1][1]]
-    return combinedEntriesAndTargets
+    mostDistance = sortedPointsAccordingToDistance[0]
+    leastDistance = sortedPointsAccordingToDistance[-1]
+    return mostDistance, leastDistance
 
 
 def getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision):
-    pointsByDistance = {}
+    sortedPointsAccordingToDistance = {}
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             distance = 0
             distance += getDistanceOfClosestPointToPath(entry, target, tree, precision)
             key = float(distance)
-            if key in pointsByDistance.keys():
-                pointsByDistance[key].append([entry, target])
+            if key in sortedPointsAccordingToDistance.keys():
+                sortedPointsAccordingToDistance[key].append([entry, target])
             else:
-                pointsByDistance[key] = [entry, target]
-    sortedPoints = sorted(pointsByDistance.items(), reverse=True)
-    return sortedPoints
+                sortedPointsAccordingToDistance[key] = [entry, target]
+    sortedPointsAccordingToDistance = sorted(sortedPointsAccordingToDistance.items(), reverse=True)
+    return sortedPointsAccordingToDistance
 
 
 def getDistanceOfClosestPointToPath(entry, target, tree, precision):
@@ -145,7 +142,7 @@ def getDistanceOfClosestPointToPath(entry, target, tree, precision):
         distance = getClosestPointDistance(tree, x, y, z)
         vector = GeometryUtils.getVectorFromPoints(entry, target)
         minDistance = GeometryUtils.getVectorMagnitude(vector)
-        if distance < minDistance and distance != 0:
+        if distance > 0 and distance < minDistance:
             minDistance = distance
     return minDistance
 
