@@ -11,7 +11,7 @@ def applyAllConstraints(entries, targets, hippocampus, ventricles, vessels, cort
     # Filter targets
     entriesAndTargets = preProcessing(entries, hippocampus, targets)
 
-    # Create the OBB tree for each part
+    # Create the OBB tree for each area
     ventriclesTree, _ = getTree(ventricles)
     bloodVesselTree, _ = getTree(vessels)
     cortexTree, cortexPolyData = getTree(cortex, (0, 0.5))
