@@ -6,7 +6,8 @@ import sitkUtils as su
 import SimpleITK as sitk
 
 
-def applyAllConstraints(entries, targets, hippocampus, ventricles, vessels, cortex, specifiedAngle):
+# Hard Constraints
+def applyAllHardConstraints(entries, targets, hippocampus, ventricles, vessels, cortex, specifiedAngle):
     trajectoryDictionary = {}
     # Filter targets
     entriesAndTargets = preProcessing(entries, hippocampus, targets)
@@ -110,6 +111,7 @@ def isValidAngle(tree, polyData, entry, target, specifiedAngle):
     return GeometryUtils.isValidAngle(tree, polyData, entry, target, specifiedAngle)
 
 
+# Soft Constraint
 def getBestTrajectory(entriesAndTargets, area, precision):
     tree, _ = getTree(area)
     sortedPointsAccordingToDistance = getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision)
