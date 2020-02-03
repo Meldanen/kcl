@@ -242,15 +242,24 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         # print('Use only specified angle: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        trajectoriesForAllConstraints = PathPlanner.applyAllHardConstraints(entries, targets, hippocampus, ventricles,
-                                                                            bloodVessels, cortex,
-                                                                            angle)
+        trajectoriesForAllHardConstraints = PathPlanner.applyAllHardConstraints(entries, targets, hippocampus,
+                                                                                ventricles,
+                                                                                bloodVessels, cortex,
+                                                                                angle)
         # finalTrajectories = PathPlanner.getBestTrajectory(trajectoriesForAllConstraints, bloodVessels, 0.01)
         endTime = time.time()
         print('All together: ', endTime - startTime, 'seconds')
 
+        # add to slicer scene to view
+        self.registerToSlicer(trajectoriesForAllHardConstraints)
         logging.info('Processing completed')
         return True
+
+    @staticmethod
+    def registerToSlicer(trajectories):
+        trajectories = PointUtils.convertEntryTargetDictionaryToVtkObject(trajectories)
+        pathNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLModelNode', 'finalTrajectories')
+        pathNode.SetAndObserveMesh(trajectories)
 
 
 class Assignment1Test(ScriptedLoadableModuleTest):
@@ -390,7 +399,8 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         self.testCountRejectedTrajectoriesForVentricles(entriesAndTargets, ventricles, total, printOutput)
         self.testCountRejectedTrajectoriesForBloodVessels(entriesAndTargets, bloodVessels, total, printOutput)
         self.testCountRejectedTrajectoriesForAngle(entriesAndTargets, cortex, angle, total, printOutput)
-        self.testCountRejectedTrajectoriesCombiningAllHard(entries, targets, hippocampus, ventricles, bloodVessels, cortex,
+        self.testCountRejectedTrajectoriesCombiningAllHard(entries, targets, hippocampus, ventricles, bloodVessels,
+                                                           cortex,
                                                            angle, total, printOutput)
 
     def testCountRejectedTrajectoriesForVentricles(self, entriesAndTargets, ventricles, total, printOutput):
@@ -435,7 +445,8 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         self.assertTrue(total - totalTrajectoriesFilteringAngles == 17426)
         self.delayDisplay('testCountRejectedTrajectoriesForAngle passed!')
 
-    def testCountRejectedTrajectoriesCombiningAllHard(self, entries, targets, hippocampus, ventricles, bloodVessels, cortex,
+    def testCountRejectedTrajectoriesCombiningAllHard(self, entries, targets, hippocampus, ventricles, bloodVessels,
+                                                      cortex,
                                                       angle, total, printOutput):
         startTime = time.time()
         totalTrajectoriesForAllConstraints = PathPlanner.applyAllHardConstraints(entries, targets, hippocampus,
