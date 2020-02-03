@@ -301,7 +301,7 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         angle = 55
         trajectoriesForAllHardConstraints = PathPlanner.applyAllHardConstraints(entries, targets, hippocampus,
                                                                                 ventricles, bloodVessels, cortex, angle)
-        PathPlanner.getBestTrajectory(trajectoriesForAllHardConstraints, bloodVessels, 0.01)
+        # PathPlanner.getBestTrajectory(trajectoriesForAllHardConstraints, bloodVessels, 0.01)
         self.delayDisplay('testAllTogether passed!')
 
     def testGetFilteredHippocampusTargets(self):
