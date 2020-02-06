@@ -1,2 +1,2 @@
 # kcl
-Work for Healthcare Technologies MSc
+Coursework for Healthcare Technologies MSc
