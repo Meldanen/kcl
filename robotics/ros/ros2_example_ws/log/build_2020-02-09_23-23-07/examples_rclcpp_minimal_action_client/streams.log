@@ -1,0 +1,85 @@
+[0.453s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client -G Visual Studio 16 2019
+[4.016s] -- The C compiler identification is MSVC 19.24.28316.0
+[5.984s] -- The CXX compiler identification is MSVC 19.24.28316.0
+[6.172s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[8.047s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[8.047s] -- Detecting C compiler ABI info
+[9.781s] -- Detecting C compiler ABI info - done
+[9.812s] -- Detecting C compile features
+[9.812s] -- Detecting C compile features - done
+[9.844s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[11.453s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[11.453s] -- Detecting CXX compiler ABI info
+[13.391s] -- Detecting CXX compiler ABI info - done
+[13.422s] -- Detecting CXX compile features
+[13.422s] -- Detecting CXX compile features - done
+[13.500s] -- Found ament_cmake: 0.8.2 (C:/dev/ros2_eloquent/share/ament_cmake/cmake)
+[13.812s] -- Found PythonInterp: C:/Python37/python.exe (found suitable version "3.7.5", minimum required is "3") 
+[13.812s] -- Using PYTHON_EXECUTABLE: C:/Python37/python.exe
+[14.453s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[16.062s] -- Found example_interfaces: 0.7.1 (C:/dev/ros2_eloquent/share/example_interfaces/cmake)
+[16.797s] -- Found rosidl_adapter: 0.8.2 (C:/dev/ros2_eloquent/share/rosidl_adapter/cmake)
+[17.984s] -- Found rclcpp: 0.8.4 (C:/dev/ros2_eloquent/share/rclcpp/cmake)
+[18.250s] -- Found rmw_implementation_cmake: 0.8.1 (C:/dev/ros2_eloquent/share/rmw_implementation_cmake/cmake)
+[18.266s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[18.266s] -- Looking for pthread.h
+[19.297s] -- Looking for pthread.h - not found
+[19.297s] -- Found Threads: TRUE  
+[19.984s] -- Found rclcpp_action: 0.8.4 (C:/dev/ros2_eloquent/share/rclcpp_action/cmake)
+[21.281s] -- Configuring done
+[21.766s] -- Generating done
+[21.797s] -- Build files have been written to: C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_action_client
+[21.828s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client -G Visual Studio 16 2019
+[21.828s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --config Release
+[22.141s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[22.141s] Copyright (C) Microsoft Corporation. All rights reserved.
+[22.141s] 
+[22.844s]   Checking Build System
+[23.453s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_action_client/CMakeLists.txt
+[24.641s]   member_functions.cpp
+[31.297s]   action_client_member_functions.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_member_functions.exe
+[31.516s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_action_client/CMakeLists.txt
+[32.078s]   not_composable.cpp
+[37.828s]   action_client_not_composable.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_not_composable.exe
+[37.922s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_action_client/CMakeLists.txt
+[38.953s]   not_composable_with_cancel.cpp
+[44.578s]   action_client_not_composable_with_cancel.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_not_composable_with_cancel.exe
+[44.578s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_action_client/CMakeLists.txt
+[44.578s]   not_composable_with_feedback.cpp
+[49.500s]   action_client_not_composable_with_feedback.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_not_composable_with_feedback.exe
+[49.500s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_action_client/CMakeLists.txt
+[50.719s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --config Release
+[50.719s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --target install --config Release
+[51.469s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[51.469s] Copyright (C) Microsoft Corporation. All rights reserved.
+[51.469s] 
+[52.125s]   action_client_member_functions.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_member_functions.exe
+[52.141s]   action_client_not_composable.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_not_composable.exe
+[52.141s]   action_client_not_composable_with_cancel.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_not_composable_with_cancel.exe
+[52.141s]   action_client_not_composable_with_feedback.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client\Release\action_client_not_composable_with_feedback.exe
+[52.141s]   -- Install configuration: "Release"
+[52.141s]   -- Execute custom install script
+[52.141s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/lib/examples_rclcpp_minimal_action_client/action_client_member_functions.exe
+[52.219s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/lib/examples_rclcpp_minimal_action_client/action_client_not_composable.exe
+[52.844s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/lib/examples_rclcpp_minimal_action_client/action_client_not_composable_with_cancel.exe
+[52.844s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/lib/examples_rclcpp_minimal_action_client/action_client_not_composable_with_feedback.exe
+[52.844s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_action_client
+[52.844s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_action_client
+[52.844s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/environment/ament_prefix_path.bat
+[52.906s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/environment/ament_prefix_path.dsv
+[52.984s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/environment/path.bat
+[53.094s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/environment/path.dsv
+[53.234s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/local_setup.bat
+[53.266s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/local_setup.dsv
+[53.344s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/package.dsv
+[53.422s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/ament_index/resource_index/packages/examples_rclcpp_minimal_action_client
+[53.500s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/cmake/examples_rclcpp_minimal_action_clientConfig.cmake
+[53.578s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/cmake/examples_rclcpp_minimal_action_clientConfig-version.cmake
+[53.672s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_action_client/share/examples_rclcpp_minimal_action_client/package.xml
+[53.844s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --target install --config Release

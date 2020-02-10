@@ -1,0 +1,26 @@
+[3.563s] running develop
+[3.750s] running egg_info
+[3.750s] creating examples_rclpy_minimal_service.egg-info
+[3.750s] writing examples_rclpy_minimal_service.egg-info\PKG-INFO
+[3.750s] writing dependency_links to examples_rclpy_minimal_service.egg-info\dependency_links.txt
+[3.766s] writing entry points to examples_rclpy_minimal_service.egg-info\entry_points.txt
+[3.766s] writing requirements to examples_rclpy_minimal_service.egg-info\requires.txt
+[3.766s] writing top-level names to examples_rclpy_minimal_service.egg-info\top_level.txt
+[3.766s] writing manifest file 'examples_rclpy_minimal_service.egg-info\SOURCES.txt'
+[3.797s] reading manifest file 'examples_rclpy_minimal_service.egg-info\SOURCES.txt'
+[3.797s] writing manifest file 'examples_rclpy_minimal_service.egg-info\SOURCES.txt'
+[3.797s] running build_ext
+[3.797s] Creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service/Lib/site-packages\site.py
+[3.813s] Creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service/Lib/site-packages\examples-rclpy-minimal-service.egg-link (link to .)
+[3.813s] Installing service-script.py script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service/lib/examples_rclpy_minimal_service
+[3.813s] Installing service.exe script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service/lib/examples_rclpy_minimal_service
+[3.828s] Installing service_member_function-script.py script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service/lib/examples_rclpy_minimal_service
+[3.828s] Installing service_member_function.exe script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service/lib/examples_rclpy_minimal_service
+[3.828s] 
+[3.828s] Installed c:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service
+[3.828s] running install_data
+[3.828s] creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\ament_index
+[3.828s] creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\ament_index\resource_index
+[3.828s] creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\ament_index\resource_index\packages
+[3.828s] copying resource\examples_rclpy_minimal_service -> C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\ament_index\resource_index\packages
+[3.828s] copying package.xml -> C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service

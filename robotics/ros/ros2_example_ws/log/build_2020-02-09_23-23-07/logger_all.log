@@ -1,0 +1,982 @@
+[0.713s] [34mcolcon[0m [30mDEBUG[0m [32mCommand line arguments: ['C:\\Python37\\Scripts\\colcon', 'build', '--symlink-install'][0m
+[0.713s] [34mcolcon[0m [30mDEBUG[0m [32mParsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x00000202EADF8488>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, parallel_workers=8, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x00000202EADF8488>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x00000202EADF8A48>)[0m
+[0.809s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.810s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(recursive) check parameters
+[0.810s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(ignore) check parameters
+[0.810s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(path) check parameters
+[0.810s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.810s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(recursive) discover
+[0.810s] [34mcolcon.colcon_core.package_discovery[0m [30mINFO[0m Crawling recursively for packages in 'C:\kcl\robotics\ros\ros2_example_ws'
+[0.810s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.810s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.811s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'ros'
+[0.829s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.829s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.829s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'python'
+[0.829s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.830s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.830s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.830s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.830s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(build) ignored
+[0.830s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.830s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.831s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(install) ignored
+[0.831s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.831s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(log) ignored
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.832s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'ros'
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'python'
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extensions ['ignore', 'ignore_ament_install']
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'ignore'
+[0.833s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'ignore_ament_install'
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extensions ['colcon_pkg']
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'colcon_pkg'
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extensions ['colcon_meta']
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'colcon_meta'
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extensions ['ros']
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'ros'
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extensions ['cmake', 'python']
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'cmake'
+[0.834s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'python'
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extensions ['python_setup_py']
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples) by extension 'python_setup_py'
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extensions ['ignore', 'ignore_ament_install']
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'ignore'
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'ignore_ament_install'
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extensions ['colcon_pkg']
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'colcon_pkg'
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extensions ['colcon_meta']
+[0.835s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'colcon_meta'
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extensions ['ros']
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'ros'
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extensions ['cmake', 'python']
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'cmake'
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'python'
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extensions ['python_setup_py']
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp) by extension 'python_setup_py'
+[0.836s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extensions ['ignore', 'ignore_ament_install']
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extension 'ignore'
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extension 'ignore_ament_install'
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extensions ['colcon_pkg']
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extension 'colcon_pkg'
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extensions ['colcon_meta']
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extension 'colcon_meta'
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extensions ['ros']
+[0.837s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_client) by extension 'ros'
+[0.849s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_action_client' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_action_client'[0m
+[0.849s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extensions ['ignore', 'ignore_ament_install']
+[0.849s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extension 'ignore'
+[0.849s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extension 'ignore_ament_install'
+[0.850s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extensions ['colcon_pkg']
+[0.850s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extension 'colcon_pkg'
+[0.850s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extensions ['colcon_meta']
+[0.850s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extension 'colcon_meta'
+[0.850s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extensions ['ros']
+[0.850s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_action_server) by extension 'ros'
+[0.856s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_action_server' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_action_server'[0m
+[0.856s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extensions ['ignore', 'ignore_ament_install']
+[0.856s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extension 'ignore'
+[0.856s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extension 'ignore_ament_install'
+[0.857s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extensions ['colcon_pkg']
+[0.857s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extension 'colcon_pkg'
+[0.857s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extensions ['colcon_meta']
+[0.857s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extension 'colcon_meta'
+[0.857s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extensions ['ros']
+[0.857s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_client) by extension 'ros'
+[0.863s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_client' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_client'[0m
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extensions ['ignore', 'ignore_ament_install']
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extension 'ignore'
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extension 'ignore_ament_install'
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extensions ['colcon_pkg']
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extension 'colcon_pkg'
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extensions ['colcon_meta']
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extension 'colcon_meta'
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extensions ['ros']
+[0.864s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_composition) by extension 'ros'
+[0.870s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_composition' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_composition'[0m
+[0.870s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.870s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extension 'ignore'
+[0.870s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extension 'ignore_ament_install'
+[0.871s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extensions ['colcon_pkg']
+[0.871s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extension 'colcon_pkg'
+[0.871s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extensions ['colcon_meta']
+[0.871s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extension 'colcon_meta'
+[0.871s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extensions ['ros']
+[0.871s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_publisher) by extension 'ros'
+[0.876s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_publisher' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_publisher'[0m
+[0.877s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extensions ['ignore', 'ignore_ament_install']
+[0.877s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extension 'ignore'
+[0.877s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extension 'ignore_ament_install'
+[0.877s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extensions ['colcon_pkg']
+[0.877s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extension 'colcon_pkg'
+[0.877s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extensions ['colcon_meta']
+[0.878s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extension 'colcon_meta'
+[0.878s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extensions ['ros']
+[0.878s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_service) by extension 'ros'
+[0.883s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_service' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_service'[0m
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extensions ['ignore', 'ignore_ament_install']
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extension 'ignore'
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extension 'ignore_ament_install'
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extensions ['colcon_pkg']
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extension 'colcon_pkg'
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extensions ['colcon_meta']
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extension 'colcon_meta'
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extensions ['ros']
+[0.884s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_subscriber) by extension 'ros'
+[0.890s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_subscriber' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_subscriber'[0m
+[0.890s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extensions ['ignore', 'ignore_ament_install']
+[0.890s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extension 'ignore'
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extension 'ignore_ament_install'
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extensions ['colcon_pkg']
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extension 'colcon_pkg'
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extensions ['colcon_meta']
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extension 'colcon_meta'
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extensions ['ros']
+[0.891s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\minimal_timer) by extension 'ros'
+[0.897s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\minimal_timer' with type 'ros.ament_cmake' and name 'examples_rclcpp_minimal_timer'[0m
+[0.897s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extensions ['ignore', 'ignore_ament_install']
+[0.897s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extension 'ignore'
+[0.897s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extension 'ignore_ament_install'
+[0.898s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extensions ['colcon_pkg']
+[0.898s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extension 'colcon_pkg'
+[0.898s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extensions ['colcon_meta']
+[0.898s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extension 'colcon_meta'
+[0.898s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extensions ['ros']
+[0.898s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclcpp\multithreaded_executor) by extension 'ros'
+[0.904s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclcpp\multithreaded_executor' with type 'ros.ament_cmake' and name 'examples_rclcpp_multithreaded_executor'[0m
+[0.904s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extensions ['ignore', 'ignore_ament_install']
+[0.904s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'ignore'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'ignore_ament_install'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extensions ['colcon_pkg']
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'colcon_pkg'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extensions ['colcon_meta']
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'colcon_meta'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extensions ['ros']
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'ros'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extensions ['cmake', 'python']
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'cmake'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'python'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extensions ['python_setup_py']
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy) by extension 'python_setup_py'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extensions ['ignore', 'ignore_ament_install']
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'ignore'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'ignore_ament_install'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extensions ['colcon_pkg']
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'colcon_pkg'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extensions ['colcon_meta']
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'colcon_meta'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extensions ['ros']
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'ros'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extensions ['cmake', 'python']
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'cmake'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'python'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extensions ['python_setup_py']
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions) by extension 'python_setup_py'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extension 'ignore'
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extension 'ignore_ament_install'
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extensions ['colcon_pkg']
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extension 'colcon_pkg'
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extensions ['colcon_meta']
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extension 'colcon_meta'
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extensions ['ros']
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_client) by extension 'ros'
+[0.919s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\actions\minimal_action_client' with type 'ros.ament_python' and name 'examples_rclpy_minimal_action_client'[0m
+[0.919s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extensions ['ignore', 'ignore_ament_install']
+[0.919s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extension 'ignore'
+[0.919s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extension 'ignore_ament_install'
+[0.919s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extensions ['colcon_pkg']
+[0.919s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extension 'colcon_pkg'
+[0.920s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extensions ['colcon_meta']
+[0.920s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extension 'colcon_meta'
+[0.920s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extensions ['ros']
+[0.920s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\actions\minimal_action_server) by extension 'ros'
+[0.930s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\actions\minimal_action_server' with type 'ros.ament_python' and name 'examples_rclpy_minimal_action_server'[0m
+[0.930s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extensions ['ignore', 'ignore_ament_install']
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extension 'ignore'
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extension 'ignore_ament_install'
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extensions ['colcon_pkg']
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extension 'colcon_pkg'
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extensions ['colcon_meta']
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extension 'colcon_meta'
+[0.931s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extensions ['ros']
+[0.932s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\executors) by extension 'ros'
+[0.942s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\executors' with type 'ros.ament_python' and name 'examples_rclpy_executors'[0m
+[0.942s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extensions ['ignore', 'ignore_ament_install']
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'ignore'
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'ignore_ament_install'
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extensions ['colcon_pkg']
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'colcon_pkg'
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extensions ['colcon_meta']
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'colcon_meta'
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extensions ['ros']
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'ros'
+[0.943s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extensions ['cmake', 'python']
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'cmake'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'python'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extensions ['python_setup_py']
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services) by extension 'python_setup_py'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extensions ['ignore', 'ignore_ament_install']
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extension 'ignore'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extension 'ignore_ament_install'
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extensions ['colcon_pkg']
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extension 'colcon_pkg'
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extensions ['colcon_meta']
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extension 'colcon_meta'
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extensions ['ros']
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_client) by extension 'ros'
+[0.956s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\services\minimal_client' with type 'ros.ament_python' and name 'examples_rclpy_minimal_client'[0m
+[0.956s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extensions ['ignore', 'ignore_ament_install']
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extension 'ignore'
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extension 'ignore_ament_install'
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extensions ['colcon_pkg']
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extension 'colcon_pkg'
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extensions ['colcon_meta']
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extension 'colcon_meta'
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extensions ['ros']
+[0.957s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\services\minimal_service) by extension 'ros'
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\services\minimal_service' with type 'ros.ament_python' and name 'examples_rclpy_minimal_service'[0m
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extensions ['ignore', 'ignore_ament_install']
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'ignore'
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'ignore_ament_install'
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extensions ['colcon_pkg']
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'colcon_pkg'
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extensions ['colcon_meta']
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'colcon_meta'
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extensions ['ros']
+[0.969s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'ros'
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extensions ['cmake', 'python']
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'cmake'
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'python'
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extensions ['python_setup_py']
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics) by extension 'python_setup_py'
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extension 'ignore'
+[0.970s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extension 'ignore_ament_install'
+[0.971s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extensions ['colcon_pkg']
+[0.971s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extension 'colcon_pkg'
+[0.971s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extensions ['colcon_meta']
+[0.971s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extension 'colcon_meta'
+[0.971s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extensions ['ros']
+[0.971s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_publisher) by extension 'ros'
+[0.982s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\topics\minimal_publisher' with type 'ros.ament_python' and name 'examples_rclpy_minimal_publisher'[0m
+[0.982s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extensions ['ignore', 'ignore_ament_install']
+[0.982s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extension 'ignore'
+[0.982s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extension 'ignore_ament_install'
+[0.982s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extensions ['colcon_pkg']
+[0.983s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extension 'colcon_pkg'
+[0.983s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extensions ['colcon_meta']
+[0.983s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extension 'colcon_meta'
+[0.983s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extensions ['ros']
+[0.983s] [34mcolcon.colcon_core.package_identification[0m [30mLevel 1[0m _identify(src\examples\rclpy\topics\minimal_subscriber) by extension 'ros'
+[0.993s] [34mcolcon.colcon_core.package_identification[0m [30mDEBUG[0m [32mPackage 'src\examples\rclpy\topics\minimal_subscriber' with type 'ros.ament_python' and name 'examples_rclpy_minimal_subscriber'[0m
+[0.993s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(recursive) using defaults
+[0.993s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(ignore) discover
+[0.993s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(ignore) using defaults
+[0.993s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(path) discover
+[0.993s] [34mcolcon.colcon_core.package_discovery[0m [30mLevel 1[0m discover_packages(path) using defaults
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'cmake_args' from command line to 'None'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'cmake_target' from command line to 'None'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'cmake_clean_cache' from command line to 'False'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'cmake_clean_first' from command line to 'False'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'cmake_force_configure' from command line to 'False'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'ament_cmake_args' from command line to 'None'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'catkin_cmake_args' from command line to 'None'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.034s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_action_client' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_action_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_action_client', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_action_client', 'symlink_install': True, 'test_result_base': None}[0m
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'cmake_args' from command line to 'None'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'cmake_target' from command line to 'None'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'cmake_clean_cache' from command line to 'False'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'cmake_clean_first' from command line to 'False'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'cmake_force_configure' from command line to 'False'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'ament_cmake_args' from command line to 'None'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'catkin_cmake_args' from command line to 'None'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_action_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.047s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_action_server' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_action_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_action_server', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_action_server', 'symlink_install': True, 'test_result_base': None}[0m
+[1.059s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'cmake_args' from command line to 'None'
+[1.059s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'cmake_target' from command line to 'None'
+[1.059s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'cmake_clean_cache' from command line to 'False'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'cmake_clean_first' from command line to 'False'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'cmake_force_configure' from command line to 'False'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'ament_cmake_args' from command line to 'None'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'catkin_cmake_args' from command line to 'None'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.060s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_client' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_client', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_client', 'symlink_install': True, 'test_result_base': None}[0m
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'cmake_args' from command line to 'None'
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'cmake_target' from command line to 'None'
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'cmake_clean_cache' from command line to 'False'
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'cmake_clean_first' from command line to 'False'
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'cmake_force_configure' from command line to 'False'
+[1.072s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'ament_cmake_args' from command line to 'None'
+[1.073s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'catkin_cmake_args' from command line to 'None'
+[1.073s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_composition' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.073s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_composition' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_composition', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_composition', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_composition', 'symlink_install': True, 'test_result_base': None}[0m
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'cmake_args' from command line to 'None'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'cmake_target' from command line to 'None'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.085s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_publisher', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_publisher', 'symlink_install': True, 'test_result_base': None}[0m
+[1.097s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'cmake_args' from command line to 'None'
+[1.097s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'cmake_target' from command line to 'None'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'cmake_clean_cache' from command line to 'False'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'cmake_clean_first' from command line to 'False'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'cmake_force_configure' from command line to 'False'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'ament_cmake_args' from command line to 'None'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'catkin_cmake_args' from command line to 'None'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_service' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.098s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_service' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_service', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_service', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_service', 'symlink_install': True, 'test_result_base': None}[0m
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'cmake_args' from command line to 'None'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'cmake_target' from command line to 'None'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'cmake_clean_cache' from command line to 'False'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'cmake_clean_first' from command line to 'False'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'cmake_force_configure' from command line to 'False'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'ament_cmake_args' from command line to 'None'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'catkin_cmake_args' from command line to 'None'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_subscriber' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.110s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_subscriber' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_subscriber', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_subscriber', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_subscriber', 'symlink_install': True, 'test_result_base': None}[0m
+[1.122s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'cmake_args' from command line to 'None'
+[1.122s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'cmake_target' from command line to 'None'
+[1.122s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'cmake_clean_cache' from command line to 'False'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'cmake_clean_first' from command line to 'False'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'cmake_force_configure' from command line to 'False'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'ament_cmake_args' from command line to 'None'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'catkin_cmake_args' from command line to 'None'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_minimal_timer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.123s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_minimal_timer' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_minimal_timer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_minimal_timer', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\minimal_timer', 'symlink_install': True, 'test_result_base': None}[0m
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'cmake_args' from command line to 'None'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'cmake_target' from command line to 'None'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'cmake_clean_cache' from command line to 'False'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'cmake_clean_first' from command line to 'False'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'cmake_force_configure' from command line to 'False'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'ament_cmake_args' from command line to 'None'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'catkin_cmake_args' from command line to 'None'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclcpp_multithreaded_executor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.135s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclcpp_multithreaded_executor' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclcpp_multithreaded_executor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclcpp_multithreaded_executor', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclcpp\\multithreaded_executor', 'symlink_install': True, 'test_result_base': None}[0m
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'cmake_args' from command line to 'None'
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'cmake_target' from command line to 'None'
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'cmake_clean_cache' from command line to 'False'
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'cmake_clean_first' from command line to 'False'
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'cmake_force_configure' from command line to 'False'
+[1.147s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'ament_cmake_args' from command line to 'None'
+[1.148s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'catkin_cmake_args' from command line to 'None'
+[1.148s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_executors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.148s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_executors' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_executors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_executors', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\executors', 'symlink_install': True, 'test_result_base': None}[0m
+[1.160s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'cmake_args' from command line to 'None'
+[1.160s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'cmake_target' from command line to 'None'
+[1.160s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.160s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'cmake_clean_cache' from command line to 'False'
+[1.161s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'cmake_clean_first' from command line to 'False'
+[1.161s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'cmake_force_configure' from command line to 'False'
+[1.161s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'ament_cmake_args' from command line to 'None'
+[1.161s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'catkin_cmake_args' from command line to 'None'
+[1.161s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.161s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_minimal_action_client' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_minimal_action_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_minimal_action_client', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\actions\\minimal_action_client', 'symlink_install': True, 'test_result_base': None}[0m
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'cmake_args' from command line to 'None'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'cmake_target' from command line to 'None'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'cmake_clean_cache' from command line to 'False'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'cmake_clean_first' from command line to 'False'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'cmake_force_configure' from command line to 'False'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'ament_cmake_args' from command line to 'None'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'catkin_cmake_args' from command line to 'None'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_action_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.173s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_minimal_action_server' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_minimal_action_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_minimal_action_server', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\actions\\minimal_action_server', 'symlink_install': True, 'test_result_base': None}[0m
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'cmake_args' from command line to 'None'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'cmake_target' from command line to 'None'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'cmake_clean_cache' from command line to 'False'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'cmake_clean_first' from command line to 'False'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'cmake_force_configure' from command line to 'False'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'ament_cmake_args' from command line to 'None'
+[1.185s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'catkin_cmake_args' from command line to 'None'
+[1.186s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.186s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_minimal_client' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_minimal_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_minimal_client', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\services\\minimal_client', 'symlink_install': True, 'test_result_base': None}[0m
+[1.197s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'cmake_args' from command line to 'None'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'cmake_target' from command line to 'None'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.198s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_minimal_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_minimal_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_minimal_publisher', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\topics\\minimal_publisher', 'symlink_install': True, 'test_result_base': None}[0m
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'cmake_args' from command line to 'None'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'cmake_target' from command line to 'None'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'cmake_clean_cache' from command line to 'False'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'cmake_clean_first' from command line to 'False'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'cmake_force_configure' from command line to 'False'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'ament_cmake_args' from command line to 'None'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'catkin_cmake_args' from command line to 'None'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_service' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.210s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_minimal_service' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_minimal_service', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_minimal_service', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\services\\minimal_service', 'symlink_install': True, 'test_result_base': None}[0m
+[1.222s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'cmake_args' from command line to 'None'
+[1.222s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'cmake_target' from command line to 'None'
+[1.222s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'cmake_clean_cache' from command line to 'False'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'cmake_clean_first' from command line to 'False'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'cmake_force_configure' from command line to 'False'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'ament_cmake_args' from command line to 'None'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'catkin_cmake_args' from command line to 'None'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mLevel 5[0m set package 'examples_rclpy_minimal_subscriber' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.223s] [34mcolcon.colcon_core.verb[0m [30mDEBUG[0m [32mBuilding package 'examples_rclpy_minimal_subscriber' with the following arguments: {'ament_cmake_args': None, 'build_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\build\\examples_rclpy_minimal_subscriber', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\install\\examples_rclpy_minimal_subscriber', 'merge_install': False, 'path': 'C:\\kcl\\robotics\\ros\\ros2_example_ws\\src\\examples\\rclpy\\topics\\minimal_subscriber', 'symlink_install': True, 'test_result_base': None}[0m
+[1.226s] [34mcolcon.colcon_core.executor[0m [30mINFO[0m Executing jobs using 'parallel' executor
+[1.248s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [30mDEBUG[0m [32mrun_until_complete[0m
+[1.248s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_client' with build type 'ament_cmake'
+[1.259s] [34mcolcon.colcon_core.plugin_system[0m [30mINFO[0m Skipping extension 'colcon_core.shell.sh': Not used on Windows systems
+[1.259s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_client'
+[1.266s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.318s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_server' with build type 'ament_cmake'
+[1.325s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_server'
+[1.332s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.373s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_client' with build type 'ament_cmake'
+[1.381s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_client'
+[1.388s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.426s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_composition' with build type 'ament_cmake'
+[1.431s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_composition'
+[1.439s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.476s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_publisher' with build type 'ament_cmake'
+[1.484s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_publisher'
+[1.490s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.528s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_service' with build type 'ament_cmake'
+[1.535s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_service'
+[1.542s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.583s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_subscriber' with build type 'ament_cmake'
+[1.590s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_subscriber'
+[1.596s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.637s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_timer' with build type 'ament_cmake'
+[1.644s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_timer'
+[1.650s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.701s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client -G Visual Studio 16 2019[0m
+[1.914s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client -G Visual Studio 16 2019[0m
+[1.966s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_server -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server -G Visual Studio 16 2019[0m
+[2.023s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_subscriber -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber -G Visual Studio 16 2019[0m
+[2.105s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_publisher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher -G Visual Studio 16 2019[0m
+[2.176s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_service -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service -G Visual Studio 16 2019[0m
+[2.281s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_composition -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition -G Visual Studio 16 2019[0m
+[2.368s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_timer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer -G Visual Studio 16 2019[0m
+[21.854s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_service -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service -G Visual Studio 16 2019[0m
+[21.860s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service --config Release[0m
+[21.944s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client -G Visual Studio 16 2019[0m
+[21.948s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client --config Release[0m
+[22.046s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_timer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer -G Visual Studio 16 2019[0m
+[22.050s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer --config Release[0m
+[22.164s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_publisher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher -G Visual Studio 16 2019[0m
+[22.168s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --config Release[0m
+[22.264s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_subscriber -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber -G Visual Studio 16 2019[0m
+[22.268s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber --config Release[0m
+[22.596s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_server -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server -G Visual Studio 16 2019[0m
+[22.600s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server --config Release[0m
+[22.695s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_composition -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition -G Visual Studio 16 2019[0m
+[22.698s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition --config Release[0m
+[23.084s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_action_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client -G Visual Studio 16 2019[0m
+[23.085s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --config Release[0m
+[31.300s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client --config Release[0m
+[31.304s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client --target install --config Release[0m
+[31.600s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service --config Release[0m
+[31.645s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service --target install --config Release[0m
+[37.121s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_client)
+[37.130s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_client --target install --config Release[0m
+[37.179s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client' for CMake module files
+[37.185s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client' for CMake config files
+[37.191s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_client', 'cmake_prefix_path')
+[37.205s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\examples_rclcpp_minimal_client\hook\cmake_prefix_path.ps1'
+[37.218s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\examples_rclcpp_minimal_client\hook\cmake_prefix_path.bat'
+[37.234s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\examples_rclcpp_minimal_client\hook\cmake_prefix_path.dsv'
+[37.293s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\bin'
+[37.293s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\bin'
+[37.293s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\Scripts'
+[37.294s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\lib\pkgconfig\examples_rclcpp_minimal_client.pc'
+[37.294s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\Lib\site-packages'
+[37.306s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\examples_rclcpp_minimal_client\package.ps1'
+[37.322s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\examples_rclcpp_minimal_client\package.bat'
+[37.334s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\examples_rclcpp_minimal_client\package.dsv'
+[37.344s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_client\share\colcon-core\packages\examples_rclcpp_minimal_client)
+[37.346s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\multithreaded_executor' with build type 'ament_cmake'
+[37.370s] [34mcolcon.colcon_cmake.task.cmake.build[0m [30mINFO[0m Building CMake package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\multithreaded_executor'
+[37.384s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.548s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\multithreaded_executor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor -G Visual Studio 16 2019[0m
+[37.615s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_service)
+[37.637s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service' for CMake module files
+[37.643s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service' for CMake config files
+[37.654s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service --target install --config Release[0m
+[37.655s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_service', 'cmake_prefix_path')
+[37.669s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\examples_rclcpp_minimal_service\hook\cmake_prefix_path.ps1'
+[37.685s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\examples_rclcpp_minimal_service\hook\cmake_prefix_path.bat'
+[37.688s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\examples_rclcpp_minimal_service\hook\cmake_prefix_path.dsv'
+[37.690s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\bin'
+[37.691s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\bin'
+[37.691s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\Scripts'
+[37.691s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\lib\pkgconfig\examples_rclcpp_minimal_service.pc'
+[37.691s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\Lib\site-packages'
+[37.711s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\examples_rclcpp_minimal_service\package.ps1'
+[37.717s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\examples_rclcpp_minimal_service\package.bat'
+[37.719s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\examples_rclcpp_minimal_service\package.dsv'
+[37.721s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_service\share\colcon-core\packages\examples_rclcpp_minimal_service)
+[37.724s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\executors' with build type 'ament_python'
+[37.724s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_executors', 'ament_prefix_path')
+[37.738s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\hook\ament_prefix_path.ps1'
+[37.754s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\hook\ament_prefix_path.bat'
+[37.756s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\hook\ament_prefix_path.dsv'
+[37.772s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.906s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer --config Release[0m
+[37.909s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer --target install --config Release[0m
+[38.997s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\executors'
+[39.010s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[39.077s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server --config Release[0m
+[39.079s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server --target install --config Release[0m
+[40.201s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors[0m
+[42.507s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_executors', 'pythonpath_develop')
+[42.522s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors\share\examples_rclpy_executors\hook\pythonpath_develop.ps1'
+[42.522s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors[0m
+[42.526s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors\share\examples_rclpy_executors\hook\pythonpath_develop.bat'
+[42.528s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_executors\share\examples_rclpy_executors\hook\pythonpath_develop.dsv'
+[42.549s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors' for CMake module files
+[42.552s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors' for CMake config files
+[42.554s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\bin'
+[42.554s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\bin'
+[42.554s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\Scripts'
+[42.555s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\lib\pkgconfig\examples_rclpy_executors.pc'
+[42.555s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\Lib\site-packages'
+[42.555s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_executors', 'pythonpath')
+[42.569s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\hook\pythonpath.ps1'
+[42.571s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\hook\pythonpath.bat'
+[42.594s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\hook\pythonpath.dsv'
+[42.623s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_executors)
+[42.638s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\package.ps1'
+[42.642s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\package.bat'
+[42.644s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\examples_rclpy_executors\package.dsv'
+[42.647s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_executors\share\colcon-core\packages\examples_rclpy_executors)
+[42.649s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\actions\minimal_action_client' with build type 'ament_python'
+[42.649s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_action_client', 'ament_prefix_path')
+[42.669s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\ament_prefix_path.ps1'
+[42.672s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\ament_prefix_path.bat'
+[42.674s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\ament_prefix_path.dsv'
+[42.721s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[44.458s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\actions\minimal_action_client'
+[44.467s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[44.532s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_timer)
+[44.552s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer' for CMake module files
+[44.559s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_timer --target install --config Release[0m
+[44.560s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer' for CMake config files
+[44.565s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_timer', 'cmake_prefix_path')
+[44.579s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\examples_rclcpp_minimal_timer\hook\cmake_prefix_path.ps1'
+[44.582s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\examples_rclcpp_minimal_timer\hook\cmake_prefix_path.bat'
+[44.584s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\examples_rclcpp_minimal_timer\hook\cmake_prefix_path.dsv'
+[44.585s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\bin'
+[44.586s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\bin'
+[44.586s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\Scripts'
+[44.586s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\lib\pkgconfig\examples_rclcpp_minimal_timer.pc'
+[44.586s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\Lib\site-packages'
+[44.601s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\examples_rclcpp_minimal_timer\package.ps1'
+[44.603s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\examples_rclcpp_minimal_timer\package.bat'
+[44.605s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\examples_rclcpp_minimal_timer\package.dsv'
+[44.607s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_timer\share\colcon-core\packages\examples_rclcpp_minimal_timer)
+[44.613s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --config Release[0m
+[44.615s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --target install --config Release[0m
+[44.699s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\actions\minimal_action_server' with build type 'ament_python'
+[44.700s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_action_server', 'ament_prefix_path')
+[44.714s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\ament_prefix_path.ps1'
+[44.716s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\ament_prefix_path.bat'
+[44.719s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\ament_prefix_path.dsv'
+[44.733s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[44.797s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber --config Release[0m
+[44.801s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber --target install --config Release[0m
+[44.878s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_action_server)
+[44.890s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_server --target install --config Release[0m
+[44.899s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server' for CMake module files
+[44.905s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server' for CMake config files
+[44.912s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_action_server', 'cmake_prefix_path')
+[44.926s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\examples_rclcpp_minimal_action_server\hook\cmake_prefix_path.ps1'
+[44.931s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\examples_rclcpp_minimal_action_server\hook\cmake_prefix_path.bat'
+[44.933s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\examples_rclcpp_minimal_action_server\hook\cmake_prefix_path.dsv'
+[44.935s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\bin'
+[44.935s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\bin'
+[44.935s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\Scripts'
+[44.935s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\lib\pkgconfig\examples_rclcpp_minimal_action_server.pc'
+[44.936s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\Lib\site-packages'
+[44.949s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\examples_rclcpp_minimal_action_server\package.ps1'
+[44.952s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\examples_rclcpp_minimal_action_server\package.bat'
+[44.954s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\examples_rclcpp_minimal_action_server\package.dsv'
+[44.958s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_server\share\colcon-core\packages\examples_rclcpp_minimal_action_server)
+[44.961s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\services\minimal_client' with build type 'ament_python'
+[44.961s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_client', 'ament_prefix_path')
+[44.975s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\ament_prefix_path.ps1'
+[44.977s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\ament_prefix_path.bat'
+[44.982s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\ament_prefix_path.dsv'
+[45.005s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[45.813s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client[0m
+[46.622s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\actions\minimal_action_server'
+[46.636s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[47.677s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\services\minimal_client'
+[47.690s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[47.761s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_action_client', 'pythonpath_develop')
+[47.776s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\pythonpath_develop.ps1'
+[47.779s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\pythonpath_develop.bat'
+[47.781s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\pythonpath_develop.dsv'
+[47.806s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client' for CMake module files
+[47.809s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client' for CMake config files
+[47.814s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\bin'
+[47.814s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\bin'
+[47.815s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\Scripts'
+[47.815s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\lib\pkgconfig\examples_rclpy_minimal_action_client.pc'
+[47.815s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\Lib\site-packages'
+[47.815s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_action_client', 'pythonpath')
+[47.828s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\pythonpath.ps1'
+[47.833s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_client\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client[0m
+[47.835s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\pythonpath.bat'
+[47.838s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\hook\pythonpath.dsv'
+[47.839s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_minimal_action_client)
+[47.854s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\package.ps1'
+[47.856s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\package.bat'
+[47.859s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\examples_rclpy_minimal_action_client\package.dsv'
+[47.861s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_client\share\colcon-core\packages\examples_rclpy_minimal_action_client)
+[47.864s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\topics\minimal_publisher' with build type 'ament_python'
+[47.864s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_publisher', 'ament_prefix_path')
+[47.879s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\ament_prefix_path.ps1'
+[47.885s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\ament_prefix_path.bat'
+[47.887s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\ament_prefix_path.dsv'
+[47.903s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[48.719s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server[0m
+[49.452s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client[0m
+[49.464s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition --config Release[0m
+[49.466s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition --target install --config Release[0m
+[49.557s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_publisher)
+[49.578s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher' for CMake module files
+[49.579s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --target install --config Release[0m
+[49.586s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher' for CMake config files
+[49.595s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_publisher', 'cmake_prefix_path')
+[49.610s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\examples_rclcpp_minimal_publisher\hook\cmake_prefix_path.ps1'
+[49.613s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\examples_rclcpp_minimal_publisher\hook\cmake_prefix_path.bat'
+[49.615s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\examples_rclcpp_minimal_publisher\hook\cmake_prefix_path.dsv'
+[49.630s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\bin'
+[49.631s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\bin'
+[49.631s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\Scripts'
+[49.631s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\lib\pkgconfig\examples_rclcpp_minimal_publisher.pc'
+[49.631s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\Lib\site-packages'
+[49.647s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\examples_rclcpp_minimal_publisher\package.ps1'
+[49.663s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\examples_rclcpp_minimal_publisher\package.bat'
+[49.665s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\examples_rclcpp_minimal_publisher\package.dsv'
+[49.667s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher\share\colcon-core\packages\examples_rclcpp_minimal_publisher)
+[49.670s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_subscriber)
+[49.703s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber' for CMake module files
+[49.708s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_subscriber --target install --config Release[0m
+[49.711s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber' for CMake config files
+[49.720s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_subscriber', 'cmake_prefix_path')
+[49.741s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\examples_rclcpp_minimal_subscriber\hook\cmake_prefix_path.ps1'
+[49.763s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\examples_rclcpp_minimal_subscriber\hook\cmake_prefix_path.bat'
+[49.772s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\examples_rclcpp_minimal_subscriber\hook\cmake_prefix_path.dsv'
+[49.776s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\bin'
+[49.776s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\bin'
+[49.776s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\Scripts'
+[49.777s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\lib\pkgconfig\examples_rclcpp_minimal_subscriber.pc'
+[49.777s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\Lib\site-packages'
+[49.791s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\examples_rclcpp_minimal_subscriber\package.ps1'
+[49.795s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\examples_rclcpp_minimal_subscriber\package.bat'
+[49.797s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\examples_rclcpp_minimal_subscriber\package.dsv'
+[49.800s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_subscriber\share\colcon-core\packages\examples_rclcpp_minimal_subscriber)
+[50.443s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\topics\minimal_publisher'
+[50.454s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[50.517s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\services\minimal_service' with build type 'ament_python'
+[50.518s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_service', 'ament_prefix_path')
+[50.531s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\ament_prefix_path.ps1'
+[50.534s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\ament_prefix_path.bat'
+[50.535s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\ament_prefix_path.dsv'
+[50.548s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[50.612s] [34mcolcon.colcon_ros.task.ament_python.build[0m [30mINFO[0m Building ROS package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\topics\minimal_subscriber' with build type 'ament_python'
+[50.613s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_subscriber', 'ament_prefix_path')
+[50.626s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\ament_prefix_path.ps1'
+[50.630s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\ament_prefix_path.bat'
+[50.631s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\ament_prefix_path.dsv'
+[50.646s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[50.715s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_action_server', 'pythonpath_develop')
+[50.729s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\pythonpath_develop.ps1'
+[50.732s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\pythonpath_develop.bat'
+[50.734s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\pythonpath_develop.dsv'
+[50.751s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server' for CMake module files
+[50.755s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server' for CMake config files
+[50.759s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\bin'
+[50.760s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_action_server\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server[0m
+[50.760s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\bin'
+[50.760s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\Scripts'
+[50.760s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\lib\pkgconfig\examples_rclpy_minimal_action_server.pc'
+[50.761s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\Lib\site-packages'
+[50.761s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_action_server', 'pythonpath')
+[50.772s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\pythonpath.ps1'
+[50.774s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\pythonpath.bat'
+[50.776s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\hook\pythonpath.dsv'
+[50.778s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_minimal_action_server)
+[50.792s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\package.ps1'
+[50.794s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\package.bat'
+[50.796s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\examples_rclpy_minimal_action_server\package.dsv'
+[50.798s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_action_server\share\colcon-core\packages\examples_rclpy_minimal_action_server)
+[51.352s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher[0m
+[51.914s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\services\minimal_service'
+[51.926s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[51.975s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --config Release[0m
+[51.977s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --target install --config Release[0m
+[52.028s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_client', 'pythonpath_develop')
+[52.040s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\pythonpath_develop.ps1'
+[52.044s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\pythonpath_develop.bat'
+[52.044s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client[0m
+[52.046s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\pythonpath_develop.dsv'
+[52.064s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client' for CMake module files
+[52.067s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client' for CMake config files
+[52.069s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\bin'
+[52.069s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\bin'
+[52.069s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\Scripts'
+[52.070s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\lib\pkgconfig\examples_rclpy_minimal_client.pc'
+[52.070s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\Lib\site-packages'
+[52.070s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_client', 'pythonpath')
+[52.082s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\pythonpath.ps1'
+[52.084s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\pythonpath.bat'
+[52.086s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\hook\pythonpath.dsv'
+[52.087s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_minimal_client)
+[52.101s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\package.ps1'
+[52.103s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\package.bat'
+[52.105s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\examples_rclpy_minimal_client\package.dsv'
+[52.107s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_client\share\colcon-core\packages\examples_rclpy_minimal_client)
+[52.652s] [34mcolcon.colcon_core.task.python.build[0m [30mINFO[0m Building Python package in 'C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclpy\topics\minimal_subscriber'
+[52.658s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[52.720s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\multithreaded_executor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor -G Visual Studio 16 2019[0m
+[52.720s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --config Release[0m
+[52.775s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_publisher', 'pythonpath_develop')
+[52.787s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\pythonpath_develop.ps1'
+[52.787s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher[0m
+[52.789s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\pythonpath_develop.bat'
+[52.791s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\pythonpath_develop.dsv'
+[52.804s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher' for CMake module files
+[52.806s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher' for CMake config files
+[52.807s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\bin'
+[52.807s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\bin'
+[52.807s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\Scripts'
+[52.807s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\lib\pkgconfig\examples_rclpy_minimal_publisher.pc'
+[52.808s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\Lib\site-packages'
+[52.808s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_publisher', 'pythonpath')
+[52.814s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\pythonpath.ps1'
+[52.816s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\pythonpath.bat'
+[52.817s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\hook\pythonpath.dsv'
+[52.818s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_minimal_publisher)
+[52.832s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\package.ps1'
+[52.834s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\package.bat'
+[52.836s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher\package.dsv'
+[52.837s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\colcon-core\packages\examples_rclpy_minimal_publisher)
+[53.370s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service[0m
+[53.376s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_composition)
+[53.388s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition' for CMake module files
+[53.391s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_composition --target install --config Release[0m
+[53.393s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition' for CMake config files
+[53.398s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_composition', 'cmake_prefix_path')
+[53.404s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\cmake_prefix_path.ps1'
+[53.406s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\cmake_prefix_path.bat'
+[53.407s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\cmake_prefix_path.dsv'
+[53.408s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\bin'
+[53.409s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_composition', 'path_dll')
+[53.416s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\path_dll.ps1'
+[53.417s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\path_dll.bat'
+[53.419s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\path_dll.dsv'
+[53.421s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\bin'
+[53.422s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_composition', 'path')
+[53.435s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\path.ps1'
+[53.438s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\path.bat'
+[53.439s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\hook\path.dsv'
+[53.443s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\Scripts'
+[53.443s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\lib\pkgconfig\examples_rclcpp_minimal_composition.pc'
+[53.444s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\Lib\site-packages'
+[53.458s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\package.ps1'
+[53.461s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\package.bat'
+[53.463s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\examples_rclcpp_minimal_composition\package.dsv'
+[53.466s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_composition\share\colcon-core\packages\examples_rclcpp_minimal_composition)
+[54.095s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber[0m
+[54.400s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_service', 'pythonpath_develop')
+[54.408s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\pythonpath_develop.ps1'
+[54.409s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service[0m
+[54.411s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\pythonpath_develop.bat'
+[54.413s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\pythonpath_develop.dsv'
+[54.434s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service' for CMake module files
+[54.437s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service' for CMake config files
+[54.439s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\bin'
+[54.439s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\bin'
+[54.439s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\Scripts'
+[54.440s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\lib\pkgconfig\examples_rclpy_minimal_service.pc'
+[54.440s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\Lib\site-packages'
+[54.440s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_service', 'pythonpath')
+[54.454s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\pythonpath.ps1'
+[54.456s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\pythonpath.bat'
+[54.457s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\hook\pythonpath.dsv'
+[54.459s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_minimal_service)
+[54.473s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\package.ps1'
+[54.475s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\package.bat'
+[54.477s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\examples_rclpy_minimal_service\package.dsv'
+[54.479s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_service\share\colcon-core\packages\examples_rclpy_minimal_service)
+[55.009s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_subscriber', 'pythonpath_develop')
+[55.022s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\pythonpath_develop.ps1'
+[55.023s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber[0m
+[55.025s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\pythonpath_develop.bat'
+[55.027s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\pythonpath_develop.dsv'
+[55.047s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber' for CMake module files
+[55.049s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber' for CMake config files
+[55.051s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\bin'
+[55.051s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\bin'
+[55.052s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\Scripts'
+[55.052s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\lib\pkgconfig\examples_rclpy_minimal_subscriber.pc'
+[55.052s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\Lib\site-packages'
+[55.052s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclpy_minimal_subscriber', 'pythonpath')
+[55.059s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\pythonpath.ps1'
+[55.060s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\pythonpath.bat'
+[55.062s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\hook\pythonpath.dsv'
+[55.063s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclpy_minimal_subscriber)
+[55.070s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\package.ps1'
+[55.071s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\package.bat'
+[55.073s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\examples_rclpy_minimal_subscriber\package.dsv'
+[55.074s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_subscriber\share\colcon-core\packages\examples_rclpy_minimal_subscriber)
+[55.076s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_minimal_action_client)
+[55.086s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client' for CMake module files
+[55.088s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_action_client --target install --config Release[0m
+[55.091s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client' for CMake config files
+[55.096s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_minimal_action_client', 'cmake_prefix_path')
+[55.102s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\examples_rclcpp_minimal_action_client\hook\cmake_prefix_path.ps1'
+[55.104s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\examples_rclcpp_minimal_action_client\hook\cmake_prefix_path.bat'
+[55.106s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\examples_rclcpp_minimal_action_client\hook\cmake_prefix_path.dsv'
+[55.107s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\bin'
+[55.107s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\bin'
+[55.107s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\Scripts'
+[55.107s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\lib\pkgconfig\examples_rclcpp_minimal_action_client.pc'
+[55.108s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\Lib\site-packages'
+[55.115s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\examples_rclcpp_minimal_action_client\package.ps1'
+[55.116s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\examples_rclcpp_minimal_action_client\package.bat'
+[55.117s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\examples_rclcpp_minimal_action_client\package.dsv'
+[55.119s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_action_client\share\colcon-core\packages\examples_rclcpp_minimal_action_client)
+[57.505s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --config Release[0m
+[57.508s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --target install --config Release[0m
+[59.531s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_environment_scripts_only(examples_rclcpp_multithreaded_executor)
+[59.536s] [34mcolcon.colcon_core.event_handler.log_command[0m [30mDEBUG[0m [32mInvoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --target install --config Release[0m
+[59.541s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor' for CMake module files
+[59.545s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor' for CMake config files
+[59.548s] [34mcolcon.colcon_core.shell[0m [30mLevel 1[0m create_environment_hook('examples_rclcpp_multithreaded_executor', 'cmake_prefix_path')
+[59.554s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\examples_rclcpp_multithreaded_executor\hook\cmake_prefix_path.ps1'
+[59.555s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment hook 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\examples_rclcpp_multithreaded_executor\hook\cmake_prefix_path.bat'
+[59.557s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating environment descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\examples_rclcpp_multithreaded_executor\hook\cmake_prefix_path.dsv'
+[59.560s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\bin'
+[59.560s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\bin'
+[59.560s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\Scripts'
+[59.560s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\lib\pkgconfig\examples_rclcpp_multithreaded_executor.pc'
+[59.560s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m checking 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\Lib\site-packages'
+[59.567s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\examples_rclcpp_multithreaded_executor\package.ps1'
+[59.569s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package script 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\examples_rclcpp_multithreaded_executor\package.bat'
+[59.570s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating package descriptor 'C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\examples_rclcpp_multithreaded_executor\package.dsv'
+[59.571s] [34mcolcon.colcon_core.environment[0m [30mLevel 1[0m create_file_with_runtime_dependencies(C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor\share\colcon-core\packages\examples_rclcpp_multithreaded_executor)
+[59.572s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[59.572s] [34mcolcon.colcon_core.event_reactor[0m [30mDEBUG[0m [32mjoining thread[0m
+[59.587s] [34mcolcon.colcon_core.plugin_system[0m [30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify2': 'notify2' not found
+[59.588s] [34mcolcon.colcon_core.plugin_system[0m [30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify_send': Not used on non-Linux systems
+[59.588s] [34mcolcon.colcon_core.plugin_system[0m [30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[59.588s] [34mcolcon.colcon_notification.desktop_notification[0m [30mINFO[0m Sending desktop notification using 'win32'
+[64.643s] [34mcolcon.colcon_core.event_reactor[0m [30mDEBUG[0m [32mjoined thread[0m
+[64.652s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating prefix script 'C:\kcl\robotics\ros\ros2_example_ws\install\local_setup.ps1'
+[64.663s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating prefix util module 'C:\kcl\robotics\ros\ros2_example_ws\install\_local_setup_util_ps1.py'
+[64.672s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating prefix chain script 'C:\kcl\robotics\ros\ros2_example_ws\install\setup.ps1'
+[64.687s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating prefix script 'C:\kcl\robotics\ros\ros2_example_ws\install\local_setup.bat'
+[64.698s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating prefix util module 'C:\kcl\robotics\ros\ros2_example_ws\install\_local_setup_util_bat.py'
+[64.700s] [34mcolcon.colcon_core.shell[0m [30mINFO[0m Creating prefix chain script 'C:\kcl\robotics\ros\ros2_example_ws\install\setup.bat'

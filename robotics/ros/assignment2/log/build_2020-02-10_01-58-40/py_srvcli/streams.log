@@ -1,0 +1,26 @@
+[1.125s] Invoking command in 'C:\kcl\robotics\ros\assignment2\src\py_srvcli': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\assignment2\install\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base C:\kcl\robotics\ros\assignment2\build\py_srvcli build --build-base C:\kcl\robotics\ros\assignment2\build\py_srvcli\build install --prefix C:\kcl\robotics\ros\assignment2\install --record C:\kcl\robotics\ros\assignment2\build\py_srvcli\install.log --single-version-externally-managed
+[1.578s] running egg_info
+[1.578s] writing C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\PKG-INFO
+[1.578s] writing dependency_links to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\dependency_links.txt
+[1.578s] writing entry points to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\entry_points.txt
+[1.578s] writing requirements to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\requires.txt
+[1.578s] writing top-level names to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\top_level.txt
+[1.610s] reading manifest file 'C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\SOURCES.txt'
+[1.625s] writing manifest file 'C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\SOURCES.txt'
+[1.625s] running build
+[1.625s] running build_py
+[1.625s] running install
+[1.625s] running install_lib
+[1.625s] running install_data
+[1.625s] running install_egg_info
+[1.641s] removing 'C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\py_srvcli-0.0.0-py3.7.egg-info' (and everything under it)
+[1.641s] Copying C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info to C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\py_srvcli-0.0.0-py3.7.egg-info
+[1.641s] running install_scripts
+[1.672s] Installing client-script.py script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[1.672s] Installing client.exe script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[1.672s] Installing service-script.py script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[1.688s] Installing service.exe script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[1.688s] error: [Errno 13] Permission denied: 'C:\\kcl\\robotics\\ros\\assignment2\\install\\lib\\py_srvcli\\service.exe'
+[1.703s] Invoked command in 'C:\kcl\robotics\ros\assignment2\src\py_srvcli' returned '1': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\assignment2\install\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base C:\kcl\robotics\ros\assignment2\build\py_srvcli build --build-base C:\kcl\robotics\ros\assignment2\build\py_srvcli\build install --prefix C:\kcl\robotics\ros\assignment2\install --record C:\kcl\robotics\ros\assignment2\build\py_srvcli\install.log --single-version-externally-managed

@@ -1,0 +1,69 @@
+[0.141s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\multithreaded_executor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor -G Visual Studio 16 2019
+[3.078s] -- The C compiler identification is MSVC 19.24.28316.0
+[7.156s] -- The CXX compiler identification is MSVC 19.24.28316.0
+[7.156s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[8.422s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[8.422s] -- Detecting C compiler ABI info
+[9.313s] -- Detecting C compiler ABI info - done
+[9.313s] -- Detecting C compile features
+[9.313s] -- Detecting C compile features - done
+[9.313s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[12.063s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[12.063s] -- Detecting CXX compiler ABI info
+[12.297s] -- Detecting CXX compiler ABI info - done
+[12.297s] -- Detecting CXX compile features
+[12.297s] -- Detecting CXX compile features - done
+[12.297s] -- Found ament_cmake: 0.8.2 (C:/dev/ros2_eloquent/share/ament_cmake/cmake)
+[13.328s] -- Found PythonInterp: C:/Python37/python.exe (found suitable version "3.7.5", minimum required is "3") 
+[13.328s] -- Using PYTHON_EXECUTABLE: C:/Python37/python.exe
+[13.328s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[13.328s] -- Found rclcpp: 0.8.4 (C:/dev/ros2_eloquent/share/rclcpp/cmake)
+[13.328s] -- Found rosidl_adapter: 0.8.2 (C:/dev/ros2_eloquent/share/rosidl_adapter/cmake)
+[14.563s] -- Found rmw_implementation_cmake: 0.8.1 (C:/dev/ros2_eloquent/share/rmw_implementation_cmake/cmake)
+[14.563s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[14.563s] -- Looking for pthread.h
+[14.641s] -- Looking for pthread.h - not found
+[14.641s] -- Found Threads: TRUE  
+[14.641s] -- Found std_msgs: 0.8.1 (C:/dev/ros2_eloquent/share/std_msgs/cmake)
+[15.297s] -- Configuring done
+[15.297s] -- Generating done
+[15.297s] -- Build files have been written to: C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_multithreaded_executor
+[15.313s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\multithreaded_executor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_multithreaded_executor -G Visual Studio 16 2019
+[15.313s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --config Release
+[15.985s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[15.985s] Copyright (C) Microsoft Corporation. All rights reserved.
+[15.985s] 
+[15.985s]   Checking Build System
+[16.688s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/multithreaded_executor/CMakeLists.txt
+[16.688s]   multithreaded_executor.cpp
+[19.906s]   multithreaded_executor.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor\Release\multithreaded_executor.exe
+[19.969s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/multithreaded_executor/CMakeLists.txt
+[20.094s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --config Release
+[20.094s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --target install --config Release
+[20.250s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[20.250s] Copyright (C) Microsoft Corporation. All rights reserved.
+[20.250s] 
+[20.750s]   multithreaded_executor.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor\Release\multithreaded_executor.exe
+[21.000s]   -- Install configuration: "Release"
+[21.000s]   -- Execute custom install script
+[21.016s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/lib/examples_rclcpp_multithreaded_executor/multithreaded_executor.exe
+[21.094s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_multithreaded_executor
+[21.172s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_multithreaded_executor
+[21.235s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/ament_prefix_path.bat
+[21.344s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/ament_prefix_path.dsv
+[21.406s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/path.bat
+[21.485s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/path.dsv
+[21.563s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.bat
+[21.641s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.dsv
+[21.719s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/package.dsv
+[21.797s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/packages/examples_rclcpp_multithreaded_executor
+[21.860s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/cmake/examples_rclcpp_multithreaded_executorConfig.cmake
+[21.938s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/cmake/examples_rclcpp_multithreaded_executorConfig-version.cmake
+[22.016s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/package.xml
+[22.125s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_multithreaded_executor --target install --config Release

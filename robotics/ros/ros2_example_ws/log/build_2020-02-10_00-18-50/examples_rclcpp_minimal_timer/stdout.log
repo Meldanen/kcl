@@ -1,0 +1,10 @@
+[0.437s] -- Found ament_cmake: 0.8.2 (C:/dev/ros2_eloquent/share/ament_cmake/cmake)
+[0.625s] -- Using PYTHON_EXECUTABLE: C:/Python37/python.exe
+[1.734s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.812s] -- Found rclcpp: 0.8.4 (C:/dev/ros2_eloquent/share/rclcpp/cmake)
+[2.812s] -- Found rosidl_adapter: 0.8.2 (C:/dev/ros2_eloquent/share/rosidl_adapter/cmake)
+[2.812s] -- Found rmw_implementation_cmake: 0.8.1 (C:/dev/ros2_eloquent/share/rmw_implementation_cmake/cmake)
+[2.844s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.844s] -- Configuring done
+[3.062s] -- Generating done
+[3.062s] -- Build files have been written to: C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer

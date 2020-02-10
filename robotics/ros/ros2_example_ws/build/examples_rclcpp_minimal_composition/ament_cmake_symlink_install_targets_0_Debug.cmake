@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_composition/Debug/composition_nodes.dll" "TARGETS" "composition_nodes" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

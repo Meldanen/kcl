@@ -1,0 +1,3 @@
+[console_scripts]
+my_node = kokos.my_node:main
+

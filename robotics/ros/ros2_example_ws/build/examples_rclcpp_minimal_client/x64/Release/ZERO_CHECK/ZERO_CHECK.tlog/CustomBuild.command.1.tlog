@@ -1,0 +1,10 @@
+^C:\KCL\ROBOTICS\ROS\ROS2_EXAMPLE_WS\BUILD\EXAMPLES_RCLCPP_MINIMAL_CLIENT\CMAKEFILES\FBF47F8598C407F583C7E112AC7FAC2E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_client -BC:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_client --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_client/examples_rclcpp_minimal_client.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

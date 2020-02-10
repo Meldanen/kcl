@@ -1,0 +1,10 @@
+^C:\KCL\ROBOTICS\ROS\ROS2_EXAMPLE_WS\SRC\EXAMPLES\RCLCPP\MINIMAL_PUBLISHER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_publisher -BC:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher --check-stamp-file C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

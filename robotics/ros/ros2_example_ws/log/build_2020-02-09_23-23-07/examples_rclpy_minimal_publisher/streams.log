@@ -1,0 +1,32 @@
+[3.422s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher
+[4.125s] running develop
+[4.781s] running egg_info
+[4.797s] creating examples_rclpy_minimal_publisher.egg-info
+[4.797s] writing examples_rclpy_minimal_publisher.egg-info\PKG-INFO
+[4.797s] writing dependency_links to examples_rclpy_minimal_publisher.egg-info\dependency_links.txt
+[4.797s] writing entry points to examples_rclpy_minimal_publisher.egg-info\entry_points.txt
+[4.797s] writing requirements to examples_rclpy_minimal_publisher.egg-info\requires.txt
+[4.797s] writing top-level names to examples_rclpy_minimal_publisher.egg-info\top_level.txt
+[4.797s] writing manifest file 'examples_rclpy_minimal_publisher.egg-info\SOURCES.txt'
+[4.797s] reading manifest file 'examples_rclpy_minimal_publisher.egg-info\SOURCES.txt'
+[4.797s] writing manifest file 'examples_rclpy_minimal_publisher.egg-info\SOURCES.txt'
+[4.797s] running build_ext
+[4.797s] Creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/Lib/site-packages\site.py
+[4.797s] Creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/Lib/site-packages\examples-rclpy-minimal-publisher.egg-link (link to .)
+[4.797s] Installing publisher_local_function-script.py script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[4.797s] Installing publisher_local_function.exe script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[4.797s] Installing publisher_member_function-script.py script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[4.797s] Installing publisher_member_function.exe script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[4.797s] Installing publisher_old_school-script.py script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[4.797s] Installing publisher_old_school.exe script to C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[4.797s] 
+[4.797s] Installed c:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher
+[4.797s] running install_data
+[4.797s] creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\ament_index
+[4.797s] creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\ament_index\resource_index
+[4.797s] creating C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\ament_index\resource_index\packages
+[4.797s] copying resource\examples_rclpy_minimal_publisher -> C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\ament_index\resource_index\packages
+[4.797s] copying package.xml -> C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\share\examples_rclpy_minimal_publisher
+[4.859s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py develop --prefix C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher --editable --build-directory C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclpy_minimal_publisher\build --no-deps install_data --install-dir C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclpy_minimal_publisher

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service\CMakeFiles\5024af4a99920ac55f31338402e0babd\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E70EC666-318B-3A47-A798-2083BBD202FC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

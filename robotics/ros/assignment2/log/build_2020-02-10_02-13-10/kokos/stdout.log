@@ -1,0 +1,20 @@
+[3.640s] running egg_info
+[3.640s] writing C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\PKG-INFO
+[3.640s] writing dependency_links to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\dependency_links.txt
+[3.640s] writing entry points to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\entry_points.txt
+[3.640s] writing requirements to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\requires.txt
+[3.640s] writing top-level names to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\top_level.txt
+[3.640s] reading manifest file 'C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\SOURCES.txt'
+[3.640s] writing manifest file 'C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\SOURCES.txt'
+[3.640s] running build
+[3.640s] running build_py
+[3.640s] running install
+[3.640s] running install_lib
+[3.640s] running install_data
+[3.640s] running install_egg_info
+[3.640s] removing 'C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\kokos-0.0.0-py3.7.egg-info' (and everything under it)
+[3.640s] Copying C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info to C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\kokos-0.0.0-py3.7.egg-info
+[3.640s] running install_scripts
+[3.640s] Installing my_node-script.py script to C:\kcl\robotics\ros\assignment2\install\lib\kokos
+[3.640s] Installing my_node.exe script to C:\kcl\robotics\ros\assignment2\install\lib\kokos
+[3.640s] writing list of installed files to 'C:\kcl\robotics\ros\assignment2\build\kokos\install.log'

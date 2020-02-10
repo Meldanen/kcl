@@ -1,0 +1,25 @@
+[2.375s] Invoking command in 'C:\kcl\robotics\ros\assignment2\src\kokos': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\assignment2\install\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base C:\kcl\robotics\ros\assignment2\build\kokos build --build-base C:\kcl\robotics\ros\assignment2\build\kokos\build install --prefix C:\kcl\robotics\ros\assignment2\install --record C:\kcl\robotics\ros\assignment2\build\kokos\install.log --single-version-externally-managed
+[2.890s] running egg_info
+[2.890s] writing C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\PKG-INFO
+[2.890s] writing dependency_links to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\dependency_links.txt
+[2.890s] writing entry points to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\entry_points.txt
+[2.890s] writing requirements to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\requires.txt
+[2.890s] writing top-level names to C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\top_level.txt
+[2.890s] reading manifest file 'C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\SOURCES.txt'
+[2.890s] writing manifest file 'C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info\SOURCES.txt'
+[2.890s] running build
+[2.890s] running build_py
+[2.890s] running install
+[2.890s] running install_lib
+[2.890s] running install_data
+[2.890s] copying package.xml -> C:\kcl\robotics\ros\assignment2\install\share\kokos
+[2.890s] running install_egg_info
+[2.890s] removing 'C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\kokos-0.0.0-py3.7.egg-info' (and everything under it)
+[2.890s] Copying C:\kcl\robotics\ros\assignment2\build\kokos\kokos.egg-info to C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\kokos-0.0.0-py3.7.egg-info
+[3.390s] running install_scripts
+[3.406s] Installing my_node-script.py script to C:\kcl\robotics\ros\assignment2\install\lib\kokos
+[3.406s] Installing my_node.exe script to C:\kcl\robotics\ros\assignment2\install\lib\kokos
+[3.406s] writing list of installed files to 'C:\kcl\robotics\ros\assignment2\build\kokos\install.log'
+[3.406s] Invoked command in 'C:\kcl\robotics\ros\assignment2\src\kokos' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; PYTHONPATH=C:\kcl\robotics\ros\assignment2\install\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base C:\kcl\robotics\ros\assignment2\build\kokos build --build-base C:\kcl\robotics\ros\assignment2\build\kokos\build install --prefix C:\kcl\robotics\ros\assignment2\install --record C:\kcl\robotics\ros\assignment2\build\kokos\install.log --single-version-externally-managed

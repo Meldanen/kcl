@@ -1,0 +1,25 @@
+[3.797s] running egg_info
+[3.797s] writing C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\PKG-INFO
+[3.797s] writing dependency_links to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\dependency_links.txt
+[3.797s] writing entry points to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\entry_points.txt
+[3.797s] writing requirements to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\requires.txt
+[3.797s] writing top-level names to C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\top_level.txt
+[3.828s] reading manifest file 'C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\SOURCES.txt'
+[3.828s] writing manifest file 'C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info\SOURCES.txt'
+[3.828s] running build
+[3.828s] running build_py
+[3.828s] copying py_srvcli\service_member_function.py -> C:\kcl\robotics\ros\assignment2\build\py_srvcli\build\lib\py_srvcli
+[3.828s] running install
+[3.828s] running install_lib
+[3.828s] copying C:\kcl\robotics\ros\assignment2\build\py_srvcli\build\lib\py_srvcli\service_member_function.py -> C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\py_srvcli
+[3.843s] byte-compiling C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\py_srvcli\service_member_function.py to service_member_function.cpython-37.pyc
+[3.843s] running install_data
+[3.843s] running install_egg_info
+[3.843s] removing 'C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\py_srvcli-0.0.0-py3.7.egg-info' (and everything under it)
+[3.843s] Copying C:\kcl\robotics\ros\assignment2\build\py_srvcli\py_srvcli.egg-info to C:\kcl\robotics\ros\assignment2\install\Lib\site-packages\py_srvcli-0.0.0-py3.7.egg-info
+[3.859s] running install_scripts
+[3.890s] Installing client-script.py script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[3.890s] Installing client.exe script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[3.890s] Installing service-script.py script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[3.890s] Installing service.exe script to C:\kcl\robotics\ros\assignment2\install\lib\py_srvcli
+[3.890s] error: [Errno 13] Permission denied: 'C:\\kcl\\robotics\\ros\\assignment2\\install\\lib\\py_srvcli\\service.exe'

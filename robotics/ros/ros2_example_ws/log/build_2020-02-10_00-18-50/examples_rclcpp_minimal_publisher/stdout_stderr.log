@@ -1,0 +1,46 @@
+[0.891s] -- Found ament_cmake: 0.8.2 (C:/dev/ros2_eloquent/share/ament_cmake/cmake)
+[1.047s] -- Using PYTHON_EXECUTABLE: C:/Python37/python.exe
+[1.906s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.016s] -- Found rclcpp: 0.8.4 (C:/dev/ros2_eloquent/share/rclcpp/cmake)
+[2.110s] -- Found rosidl_adapter: 0.8.2 (C:/dev/ros2_eloquent/share/rosidl_adapter/cmake)
+[2.250s] -- Found rmw_implementation_cmake: 0.8.1 (C:/dev/ros2_eloquent/share/rmw_implementation_cmake/cmake)
+[2.281s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.422s] -- Found std_msgs: 0.8.1 (C:/dev/ros2_eloquent/share/std_msgs/cmake)
+[3.094s] -- Configuring done
+[3.735s] -- Generating done
+[3.735s] -- Build files have been written to: C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher
+[4.063s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[4.063s] Copyright (C) Microsoft Corporation. All rights reserved.
+[4.063s] 
+[4.844s]   Checking Build System
+[5.344s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_publisher/CMakeLists.txt
+[5.703s]   publisher_lambda.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher\Release\publisher_lambda.exe
+[5.938s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_publisher/CMakeLists.txt
+[6.375s]   publisher_member_function.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher\Release\publisher_member_function.exe
+[6.547s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_publisher/CMakeLists.txt
+[6.860s]   publisher_not_composable.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher\Release\publisher_not_composable.exe
+[7.063s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_publisher/CMakeLists.txt
+[7.735s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[7.735s] Copyright (C) Microsoft Corporation. All rights reserved.
+[7.735s] 
+[8.735s]   publisher_lambda.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher\Release\publisher_lambda.exe
+[8.922s]   publisher_member_function.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher\Release\publisher_member_function.exe
+[9.063s]   publisher_not_composable.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher\Release\publisher_not_composable.exe
+[9.750s]   -- Install configuration: "Release"
+[9.766s]   -- Execute custom install script
+[9.781s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_lambda.exe
+[9.985s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function.exe
+[10.188s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_not_composable.exe
+[10.360s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_publisher
+[10.672s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_publisher
+[10.813s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/ament_prefix_path.bat
+[11.031s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/ament_prefix_path.dsv
+[11.203s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/path.bat
+[11.406s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/path.dsv
+[11.594s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/local_setup.bat
+[11.766s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/local_setup.dsv
+[11.953s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/package.dsv
+[12.313s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/ament_index/resource_index/packages/examples_rclcpp_minimal_publisher
+[12.328s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/cmake/examples_rclcpp_minimal_publisherConfig.cmake
+[13.438s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/cmake/examples_rclcpp_minimal_publisherConfig-version.cmake
+[13.438s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/package.xml

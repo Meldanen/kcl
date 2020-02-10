@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_client\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_client\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D3F34158-2389-3D7E-BD9B-57AFE4D66B2F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

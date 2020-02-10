@@ -1,0 +1,12 @@
+[0.625s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_publisher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher -G Visual Studio 16 2019
+[20.672s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE C:\kcl\robotics\ros\ros2_example_ws\src\examples\rclcpp\minimal_publisher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\ros2_example_ws\install\examples_rclcpp_minimal_publisher -G Visual Studio 16 2019
+[20.688s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --config Release
+[43.125s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher' returned '0': CL=/MP PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --config Release
+[43.125s] Invoking command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --target install --config Release
+[48.094s] Invoked command in 'C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher' returned '0': PUBLIC=%PUBLIC%
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\bin; C:\Program Files\CMake\bin\cmake.EXE --build C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_publisher --target install --config Release

@@ -1,0 +1,10 @@
+^C:\KCL\ROBOTICS\ROS\ROS2_EXAMPLE_WS\BUILD\EXAMPLES_RCLCPP_MINIMAL_PUBLISHER\CMAKEFILES\A577CA28A4FB51765804B7DD1F425250\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

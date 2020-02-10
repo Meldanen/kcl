@@ -1,0 +1,57 @@
+[3.735s] -- The C compiler identification is MSVC 19.24.28316.0
+[5.719s] -- The CXX compiler identification is MSVC 19.24.28316.0
+[5.891s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[7.656s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[7.688s] -- Detecting C compiler ABI info
+[9.438s] -- Detecting C compiler ABI info - done
+[9.469s] -- Detecting C compile features
+[9.485s] -- Detecting C compile features - done
+[9.531s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[11.203s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[11.219s] -- Detecting CXX compiler ABI info
+[13.094s] -- Detecting CXX compiler ABI info - done
+[13.125s] -- Detecting CXX compile features
+[13.125s] -- Detecting CXX compile features - done
+[13.188s] -- Found ament_cmake: 0.8.2 (C:/dev/ros2_eloquent/share/ament_cmake/cmake)
+[13.516s] -- Found PythonInterp: C:/Python37/python.exe (found suitable version "3.7.5", minimum required is "3") 
+[13.516s] -- Using PYTHON_EXECUTABLE: C:/Python37/python.exe
+[14.172s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[15.781s] -- Found example_interfaces: 0.7.1 (C:/dev/ros2_eloquent/share/example_interfaces/cmake)
+[16.516s] -- Found rosidl_adapter: 0.8.2 (C:/dev/ros2_eloquent/share/rosidl_adapter/cmake)
+[17.703s] -- Found rclcpp: 0.8.4 (C:/dev/ros2_eloquent/share/rclcpp/cmake)
+[17.953s] -- Found rmw_implementation_cmake: 0.8.1 (C:/dev/ros2_eloquent/share/rmw_implementation_cmake/cmake)
+[17.969s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[17.985s] -- Looking for pthread.h
+[19.031s] -- Looking for pthread.h - not found
+[19.031s] -- Found Threads: TRUE  
+[20.031s] -- Configuring done
+[20.266s] -- Generating done
+[20.297s] -- Build files have been written to: C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_service
+[20.735s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[20.735s] Copyright (C) Microsoft Corporation. All rights reserved.
+[20.735s] 
+[21.391s]   Checking Build System
+[21.953s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_service/CMakeLists.txt
+[22.485s]   main.cpp
+[28.141s]   service_main.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service\Release\service_main.exe
+[29.203s]   Building Custom Rule C:/kcl/robotics/ros/ros2_example_ws/src/examples/rclcpp/minimal_service/CMakeLists.txt
+[30.438s] Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+[30.438s] Copyright (C) Microsoft Corporation. All rights reserved.
+[30.438s] 
+[31.375s]   service_main.vcxproj -> C:\kcl\robotics\ros\ros2_example_ws\build\examples_rclcpp_minimal_service\Release\service_main.exe
+[31.953s]   -- Install configuration: "Release"
+[31.953s]   -- Execute custom install script
+[31.969s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/lib/examples_rclcpp_minimal_service/service_main.exe
+[32.250s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_service
+[32.406s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_service
+[32.563s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/ament_prefix_path.bat
+[32.828s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/ament_prefix_path.dsv
+[33.000s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/path.bat
+[33.156s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/path.dsv
+[33.485s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.bat
+[33.625s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.dsv
+[33.953s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/package.dsv
+[34.391s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/packages/examples_rclcpp_minimal_service
+[34.844s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/cmake/examples_rclcpp_minimal_serviceConfig.cmake
+[35.156s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/cmake/examples_rclcpp_minimal_serviceConfig-version.cmake
+[35.438s]   -- Symlinking: C:/kcl/robotics/ros/ros2_example_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/package.xml
