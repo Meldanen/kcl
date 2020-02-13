@@ -1,0 +1,8 @@
+prefix=C:/kcl/robotics/ros/catkin_ws/devel
+
+Name: test_urdf
+Description: Description of test_urdf
+Version: 0.0.0
+Cflags: 
+Libs: -LC:/kcl/robotics/ros/catkin_ws/devel/lib 
+Requires: 

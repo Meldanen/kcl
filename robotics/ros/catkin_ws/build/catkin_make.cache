@@ -1,0 +1,2 @@
+beginner_tutorials;joint_state_publisher\joint_state_publisher;joint_state_publisher\joint_state_publisher_gui;learning_tf;r2d2;testbot_description;turtlesim_cleaner;urdf_parser_py;urdf_tutorial
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=C:\kcl\robotics\ros\catkin_ws\devel -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\catkin_ws\install -G NMake Makefiles

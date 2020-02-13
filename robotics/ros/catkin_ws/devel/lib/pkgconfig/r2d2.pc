@@ -1,0 +1,8 @@
+prefix=C:/kcl/robotics/ros/catkin_ws/devel
+
+Name: r2d2
+Description: Description of r2d2
+Version: 0.0.0
+Cflags: 
+Libs: -LC:/kcl/robotics/ros/catkin_ws/devel/lib 
+Requires: 

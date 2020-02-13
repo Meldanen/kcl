@@ -1,0 +1,8 @@
+prefix=C:/kcl/robotics/ros/catkin_ws/devel
+
+Name: robot_state_publisher
+Description: Description of robot_state_publisher
+Version: 1.14.0
+Cflags: -IC:/kcl/robotics/ros/catkin_ws/src/robot_state_publisher/include -IC:/opt/ros/melodic/x64/share/orocos_kdl/cmake/../../../include -IC:/opt/rosdeps/x64/include/eigen3 -IC:/opt/rosdeps/x64/include
+Libs: -LC:/kcl/robotics/ros/catkin_ws/devel/lib -lrobot_state_publisher_solver -ljoint_state_listener C:/opt/ros/melodic/x64/lib/orocos-kdl.lib
+Requires: kdl_parser roscpp rosconsole rostime sensor_msgs tf2_ros tf2_kdl

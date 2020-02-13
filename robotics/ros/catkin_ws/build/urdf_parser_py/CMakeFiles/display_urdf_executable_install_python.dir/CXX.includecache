@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/kcl/robotics/ros/catkin_ws/build/urdf_parser_py/catkin_generated/add_python_executable/display_urdf_executable_install_python/display_urdf.cpp
+iostream
+-
+windows.h
+-
+

@@ -1,0 +1,6 @@
+set(urdfdom_py_SETUP_PY_VERSION "0.4.2")
+set(urdfdom_py_SETUP_PY_SCRIPTS "")
+set(urdfdom_py_SETUP_PY_PACKAGES "urdf_parser_py")
+set(urdfdom_py_SETUP_PY_PACKAGE_DIRS "src/urdf_parser_py")
+set(urdfdom_py_SETUP_PY_MODULES "")
+set(urdfdom_py_SETUP_PY_MODULE_DIRS "")

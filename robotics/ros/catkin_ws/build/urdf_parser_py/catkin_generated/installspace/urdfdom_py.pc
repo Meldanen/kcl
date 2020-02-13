@@ -1,0 +1,8 @@
+prefix=C:/kcl/robotics/ros/catkin_ws/install
+
+Name: urdfdom_py
+Description: Description of urdfdom_py
+Version: 0.4.2
+Cflags: 
+Libs: -LC:/kcl/robotics/ros/catkin_ws/install/lib 
+Requires: 

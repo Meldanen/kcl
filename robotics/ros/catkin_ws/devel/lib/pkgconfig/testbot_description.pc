@@ -1,0 +1,8 @@
+prefix=C:/kcl/robotics/ros/catkin_ws/devel
+
+Name: testbot_description
+Description: Description of testbot_description
+Version: 0.0.0
+Cflags: 
+Libs: -LC:/kcl/robotics/ros/catkin_ws/devel/lib 
+Requires: 
