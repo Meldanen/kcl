@@ -1,0 +1,16 @@
+[2.188s] -- The C compiler identification is MSVC 19.24.28316.0
+[3.375s] -- The CXX compiler identification is MSVC 19.24.28316.0
+[3.969s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[4.516s] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[4.516s] -- Detecting C compiler ABI info
+[5.469s] -- Detecting C compiler ABI info - done
+[5.485s] -- Detecting C compile features
+[5.485s] -- Detecting C compile features - done
+[5.500s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+[6.438s] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+[6.438s] -- Detecting CXX compiler ABI info
+[7.391s] -- Detecting CXX compiler ABI info - done
+[7.406s] -- Detecting CXX compile features
+[7.406s] -- Detecting CXX compile features - done
+[7.594s] -- Configuring incomplete, errors occurred!
+[7.594s] See also "C:/kcl/robotics/ros/assignment2/build/joint_state_publisher/CMakeFiles/CMakeOutput.log".

@@ -4,7 +4,6 @@ set(CATKIN_ORDERED_PACKAGES "")
 set(CATKIN_ORDERED_PACKAGE_PATHS "")
 set(CATKIN_ORDERED_PACKAGES_IS_META "")
 set(CATKIN_ORDERED_PACKAGES_BUILD_TYPE "")
-<<<<<<< HEAD
 list(APPEND CATKIN_ORDERED_PACKAGES "joint_state_publisher_gui")
 list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "joint_state_publisher/joint_state_publisher_gui")
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
@@ -29,13 +28,10 @@ list(APPEND CATKIN_ORDERED_PACKAGES "learning_tf")
 list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "learning_tf")
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
 list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
-=======
->>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
 list(APPEND CATKIN_ORDERED_PACKAGES "turtlesim_cleaner")
 list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "turtlesim_cleaner")
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
 list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
-<<<<<<< HEAD
 list(APPEND CATKIN_ORDERED_PACKAGES "testbot_description")
 list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "testbot_description")
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
@@ -48,9 +44,3 @@ list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
 set(CATKIN_MESSAGE_GENERATORS )
 
 set(CATKIN_METAPACKAGE_CMAKE_TEMPLATE "C:/opt/python27amd64/lib/site-packages/catkin_pkg/templates/metapackage.cmake.in")
-=======
-
-set(CATKIN_MESSAGE_GENERATORS )
-
-set(CATKIN_METAPACKAGE_CMAKE_TEMPLATE "/usr/lib/python2.7/dist-packages/catkin_pkg/templates/metapackage.cmake.in")
->>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140

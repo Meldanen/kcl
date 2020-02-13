@@ -1,5 +1,4 @@
 # Hashes of file build rules.
-<<<<<<< HEAD
 de7870a8fea26137649a31a7a5c6df22 CMakeFiles/clean_test_results
 71c863be67eeb31716c47d978d4331b9 joint_state_publisher/joint_state_publisher/CMakeFiles/_run_tests_joint_state_publisher_rostest_test_test_64_joint_robot.launch
 bab9820d3adf9cfbfb16aa94918be455 joint_state_publisher/joint_state_publisher/CMakeFiles/_run_tests_joint_state_publisher_rostest_test_test_mimic_chain.launch
@@ -22,6 +21,3 @@ fcf0714fc1c348e314dfa033b69d8a9f urdf_parser_py/CMakeFiles/run_tests_urdfdom_py_
 dd3b88be434f116968c2078a4481b5a2 urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial_roslaunch-check_launch
 6f56553a3e08dec9115f88e69867588d urdf_tutorial/CMakeFiles/clean_test_results_urdf_tutorial
 dd3b88be434f116968c2078a4481b5a2 urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial_roslaunch-check_launch
-=======
-f1be74ce64094148452f4c1a1da4d2d1 CMakeFiles/clean_test_results
->>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140

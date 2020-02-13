@@ -1,0 +1,9 @@
+source;share\joint_state_publisher\hook\pythonpath.ps1
+source;share\joint_state_publisher\hook\pythonpath.bat
+source;share\joint_state_publisher\hook\pythonpath.dsv
+source;share\joint_state_publisher\hook\ros_package_path.ps1
+source;share\joint_state_publisher\hook\ros_package_path.bat
+source;share\joint_state_publisher\hook\ros_package_path.dsv
+source;share\joint_state_publisher\hook\pkg_config_path.ps1
+source;share\joint_state_publisher\hook\pkg_config_path.bat
+source;share\joint_state_publisher\hook\pkg_config_path.dsv

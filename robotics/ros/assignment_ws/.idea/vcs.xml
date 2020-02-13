@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/pame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/urdf_sim_tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/urdf_tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/urdf_sim_tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/urdf_tutorial" vcs="Git" />
+  </component>
+</project>

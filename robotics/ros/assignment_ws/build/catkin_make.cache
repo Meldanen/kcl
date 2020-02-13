@@ -1,0 +1,2 @@
+learning_tf;pame;urdf_sim_tutorial;urdf_tutorial
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=C:\kcl\robotics\ros\assignment_ws\devel -DCMAKE_INSTALL_PREFIX=C:\kcl\robotics\ros\assignment_ws\install -G NMake Makefiles

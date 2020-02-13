@@ -1,0 +1,17 @@
+[7.594s] CMake Error at CMakeLists.txt:4 (find_package):
+[7.594s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[7.594s]   asked CMake to find a package configuration file provided by "catkin", but
+[7.594s]   CMake did not find one.
+[7.594s] 
+[7.594s]   Could not find a package configuration file provided by "catkin" with any
+[7.594s]   of the following names:
+[7.594s] 
+[7.594s]     catkinConfig.cmake
+[7.594s]     catkin-config.cmake
+[7.594s] 
+[7.594s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[7.594s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[7.594s]   provides a separate development package or SDK, be sure it has been
+[7.594s]   installed.
+[7.594s] 
+[7.594s] 

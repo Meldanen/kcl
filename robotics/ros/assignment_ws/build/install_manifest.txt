@@ -1,0 +1,6 @@
+C:/kcl/robotics/ros/assignment_ws/install/_setup_util.py
+C:/kcl/robotics/ros/assignment_ws/install/_setup_util.py.exe
+C:/kcl/robotics/ros/assignment_ws/install/env.bat
+C:/kcl/robotics/ros/assignment_ws/install/setup.bat
+C:/kcl/robotics/ros/assignment_ws/install/local_setup.bat
+C:/kcl/robotics/ros/assignment_ws/install/.rosinstall
