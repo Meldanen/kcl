@@ -67,14 +67,23 @@ set(turtlesim_cleaner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(turtlesim_cleaner_SOURCE_PREFIX C:/kcl/robotics/ros/catkin_ws/src/turtlesim_cleaner)
   set(turtlesim_cleaner_DEVEL_PREFIX C:/kcl/robotics/ros/catkin_ws/devel)
+=======
+  set(turtlesim_cleaner_SOURCE_PREFIX /home/mikroszolos/catkin_ws/src/turtlesim_cleaner)
+  set(turtlesim_cleaner_DEVEL_PREFIX /home/mikroszolos/catkin_ws/devel)
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
   set(turtlesim_cleaner_INSTALL_PREFIX "")
   set(turtlesim_cleaner_PREFIX ${turtlesim_cleaner_DEVEL_PREFIX})
 else()
   set(turtlesim_cleaner_SOURCE_PREFIX "")
   set(turtlesim_cleaner_DEVEL_PREFIX "")
+<<<<<<< HEAD
   set(turtlesim_cleaner_INSTALL_PREFIX C:/kcl/robotics/ros/catkin_ws/install)
+=======
+  set(turtlesim_cleaner_INSTALL_PREFIX /home/mikroszolos/catkin_ws/install)
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
   set(turtlesim_cleaner_PREFIX ${turtlesim_cleaner_INSTALL_PREFIX})
 endif()
 
@@ -110,7 +119,11 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'turtlesim_cleaner' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
+<<<<<<< HEAD
       message(FATAL_ERROR "Project 'turtlesim_cleaner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in 'C:/kcl/robotics/ros/catkin_ws/src/turtlesim_cleaner/${idir}'.  ${_report}")
+=======
+      message(FATAL_ERROR "Project 'turtlesim_cleaner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/mikroszolos/catkin_ws/src/turtlesim_cleaner/${idir}'.  ${_report}")
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
     endif()
     _list_append_unique(turtlesim_cleaner_INCLUDE_DIRS ${include})
   endforeach()
@@ -123,6 +136,32 @@ foreach(library ${libraries})
     list(APPEND turtlesim_cleaner_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
     list(APPEND turtlesim_cleaner_LIBRARIES ${library})
+<<<<<<< HEAD
+=======
+  elseif(${library} MATCHES "^-")
+    # This is a linker flag/option (like -pthread)
+    # There's no standard variable for these, so create an interface library to hold it
+    if(NOT turtlesim_cleaner_NUM_DUMMY_TARGETS)
+      set(turtlesim_cleaner_NUM_DUMMY_TARGETS 0)
+    endif()
+    # Make sure the target name is unique
+    set(interface_target_name "catkin::turtlesim_cleaner::wrapped-linker-option${turtlesim_cleaner_NUM_DUMMY_TARGETS}")
+    while(TARGET "${interface_target_name}")
+      math(EXPR turtlesim_cleaner_NUM_DUMMY_TARGETS "${turtlesim_cleaner_NUM_DUMMY_TARGETS}+1")
+      set(interface_target_name "catkin::turtlesim_cleaner::wrapped-linker-option${turtlesim_cleaner_NUM_DUMMY_TARGETS}")
+    endwhile()
+    add_library("${interface_target_name}" INTERFACE IMPORTED)
+    if("${CMAKE_VERSION}" VERSION_LESS "3.13.0")
+      set_property(
+        TARGET
+        "${interface_target_name}"
+        APPEND PROPERTY
+        INTERFACE_LINK_LIBRARIES "${library}")
+    else()
+      target_link_options("${interface_target_name}" INTERFACE "${library}")
+    endif()
+    list(APPEND turtlesim_cleaner_LIBRARIES "${interface_target_name}")
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
   elseif(TARGET ${library})
     list(APPEND turtlesim_cleaner_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -131,7 +170,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path C:/kcl/robotics/ros/catkin_ws/devel/lib;C:/kcl/robotics/ros/catkin_ws/devel/lib;C:/opt/ros/melodic/x64/lib)
+=======
+    foreach(path /home/mikroszolos/catkin_ws/devel/lib;/home/mikroszolos/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

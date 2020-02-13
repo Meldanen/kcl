@@ -1,12 +1,25 @@
 <?xml version="1.0"?>
+<<<<<<< HEAD
 <package format="2">
   <name>catkin</name>
   <version>0.7.18</version>
+=======
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>catkin</name>
+  <version>0.7.20</version>
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
   <description>Low-level build system macros and infrastructure for ROS.</description>
   <maintainer email="dthomas@osrfoundation.org">Dirk Thomas</maintainer>
   <license>BSD</license>
 
+<<<<<<< HEAD
   <url type="website">http://www.ros.org/wiki/catkin</url>
+=======
+  <url type="website">http://wiki.ros.org/catkin</url>
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
   <url type="bugtracker">https://github.com/ros/catkin/issues</url>
   <url type="repository">https://github.com/ros/catkin</url>
 
@@ -15,6 +28,7 @@
   <author>Brian Gerkey</author>
   <author>Dirk Thomas</author>
 
+<<<<<<< HEAD
   <buildtool_depend>cmake</buildtool_depend>
   <buildtool_export_depend>cmake</buildtool_export_depend>
 
@@ -30,6 +44,26 @@
 
   <test_depend>python-mock</test_depend>
   <test_depend>python-nose</test_depend>
+=======
+  <depend condition="$ROS_PYTHON_VERSION == 2">python-argparse</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 2" version_gt="0.4.3">python-catkin-pkg</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 3" version_gt="0.4.3">python3-catkin-pkg</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 2">python-empy</depend>
+  <depend condition="$ROS_PYTHON_VERSION == 3">python3-empy</depend>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_export_depend>cmake</buildtool_export_depend>
+
+  <build_export_depend>google-mock</build_export_depend>
+  <build_export_depend>gtest</build_export_depend>
+  <build_export_depend condition="$ROS_PYTHON_VERSION == 2">python-nose</build_export_depend>
+  <build_export_depend condition="$ROS_PYTHON_VERSION == 3">python3-nose</build_export_depend>
+
+  <test_depend condition="$ROS_PYTHON_VERSION == 2">python-mock</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 3">python3-mock</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 2">python-nose</test_depend>
+  <test_depend condition="$ROS_PYTHON_VERSION == 3">python3-nose</test_depend>
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
 
   <export>
     <rosdoc config="rosdoc.yaml"/>

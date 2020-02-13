@@ -1,2 +1,6 @@
 - setup-file:
+<<<<<<< HEAD
     local-name: C:/kcl/robotics/ros/catkin_ws/install/setup.sh
+=======
+    local-name: /home/mikroszolos/catkin_ws/install/setup.sh
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140

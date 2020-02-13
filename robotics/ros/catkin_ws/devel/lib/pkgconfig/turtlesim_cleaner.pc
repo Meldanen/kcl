@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 prefix=C:/kcl/robotics/ros/catkin_ws/devel
+=======
+prefix=/home/mikroszolos/catkin_ws/devel
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
 
 Name: turtlesim_cleaner
 Description: Description of turtlesim_cleaner
 Version: 0.0.0
 Cflags: 
+<<<<<<< HEAD
 Libs: -LC:/kcl/robotics/ros/catkin_ws/devel/lib 
+=======
+Libs: -L${prefix}/lib 
+>>>>>>> 3dea7c5d8e72392238c46d905c351dcfde7f3140
 Requires: 
