@@ -22,6 +22,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "C:/kcl/robotics/ros/catkin_ws/devel/include"
   "C:/kcl/robotics/ros/catkin_ws/src/r2d2/include"
   "C:/opt/ros/melodic/x64/include"
   "C:/opt/ros/melodic/x64/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"

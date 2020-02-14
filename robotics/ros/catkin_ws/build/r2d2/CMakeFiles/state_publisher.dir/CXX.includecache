@@ -15,6 +15,12 @@ sensor_msgs/JointState.h
 -
 tf/transform_broadcaster.h
 -
+std_msgs/String.h
+C:/kcl/robotics/ros/catkin_ws/src/r2d2/src/std_msgs/String.h
+iostream
+-
+sstream
+-
 
 C:/opt/ros/melodic/x64/include/geometry_msgs/Point.h
 string
@@ -909,6 +915,22 @@ std_msgs/Header.h
 -
 
 C:/opt/ros/melodic/x64/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+C:/opt/ros/melodic/x64/include/std_msgs/String.h
 string
 -
 vector

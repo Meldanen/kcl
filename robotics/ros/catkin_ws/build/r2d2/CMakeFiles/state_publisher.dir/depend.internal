@@ -73,6 +73,7 @@ r2d2/CMakeFiles/state_publisher.dir/src/state_publisher.cpp.obj
  C:/opt/ros/melodic/x64/include/rosconsole/macros_generated.h
  C:/opt/ros/melodic/x64/include/sensor_msgs/JointState.h
  C:/opt/ros/melodic/x64/include/std_msgs/Header.h
+ C:/opt/ros/melodic/x64/include/std_msgs/String.h
  C:/opt/ros/melodic/x64/include/tf/LinearMath/Matrix3x3.h
  C:/opt/ros/melodic/x64/include/tf/LinearMath/MinMax.h
  C:/opt/ros/melodic/x64/include/tf/LinearMath/QuadWord.h

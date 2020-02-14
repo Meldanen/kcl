@@ -3,6 +3,6 @@ prefix=C:/kcl/robotics/ros/catkin_ws/install
 Name: r2d2
 Description: Description of r2d2
 Version: 0.0.0
-Cflags: 
+Cflags: -IC:/kcl/robotics/ros/catkin_ws/install/include
 Libs: -LC:/kcl/robotics/ros/catkin_ws/install/lib 
 Requires: 
