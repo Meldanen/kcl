@@ -1,0 +1,8 @@
+<launch>
+    <param name="robot_description" command="C:/opt/ros/melodic/x64/lib/xacro/xacro C:\kcl/robotics/ros/assignment_ws/src/basic_robot/model/model.xacro"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+    <node name="rviz" pkg="rviz" type="rviz"/>
+    
+    <node name="BasicRobotModelServer" pkg="basic_robot" type="BasicRobotModelServer.py" >
+    </node>
+</launch>

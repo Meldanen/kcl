@@ -50,48 +50,48 @@ The CXX compiler identification is MSVC, found in "C:/kcl/robotics/ros/assignmen
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/kcl/robotics/ros/assignment_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_90025\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_90025.dir\build.make /nologo -L                  CMakeFiles\cmTC_90025.dir\build
-Building C object CMakeFiles/cmTC_90025.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm5F48.tmp
+Run Build Command(s):nmake /nologo cmTC_6edb4\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_6edb4.dir\build.make /nologo -L                  CMakeFiles\cmTC_6edb4.dir\build
+Building C object CMakeFiles/cmTC_6edb4.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm4835.tmp
 testCCompiler.c
-Linking C executable cmTC_90025.exe
-	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_90025.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_90025.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm5FF5.tmp
+Linking C executable cmTC_6edb4.exe
+	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_6edb4.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_6edb4.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm4A0B.tmp
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/kcl/robotics/ros/assignment_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_e84ca\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_e84ca.dir\build.make /nologo -L                  CMakeFiles\cmTC_e84ca.dir\build
-Building C object CMakeFiles/cmTC_e84ca.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm62F2.tmp
+Run Build Command(s):nmake /nologo cmTC_d7830\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_d7830.dir\build.make /nologo -L                  CMakeFiles\cmTC_d7830.dir\build
+Building C object CMakeFiles/cmTC_d7830.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm4D46.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_e84ca.exe
-	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_e84ca.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_e84ca.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm638F.tmp
+Linking C executable cmTC_d7830.exe
+	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_d7830.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_d7830.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm4E02.tmp
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/kcl/robotics/ros/assignment_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_b13ed\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_b13ed.dir\build.make /nologo -L                  CMakeFiles\cmTC_b13ed.dir\build
-Building CXX object CMakeFiles/cmTC_b13ed.dir/testCXXCompiler.cxx.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm668C.tmp
+Run Build Command(s):nmake /nologo cmTC_265c7\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_265c7.dir\build.make /nologo -L                  CMakeFiles\cmTC_265c7.dir\build
+Building CXX object CMakeFiles/cmTC_265c7.dir/testCXXCompiler.cxx.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm50EF.tmp
 testCXXCompiler.cxx
-Linking CXX executable cmTC_b13ed.exe
-	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_b13ed.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_b13ed.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm6729.tmp
+Linking CXX executable cmTC_265c7.exe
+	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_265c7.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_265c7.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm517D.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/kcl/robotics/ros/assignment_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_481ed\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_481ed.dir\build.make /nologo -L                  CMakeFiles\cmTC_481ed.dir\build
-Building CXX object CMakeFiles/cmTC_481ed.dir/CMakeCXXCompilerABI.cpp.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm69D7.tmp
+Run Build Command(s):nmake /nologo cmTC_a2100\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_a2100.dir\build.make /nologo -L                  CMakeFiles\cmTC_a2100.dir\build
+Building CXX object CMakeFiles/cmTC_a2100.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\cl.exe @C:\Users\dorit\AppData\Local\Temp\nm541C.tmp
 CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_481ed.exe
-	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_481ed.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_481ed.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm6A75.tmp
+Linking CXX executable cmTC_a2100.exe
+	C:\opt\python27amd64\Lib\site-packages\cmake\data\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_a2100.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_a2100.dir\objects1.rsp @C:\Users\dorit\AppData\Local\Temp\nm54B9.tmp
 
 
 

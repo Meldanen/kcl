@@ -107,10 +107,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/kcl/robotics/ros/assignment_ws/build/urdf_sim_tutorial/cmake_install.cmake")
-  include("C:/kcl/robotics/ros/assignment_ws/build/pame/cmake_install.cmake")
-  include("C:/kcl/robotics/ros/assignment_ws/build/learning_tf/cmake_install.cmake")
-  include("C:/kcl/robotics/ros/assignment_ws/build/urdf_tutorial/cmake_install.cmake")
+  include("C:/kcl/robotics/ros/assignment_ws/build/basic_robot/cmake_install.cmake")
 
 endif()
 

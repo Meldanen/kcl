@@ -266,11 +266,11 @@ SETUPTOOLS_DEB_LAYOUT:BOOL=OFF
 //Name of the computer/site where compile is being run
 SITE:STRING=DESKTOP-9EMOT3D
 
-//The directory containing a CMake configuration file for actionlib.
-actionlib_DIR:PATH=C:/opt/ros/melodic/x64/share/actionlib/cmake
+//Value Computed by CMake
+basic_robot_BINARY_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/build/basic_robot
 
-//The directory containing a CMake configuration file for actionlib_msgs.
-actionlib_msgs_DIR:PATH=C:/opt/ros/melodic/x64/share/actionlib_msgs/cmake
+//Value Computed by CMake
+basic_robot_SOURCE_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/src/basic_robot
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=C:/opt/ros/melodic/x64/share/catkin/cmake
@@ -296,32 +296,14 @@ gennodejs_DIR:PATH=C:/opt/ros/melodic/x64/share/gennodejs/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=C:/opt/ros/melodic/x64/share/genpy/cmake
 
-//The directory containing a CMake configuration file for geometry_msgs.
-geometry_msgs_DIR:PATH=C:/opt/ros/melodic/x64/share/geometry_msgs/cmake
-
-//Value Computed by CMake
-learning_tf_BINARY_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/build/learning_tf
-
-//Value Computed by CMake
-learning_tf_SOURCE_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/src/learning_tf
-
 //Path to a library.
-lib:FILEPATH=C:/opt/ros/melodic/x64/lib/tf2.lib
-
-//The directory containing a CMake configuration file for message_filters.
-message_filters_DIR:PATH=C:/opt/ros/melodic/x64/share/message_filters/cmake
+lib:FILEPATH=C:/opt/ros/melodic/x64/lib/xmlrpcpp.lib
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=C:/opt/ros/melodic/x64/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=C:/opt/ros/melodic/x64/share/message_runtime/cmake
-
-//Value Computed by CMake
-pame_BINARY_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/build/pame
-
-//Value Computed by CMake
-pame_SOURCE_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/src/pame
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=C:/opt/ros/melodic/x64/share/rosconsole/cmake
@@ -335,14 +317,8 @@ roscpp_serialization_DIR:PATH=C:/opt/ros/melodic/x64/share/roscpp_serialization/
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=C:/opt/ros/melodic/x64/share/roscpp_traits/cmake
 
-//The directory containing a CMake configuration file for rosgraph.
-rosgraph_DIR:PATH=C:/opt/ros/melodic/x64/share/rosgraph/cmake
-
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=C:/opt/ros/melodic/x64/share/rosgraph_msgs/cmake
-
-//The directory containing a CMake configuration file for roslaunch.
-roslaunch_DIR:PATH=C:/opt/ros/melodic/x64/share/roslaunch/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=C:/opt/ros/melodic/x64/share/rospy/cmake
@@ -350,50 +326,8 @@ rospy_DIR:PATH=C:/opt/ros/melodic/x64/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=C:/opt/ros/melodic/x64/share/rostime/cmake
 
-//The directory containing a CMake configuration file for sensor_msgs.
-sensor_msgs_DIR:PATH=C:/opt/ros/melodic/x64/share/sensor_msgs/cmake
-
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=C:/opt/ros/melodic/x64/share/std_msgs/cmake
-
-//The directory containing a CMake configuration file for std_srvs.
-std_srvs_DIR:PATH=C:/opt/ros/melodic/x64/share/std_srvs/cmake
-
-//The directory containing a CMake configuration file for tf2.
-tf2_DIR:PATH=C:/opt/ros/melodic/x64/share/tf2/cmake
-
-//The directory containing a CMake configuration file for tf2_msgs.
-tf2_msgs_DIR:PATH=C:/opt/ros/melodic/x64/share/tf2_msgs/cmake
-
-//The directory containing a CMake configuration file for tf2_py.
-tf2_py_DIR:PATH=C:/opt/ros/melodic/x64/share/tf2_py/cmake
-
-//The directory containing a CMake configuration file for tf2_ros.
-tf2_ros_DIR:PATH=C:/opt/ros/melodic/x64/share/tf2_ros/cmake
-
-//The directory containing a CMake configuration file for tf.
-tf_DIR:PATH=C:/opt/ros/melodic/x64/share/tf/cmake
-
-//The directory containing a CMake configuration file for turtlesim.
-turtlesim_DIR:PATH=C:/opt/ros/melodic/x64/share/turtlesim/cmake
-
-//Value Computed by CMake
-turtlesim_cleaner_BINARY_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/build/turtlesim_cleaner
-
-//Value Computed by CMake
-turtlesim_cleaner_SOURCE_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/src/turtlesim_cleaner
-
-//Value Computed by CMake
-urdf_sim_tutorial_BINARY_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/build/urdf_sim_tutorial
-
-//Value Computed by CMake
-urdf_sim_tutorial_SOURCE_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/src/urdf_sim_tutorial
-
-//Value Computed by CMake
-urdf_tutorial_BINARY_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/build/urdf_tutorial
-
-//Value Computed by CMake
-urdf_tutorial_SOURCE_DIR:STATIC=C:/kcl/robotics/ros/assignment_ws/src/urdf_tutorial
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=C:/opt/ros/melodic/x64/share/xmlrpcpp/cmake
@@ -496,7 +430,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER

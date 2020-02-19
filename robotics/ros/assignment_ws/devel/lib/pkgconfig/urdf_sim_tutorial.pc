@@ -1,8 +1,0 @@
-prefix=C:/kcl/robotics/ros/assignment_ws/devel
-
-Name: urdf_sim_tutorial
-Description: Description of urdf_sim_tutorial
-Version: 0.4.0
-Cflags: 
-Libs: -LC:/kcl/robotics/ros/assignment_ws/devel/lib 
-Requires: 

@@ -1,0 +1,9 @@
+string mode
+string node
+float32 x
+float32 y
+float32 z
+float32 joint1
+float32 joint2
+string success
+string position
