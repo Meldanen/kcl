@@ -6,6 +6,7 @@ from MoveValidityEnum import MoveValidityEnum
 from MovementModeEnum import MovementModeEnum
 from MovementModeEnum import Utils as MovementModeEnumUtils
 
+
 class Message:
 
     def __init__(self):
@@ -14,11 +15,11 @@ class Message:
 
     def clearMessage(self):
         self.setMode(MovementModeEnum.NONE.getLabel)
-        self.setX(0)
-        self.setY(0)
-        self.setZ(0)
-        self.setJoint1(0)
-        self.setJoint2(0)
+        self.setX(0.0)
+        self.setY(0.0)
+        self.setZ(0.0)
+        self.setJoint1(0.0)
+        self.setJoint2(0.0)
         self.setSuccess(MoveValidityEnum.NOT_AVAILABLE.value)
         self.setPosition(("N/A", "N/A"))
         self.setNode(NodeTypeEnum.CLIENT.value)
@@ -35,41 +36,32 @@ class Message:
         self.setNode(node)
 
     def setNode(self, node):
-        if node:
-            self.message.node = node
+        self.message.node = node
 
     def setPosition(self, position):
-        if position:
-            self.message.position = "First Joint position: " + str(position[0]) + ", Second Joint position: " + str(
-                position[1])
+        self.message.position = "First Joint position: " + str(position[0]) + ", Second Joint position: " + str(
+            position[1])
 
     def setSuccess(self, success):
-        if success:
-            self.message.success = success
+        self.message.success = success
 
     def setJoint2(self, joint2):
-        if joint2:
-            self.message.joint2 = joint2
+        self.message.joint2 = joint2
 
     def setJoint1(self, joint1):
-        if joint1:
-            self.message.joint1 = joint1
+        self.message.joint1 = joint1
 
     def setZ(self, z):
-        if z:
-            self.message.z = z
+        self.message.z = z
 
     def setY(self, y):
-        if y:
-            self.message.y = y
+        self.message.y = y
 
     def setX(self, x):
-        if x:
-            self.message.x = x
+        self.message.x = x
 
     def setMode(self, mode):
-        if mode:
-            self.message.mode = mode
+        self.message.mode = mode
 
     def getRosMessage(self):
         return self.message

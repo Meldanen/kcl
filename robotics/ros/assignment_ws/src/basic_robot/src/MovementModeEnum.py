@@ -30,9 +30,11 @@ class Utils:
         for mode in MovementModeEnum:
             if mode.getLabel == value:
                 return mode
+        return None
 
     @staticmethod
     def getEnumFromId(value):
         for mode in MovementModeEnum:
             if mode.getId == value:
                 return mode
+        return None

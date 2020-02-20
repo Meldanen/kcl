@@ -21,6 +21,9 @@ class RobotModelClient:
             mode = self.getInput(
                 "Type 1 to set joint angles directly or type 2 to set the end effector's position: ")
             modeEnum = MovementModeUtils.getEnumFromId(mode)
+            if modeEnum is None:
+                print("Invalid mode requested. Valid modes are 1 or 2.")
+                continue
             self.message.setMode(modeEnum.getLabel)
             if self.message.isUsingJointPosition():
                 joint1 = self.getInput("First joint (in radians): ")
@@ -53,11 +56,11 @@ class RobotModelClient:
         while True:
             value = input(message)
             try:
-                answer = int(value)
+                answer = float(value)
                 break
             except ValueError:
                 try:
-                    answer = float(value)
+                    answer = int(value)
                     break
                 except ValueError:
                     print("Input must be numeric.")

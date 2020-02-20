@@ -10,8 +10,10 @@ from NodeTypeEnum import NodeTypeEnum
 from MoveValidityEnum import MoveValidityEnum
 from MovementModeEnum import Utils as MovementModeUtils
 
+
 class RobotState:
     def __init__(self):
+        rospy.init_node(NodeTypeEnum.BASIC_ROBOT_MODEL_SERVER.value)
         self.initJointState()
         self.initPublishersAndSubscribers()
         self.message = Message()
@@ -19,16 +21,30 @@ class RobotState:
 
     def initJointState(self):
         self.jointState = JointState()
-        self.jointState.name = ['joint1', 'joint2']
+        self.jointState.name = ['lowerJoint', 'upperJoint']
         self.jointState.position = [0.0, 0.0]
 
     def initPublishersAndSubscribers(self):
         rospy.Subscriber(NodeTypeEnum.TWO_WAY_COMMUNICATION_CHATTER.value, instructionsMessage, self.callback)
-        self.publisher = rospy.Publisher(NodeTypeEnum.TWO_WAY_COMMUNICATION_CHATTER.value, instructionsMessage, queue_size=1)
+        self.publisher = rospy.Publisher(NodeTypeEnum.TWO_WAY_COMMUNICATION_CHATTER.value, instructionsMessage,
+                                         queue_size=1)
         self.jointStatePublisher = rospy.Publisher(NodeTypeEnum.JOINT_STATES.value, JointState, queue_size=1)
 
-    def setResponseMessage(self, data):
-        jointStatePosition = self.getJointStatePosition(data)
+    def start(self):
+        while not rospy.is_shutdown():
+            self.updateJoints()
+            self.publishMessage(self.message)
+
+    def callback(self, data):
+        if data.node == NodeTypeEnum.CLIENT.value:
+            jointStatePosition = self.getJointStatePosition(data)
+            self.setResponseMessage(data, jointStatePosition)
+
+    def setResponseMessage(self, data, jointStatePosition):
+        joint1, joint2, x, y, z = self.setJointStatePosition(jointStatePosition)
+        self.setMessage(data.mode, x, y, z, joint1, joint2, jointStatePosition)
+
+    def setJointStatePosition(self, jointStatePosition):
         if jointStatePosition[2].isValid:
             joint1, joint2 = jointStatePosition[0], jointStatePosition[1]
             x, y, z = self.kinematics.getForwardKinematics(joint1, joint2)
@@ -36,19 +52,10 @@ class RobotState:
         else:
             x, y, z = 0.0, 0.0, 0.0
             joint1, joint2 = self.jointState.position[0], self.jointState.position[1]
-        self.setMessage(data.mode, x, y, z, joint1, joint2, jointStatePosition)
-
-    def start(self):
-        while not rospy.is_shutdown():
-            self.updateJoints()
-            self.publishMessage(self.message)
+        return joint1, joint2, x, y, z
 
     def publishMessage(self, message):
         self.publisher.publish(message.getRosMessage())
-
-    def callback(self, data):
-        if data.node == NodeTypeEnum.CLIENT.value:
-            self.setResponseMessage(data)
 
     def updateJoints(self):
         self.jointState.header.stamp = rospy.Time.now()
@@ -75,7 +82,6 @@ class RobotState:
 
 if __name__ == '__main__':
     try:
-        rospy.init_node(NodeTypeEnum.BASIC_ROBOT_MODEL_SERVER.value)
         robotState = RobotState()
         robotState.start()
     except rospy.ROSInterruptException:
