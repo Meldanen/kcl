@@ -1,9 +1,0 @@
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/uninstall.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/examples_rclcpp_minimal_subscriber_uninstall.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/subscriber_lambda.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/subscriber_not_composable.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/subscriber_member_function.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/INSTALL.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/RUN_TESTS.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/ALL_BUILD.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_subscriber/CMakeFiles/ZERO_CHECK.dir

@@ -1,13 +1,15 @@
+#include "ros/ros.h"
+#include "r2d2/AddTwoInts.h"
 #include <string>
-#include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
 #include <tf/transform_broadcaster.h>
 #include "std_msgs/String.h"
 #include <iostream>
 #include <sstream>
+#include <iostream>
 using namespace std;
 
-
+/*
 void chatterCallback(const std_msgs::String::ConstPtr& msg)
 {
     ROS_INFO("I heard: [%s]", msg->data.c_str());
@@ -18,18 +20,19 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
     geek >> x;
 
 }
-
+*/
 int main(int argc, char** argv) {
     ros::init(argc, argv, "state_publisher");
-    ros::NodeHandle n;
+
     ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState>("joint_states", 1);
     tf::TransformBroadcaster broadcaster;
     ros::Rate loop_rate(30);
-    ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
+
+    //ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
     const double degree = M_PI/180;
 
     // robot state
-    double tilt = 0, tinc = degree, joint1=0, joint2=0, x=0, angle=0, height=0, hinc=0.005;
+    double tilt = 0, tinc = degree, x=0, joint1=0, joint2=0, angle=0, height=0, hinc=0.005;
 
     // message declarations
 //    geometry_msgs::TransformStamped odom_trans;
@@ -70,7 +73,7 @@ int main(int argc, char** argv) {
         height += hinc;
         if (height>.2 || height<0) hinc *= -1;
         joint1 += x;
-	joint2 += x;
+	    joint2 += x;
         angle += degree/4;
 
         // This will adjust as needed per iteration

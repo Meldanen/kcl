@@ -1,8 +1,0 @@
-prefix=C:/kcl/robotics/ros/catkin_ws/devel
-
-Name: joint_state_publisher_gui
-Description: Description of joint_state_publisher_gui
-Version: 1.12.14
-Cflags: 
-Libs: -LC:/kcl/robotics/ros/catkin_ws/devel/lib 
-Requires: 

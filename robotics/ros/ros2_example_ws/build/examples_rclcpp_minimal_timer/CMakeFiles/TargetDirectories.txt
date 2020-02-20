@@ -1,8 +1,0 @@
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/uninstall.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/examples_rclcpp_minimal_timer_uninstall.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/INSTALL.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/RUN_TESTS.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/timer_lambda.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/timer_member_function.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/ALL_BUILD.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/CMakeFiles/ZERO_CHECK.dir

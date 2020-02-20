@@ -1,6 +1,0 @@
-source;share\kokos\hook\pythonpath.ps1
-source;share\kokos\hook\pythonpath.bat
-source;share\kokos\hook\pythonpath.dsv
-source;share\kokos\hook\ament_prefix_path.ps1
-source;share\kokos\hook\ament_prefix_path.bat
-source;share\kokos\hook\ament_prefix_path.dsv

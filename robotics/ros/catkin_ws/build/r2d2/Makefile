@@ -1079,6 +1079,25 @@ tf2_msgs_generate_messages_nodejs\fast:
 .PHONY : tf2_msgs_generate_messages_nodejs\fast
 
 # Convenience name for target.
+r2d2\CMakeFiles\state_publisher.dir\rule:
+	cd C:\kcl\robotics\ros\catkin_ws\build
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) r2d2\CMakeFiles\state_publisher.dir\rule
+	cd C:\kcl\robotics\ros\catkin_ws\build\r2d2
+.PHONY : r2d2\CMakeFiles\state_publisher.dir\rule
+
+# Convenience name for target.
+state_publisher: r2d2\CMakeFiles\state_publisher.dir\rule
+
+.PHONY : state_publisher
+
+# fast build rule for target.
+state_publisher\fast:
+	cd C:\kcl\robotics\ros\catkin_ws\build
+	$(MAKE) -f r2d2\CMakeFiles\state_publisher.dir\build.make /nologo -$(MAKEFLAGS) r2d2\CMakeFiles\state_publisher.dir\build
+	cd C:\kcl\robotics\ros\catkin_ws\build\r2d2
+.PHONY : state_publisher\fast
+
+# Convenience name for target.
 r2d2\CMakeFiles\tf2_msgs_generate_messages_py.dir\rule:
 	cd C:\kcl\robotics\ros\catkin_ws\build
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) r2d2\CMakeFiles\tf2_msgs_generate_messages_py.dir\rule
@@ -1372,6 +1391,39 @@ src\add_two_ints_server.cpp.s:
 	cd C:\kcl\robotics\ros\catkin_ws\build\r2d2
 .PHONY : src\add_two_ints_server.cpp.s
 
+src\state_publisher.obj: src\state_publisher.cpp.obj
+
+.PHONY : src\state_publisher.obj
+
+# target to build an object file
+src\state_publisher.cpp.obj:
+	cd C:\kcl\robotics\ros\catkin_ws\build
+	$(MAKE) -f r2d2\CMakeFiles\state_publisher.dir\build.make /nologo -$(MAKEFLAGS) r2d2\CMakeFiles\state_publisher.dir\src\state_publisher.cpp.obj
+	cd C:\kcl\robotics\ros\catkin_ws\build\r2d2
+.PHONY : src\state_publisher.cpp.obj
+
+src\state_publisher.i: src\state_publisher.cpp.i
+
+.PHONY : src\state_publisher.i
+
+# target to preprocess a source file
+src\state_publisher.cpp.i:
+	cd C:\kcl\robotics\ros\catkin_ws\build
+	$(MAKE) -f r2d2\CMakeFiles\state_publisher.dir\build.make /nologo -$(MAKEFLAGS) r2d2\CMakeFiles\state_publisher.dir\src\state_publisher.cpp.i
+	cd C:\kcl\robotics\ros\catkin_ws\build\r2d2
+.PHONY : src\state_publisher.cpp.i
+
+src\state_publisher.s: src\state_publisher.cpp.s
+
+.PHONY : src\state_publisher.s
+
+# target to generate assembly for a file
+src\state_publisher.cpp.s:
+	cd C:\kcl\robotics\ros\catkin_ws\build
+	$(MAKE) -f r2d2\CMakeFiles\state_publisher.dir\build.make /nologo -$(MAKEFLAGS) r2d2\CMakeFiles\state_publisher.dir\src\state_publisher.cpp.s
+	cd C:\kcl\robotics\ros\catkin_ws\build\r2d2
+.PHONY : src\state_publisher.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -1427,6 +1479,7 @@ help:
 	@echo ... tf2_msgs_generate_messages_eus
 	@echo ... tf2_msgs_generate_messages_lisp
 	@echo ... tf2_msgs_generate_messages_nodejs
+	@echo ... state_publisher
 	@echo ... rebuild_cache
 	@echo ... tf2_msgs_generate_messages_py
 	@echo ... _r2d2_generate_messages_check_deps_Num
@@ -1450,6 +1503,9 @@ help:
 	@echo ... src/add_two_ints_server.obj
 	@echo ... src/add_two_ints_server.i
 	@echo ... src/add_two_ints_server.s
+	@echo ... src/state_publisher.obj
+	@echo ... src/state_publisher.i
+	@echo ... src/state_publisher.s
 .PHONY : help
 
 

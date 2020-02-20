@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/RelWithDebInfo/timer_lambda.exe" "C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_timer/RelWithDebInfo/timer_member_function.exe" "TARGETS" "timer_lambda" "timer_member_function" "DESTINATION" "lib/examples_rclcpp_minimal_timer")

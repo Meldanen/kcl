@@ -1,9 +1,0 @@
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/uninstall.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/publisher_lambda.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/examples_rclcpp_minimal_publisher_uninstall.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/publisher_not_composable.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/publisher_member_function.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/INSTALL.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/RUN_TESTS.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/ALL_BUILD.dir
-C:/kcl/robotics/ros/ros2_example_ws/build/examples_rclcpp_minimal_publisher/CMakeFiles/ZERO_CHECK.dir
