@@ -6,11 +6,13 @@ from Message import Message
 from NodeTypeEnum import NodeTypeEnum
 from MovementModeEnum import Utils as MovementModeUtils
 
+
 class RobotModelClient:
 
     def __init__(self):
         rospy.init_node(NodeTypeEnum.BASIC_ROBOT_MODEL_CLIENT.value, anonymous=True)
-        self.publisher = rospy.Publisher(NodeTypeEnum.TWO_WAY_COMMUNICATION_CHATTER.value, instructionsMessage, queue_size=1)
+        self.publisher = rospy.Publisher(NodeTypeEnum.TWO_WAY_COMMUNICATION_CHATTER.value, instructionsMessage,
+                                         queue_size=1)
         self.message = Message()
 
     def start(self):
