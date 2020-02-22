@@ -1,10 +1,12 @@
 # Running the robot model
 
 ### 1. In a new terminal (in the appropriate directory)
+
 ```
 roslaunch basic_robot display.launch
 ```
 ### 2. In a new terminal (in the appropriate directory)
+
 ```
 rosrun basic_robot src/BasicRobotModelClient
 ```
