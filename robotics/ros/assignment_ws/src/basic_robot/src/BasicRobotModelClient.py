@@ -48,10 +48,6 @@ class RobotModelClient:
             print("\n \n")
 
     @staticmethod
-    def callback(data):
-        rospy.loginfo(data)
-
-    @staticmethod
     def getInput(message):
         while True:
             value = input(message)

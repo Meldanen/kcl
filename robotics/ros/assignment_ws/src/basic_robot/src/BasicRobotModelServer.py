@@ -41,10 +41,10 @@ class RobotState:
             self.setResponseMessage(data, jointStatePosition)
 
     def setResponseMessage(self, data, jointStatePosition):
-        joint1, joint2, x, y, z = self.setJointStatePosition(jointStatePosition)
+        joint1, joint2, x, y, z = self.getRobotConfiguration(jointStatePosition)
         self.setMessage(data.mode, x, y, z, joint1, joint2, jointStatePosition)
 
-    def setJointStatePosition(self, jointStatePosition):
+    def getRobotConfiguration(self, jointStatePosition):
         if jointStatePosition[2].isValid:
             joint1, joint2 = jointStatePosition[0], jointStatePosition[1]
             x, y, z = self.kinematics.getForwardKinematics(joint1, joint2)
@@ -54,13 +54,6 @@ class RobotState:
             joint1, joint2 = self.jointState.position[0], self.jointState.position[1]
         return joint1, joint2, x, y, z
 
-    def publishMessage(self, message):
-        self.publisher.publish(message.getRosMessage())
-
-    def updateJoints(self):
-        self.jointState.header.stamp = rospy.Time.now()
-        self.jointStatePublisher.publish(self.jointState)
-
     def getJointStatePosition(self, data):
         mode = MovementModeUtils.getEnumFromLabel(data.mode)
         if mode.isJointPosition:
@@ -69,6 +62,13 @@ class RobotState:
         if self.isValidPosition(t1, t2, data):
             return t1, t2, MoveValidityEnum.VALID
         return self.jointState.position[0], self.jointState.position[1], MoveValidityEnum.INVALID
+
+    def publishMessage(self, message):
+        self.publisher.publish(message.getRosMessage())
+
+    def updateJoints(self):
+        self.jointState.header.stamp = rospy.Time.now()
+        self.jointStatePublisher.publish(self.jointState)
 
     def isValidPosition(self, t1, t2, data):
         x, y, z = self.kinematics.getForwardKinematics(t1, t2)
