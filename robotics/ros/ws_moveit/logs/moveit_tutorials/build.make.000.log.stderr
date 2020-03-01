@@ -1,0 +1,26 @@
+[01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/interactivity/src/interactive_robot.cpp:[m[K In member function ‘[01m[Kvoid InteractiveRobot::updateAll()[m[K’:
+[01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/interactivity/src/interactive_robot.cpp:235:76:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool moveit::core::RobotState::setFromIK(const moveit::core::JointModelGroup*, const Isometry3d&, unsigned int, double, const GroupStateValidityCallbackFn&, const kinematics::KinematicsQueryOptions&)[m[K’ is deprecated: The attempts argument is not supported anymore. [[01;35m[K-Wdeprecated-declarations[m[K]
+   if (robot_state_->setFromIK(group_, desired_group_end_link_pose_, 10, 0.1[01;35m[K)[m[K)
+                                                                            [01;35m[K^[m[K
+In file included from [01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/interactivity/include/interactivity/interactive_robot.h:45:0[m[K,
+                 from [01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/interactivity/src/interactive_robot.cpp:39[m[K:
+[01m[K/opt/ros/melodic/include/moveit/robot_state/robot_state.h:995:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   [01;36m[KsetFromIK[m[K(const JointModelGroup* group, const Eigen::Isometry3d& pose, unsigned int attempts, double timeout = 0.0,
+   [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/state_display/src/state_display_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/state_display/src/state_display_tutorial.cpp:115:93:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool moveit::core::RobotState::setFromIK(const moveit::core::JointModelGroup*, const Isometry3d&, unsigned int, double, const GroupStateValidityCallbackFn&, const kinematics::KinematicsQueryOptions&)[m[K’ is deprecated: The attempts argument is not supported anymore. [[01;35m[K-Wdeprecated-declarations[m[K]
+     bool found_ik = kinematic_state->setFromIK(joint_model_group, end_effector_pose, 10, 0.1[01;35m[K)[m[K;
+                                                                                             [01;35m[K^[m[K
+In file included from [01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/state_display/src/state_display_tutorial.cpp:42:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/robot_state/robot_state.h:995:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   [01;36m[KsetFromIK[m[K(const JointModelGroup* group, const Eigen::Isometry3d& pose, unsigned int attempts, double timeout = 0.0,
+   [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/pcl-1.8/pcl/sample_consensus/sac_model.h:52:0[m[K,
+                 from [01m[K/usr/include/pcl-1.8/pcl/sample_consensus/sac.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.8/pcl/segmentation/sac_segmentation.h:49[m[K,
+                 from [01m[K/home/mikroszolos/kcl/robotics/ros/ws_moveit/src/moveit_tutorials/doc/perception_pipeline/src/cylinder_segment.cpp:43[m[K:
+[01m[K/usr/include/pcl-1.8/pcl/sample_consensus/model_types.h:[m[K In function ‘[01m[Kvoid __static_initialization_and_destruction_0(int, int)[m[K’:
+[01m[K/usr/include/pcl-1.8/pcl/sample_consensus/model_types.h:99:3:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpcl::SAC_SAMPLE_SIZE[m[K’ is deprecated: This map is deprecated and is kept only to prevent breaking existing user code. Starting from PCL 1.8.0 model sample size is a protected member of the SampleConsensusModel class [[01;35m[K-Wdeprecated-declarations[m[K]
+   [01;35m[KSAC_SAMPLE_SIZE[m[K (sample_size_pairs, sample_size_pairs + sizeof (sample_size_pairs) / sizeof (SampleSizeModel));
+   [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.8/pcl/sample_consensus/model_types.h:99:3:[m[K [01;36m[Knote: [m[Kdeclared here
