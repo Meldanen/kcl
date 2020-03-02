@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/moveit_tutorials/planning_scene_ros_api_tutorial")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/moveit_tutorials/planning_scene_ros_api_tutorial"
-         OLD_RPATH "/opt/ros/melodic/lib:/usr/lib/x86_64-linux-gnu/hdf5/openmpi:/usr/lib/x86_64-linux-gnu/openmpi/lib:"
+         OLD_RPATH "/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_visual_tools/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/geometric_shapes/lib:/opt/ros/melodic/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_planning_interface/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_warehouse/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_manipulation/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_move_group/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_planning/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_perception/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_occupancy_map_monitor/lib:/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_core/lib:/usr/lib/x86_64-linux-gnu/hdf5/openmpi:/usr/lib/x86_64-linux-gnu/openmpi/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/moveit_tutorials/planning_scene_ros_api_tutorial")

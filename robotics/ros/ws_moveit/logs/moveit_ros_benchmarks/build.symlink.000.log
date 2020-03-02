@@ -1,0 +1,7 @@
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_ros_benchmarks.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_ros_benchmarks.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_ros_benchmarks.pc
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_ros_benchmarks/moveit_run_benchmark
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_ros_benchmarks/moveit_combine_predefined_poses_benchmark
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig-version.cmake
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig.cmake

@@ -1,16 +1,25 @@
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/libinteractivity_utils.so, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libinteractivity_utils.so)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/pkgconfig/moveit_tutorials.pc, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_tutorials.pc)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/motion_planning_api_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/motion_planning_api_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/cylinder_segment, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/cylinder_segment)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/motion_planning_pipeline_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/motion_planning_pipeline_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/ros_api_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/ros_api_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/planning_scene_ros_api_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/planning_scene_ros_api_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/state_display_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/state_display_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/pick_place_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/pick_place_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/visualizing_collisions_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/visualizing_collisions_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/robot_model_and_robot_state_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/robot_model_and_robot_state_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/planning_scene_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/planning_scene_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/bag_publisher_maintain_time, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/bag_publisher_maintain_time)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/move_group_interface_tutorial, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/move_group_interface_tutorial)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/share/moveit_tutorials/cmake/moveit_tutorialsConfig.cmake, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_tutorials/cmake/moveit_tutorialsConfig.cmake)
-Linked: (/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_tutorials/share/moveit_tutorials/cmake/moveit_tutorialsConfig-version.cmake, /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_tutorials/cmake/moveit_tutorialsConfig-version.cmake)
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libinteractivity_utils.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_lerp_planner_plugin.so.0.1.0
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_lerp_planner_plugin.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libcontroller_manager_example.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_tutorials.so.0.1.0
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_tutorials.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_tutorials.pc
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/motion_planning_api_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/cylinder_segment
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/motion_planning_pipeline_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/ros_api_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/planning_scene_ros_api_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/state_display_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/pick_place_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/subframes_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/visualizing_collisions_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/robot_model_and_robot_state_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/planning_scene_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/moveit_cpp_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/trajopt_example
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/lerp_example
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/bag_publisher_maintain_time
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_tutorials/move_group_interface_tutorial
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_tutorials/cmake/moveit_tutorialsConfig.cmake
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_tutorials/cmake/moveit_tutorialsConfig-version.cmake

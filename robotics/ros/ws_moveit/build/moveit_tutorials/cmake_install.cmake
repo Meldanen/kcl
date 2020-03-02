@@ -159,7 +159,13 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/state_display/cmake_install.cmake")
   include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/interactivity/cmake_install.cmake")
   include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/pick_place/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/subframes/cmake_install.cmake")
   include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/perception_pipeline/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/tests/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/controller_configuration/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/trajopt_planner/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/creating_moveit_plugins/lerp_motion_planner/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_tutorials/doc/moveit_cpp/cmake_install.cmake")
 
 endif()
 

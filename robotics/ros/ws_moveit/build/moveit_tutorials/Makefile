@@ -126,8 +126,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -1936,6 +1936,19 @@ pick_place_tutorial/fast:
 .PHONY : pick_place_tutorial/fast
 
 #=============================================================================
+# Target rules for targets named subframes_tutorial
+
+# Build rule for target.
+subframes_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 subframes_tutorial
+.PHONY : subframes_tutorial
+
+# fast build rule for target.
+subframes_tutorial/fast:
+	$(MAKE) -f doc/subframes/CMakeFiles/subframes_tutorial.dir/build.make doc/subframes/CMakeFiles/subframes_tutorial.dir/build
+.PHONY : subframes_tutorial/fast
+
+#=============================================================================
 # Target rules for targets named cylinder_segment
 
 # Build rule for target.
@@ -1960,6 +1973,188 @@ bag_publisher_maintain_time: cmake_check_build_system
 bag_publisher_maintain_time/fast:
 	$(MAKE) -f doc/perception_pipeline/CMakeFiles/bag_publisher_maintain_time.dir/build.make doc/perception_pipeline/CMakeFiles/bag_publisher_maintain_time.dir/build
 .PHONY : bag_publisher_maintain_time/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_moveit_tutorials
+
+# Build rule for target.
+clean_test_results_moveit_tutorials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_moveit_tutorials
+.PHONY : clean_test_results_moveit_tutorials
+
+# fast build rule for target.
+clean_test_results_moveit_tutorials/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/clean_test_results_moveit_tutorials.dir/build.make doc/tests/CMakeFiles/clean_test_results_moveit_tutorials.dir/build
+.PHONY : clean_test_results_moveit_tutorials/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_moveit_tutorials_gtest_tests_tutorial
+
+# Build rule for target.
+_run_tests_moveit_tutorials_gtest_tests_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_moveit_tutorials_gtest_tests_tutorial
+.PHONY : _run_tests_moveit_tutorials_gtest_tests_tutorial
+
+# fast build rule for target.
+_run_tests_moveit_tutorials_gtest_tests_tutorial/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/_run_tests_moveit_tutorials_gtest_tests_tutorial.dir/build.make doc/tests/CMakeFiles/_run_tests_moveit_tutorials_gtest_tests_tutorial.dir/build
+.PHONY : _run_tests_moveit_tutorials_gtest_tests_tutorial/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_moveit_tutorials
+
+# Build rule for target.
+run_tests_moveit_tutorials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_moveit_tutorials
+.PHONY : run_tests_moveit_tutorials
+
+# fast build rule for target.
+run_tests_moveit_tutorials/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/run_tests_moveit_tutorials.dir/build.make doc/tests/CMakeFiles/run_tests_moveit_tutorials.dir/build
+.PHONY : run_tests_moveit_tutorials/fast
+
+#=============================================================================
+# Target rules for targets named tests_tutorial
+
+# Build rule for target.
+tests_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests_tutorial
+.PHONY : tests_tutorial
+
+# fast build rule for target.
+tests_tutorial/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/tests_tutorial.dir/build.make doc/tests/CMakeFiles/tests_tutorial.dir/build
+.PHONY : tests_tutorial/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_moveit_tutorials_gtest
+
+# Build rule for target.
+_run_tests_moveit_tutorials_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_moveit_tutorials_gtest
+.PHONY : _run_tests_moveit_tutorials_gtest
+
+# fast build rule for target.
+_run_tests_moveit_tutorials_gtest/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/_run_tests_moveit_tutorials_gtest.dir/build.make doc/tests/CMakeFiles/_run_tests_moveit_tutorials_gtest.dir/build
+.PHONY : _run_tests_moveit_tutorials_gtest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_moveit_tutorials
+
+# Build rule for target.
+_run_tests_moveit_tutorials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_moveit_tutorials
+.PHONY : _run_tests_moveit_tutorials
+
+# fast build rule for target.
+_run_tests_moveit_tutorials/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/_run_tests_moveit_tutorials.dir/build.make doc/tests/CMakeFiles/_run_tests_moveit_tutorials.dir/build
+.PHONY : _run_tests_moveit_tutorials/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_moveit_tutorials_gtest
+
+# Build rule for target.
+run_tests_moveit_tutorials_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_moveit_tutorials_gtest
+.PHONY : run_tests_moveit_tutorials_gtest
+
+# fast build rule for target.
+run_tests_moveit_tutorials_gtest/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/run_tests_moveit_tutorials_gtest.dir/build.make doc/tests/CMakeFiles/run_tests_moveit_tutorials_gtest.dir/build
+.PHONY : run_tests_moveit_tutorials_gtest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_moveit_tutorials_gtest_tests_tutorial
+
+# Build rule for target.
+run_tests_moveit_tutorials_gtest_tests_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_moveit_tutorials_gtest_tests_tutorial
+.PHONY : run_tests_moveit_tutorials_gtest_tests_tutorial
+
+# fast build rule for target.
+run_tests_moveit_tutorials_gtest_tests_tutorial/fast:
+	$(MAKE) -f doc/tests/CMakeFiles/run_tests_moveit_tutorials_gtest_tests_tutorial.dir/build.make doc/tests/CMakeFiles/run_tests_moveit_tutorials_gtest_tests_tutorial.dir/build
+.PHONY : run_tests_moveit_tutorials_gtest_tests_tutorial/fast
+
+#=============================================================================
+# Target rules for targets named controller_manager_example
+
+# Build rule for target.
+controller_manager_example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_example
+.PHONY : controller_manager_example
+
+# fast build rule for target.
+controller_manager_example/fast:
+	$(MAKE) -f doc/controller_configuration/CMakeFiles/controller_manager_example.dir/build.make doc/controller_configuration/CMakeFiles/controller_manager_example.dir/build
+.PHONY : controller_manager_example/fast
+
+#=============================================================================
+# Target rules for targets named trajopt_example
+
+# Build rule for target.
+trajopt_example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajopt_example
+.PHONY : trajopt_example
+
+# fast build rule for target.
+trajopt_example/fast:
+	$(MAKE) -f doc/trajopt_planner/CMakeFiles/trajopt_example.dir/build.make doc/trajopt_planner/CMakeFiles/trajopt_example.dir/build
+.PHONY : trajopt_example/fast
+
+#=============================================================================
+# Target rules for targets named lerp_example
+
+# Build rule for target.
+lerp_example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lerp_example
+.PHONY : lerp_example
+
+# fast build rule for target.
+lerp_example/fast:
+	$(MAKE) -f doc/creating_moveit_plugins/lerp_motion_planner/CMakeFiles/lerp_example.dir/build.make doc/creating_moveit_plugins/lerp_motion_planner/CMakeFiles/lerp_example.dir/build
+.PHONY : lerp_example/fast
+
+#=============================================================================
+# Target rules for targets named moveit_tutorials
+
+# Build rule for target.
+moveit_tutorials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 moveit_tutorials
+.PHONY : moveit_tutorials
+
+# fast build rule for target.
+moveit_tutorials/fast:
+	$(MAKE) -f doc/creating_moveit_plugins/lerp_motion_planner/CMakeFiles/moveit_tutorials.dir/build.make doc/creating_moveit_plugins/lerp_motion_planner/CMakeFiles/moveit_tutorials.dir/build
+.PHONY : moveit_tutorials/fast
+
+#=============================================================================
+# Target rules for targets named moveit_lerp_planner_plugin
+
+# Build rule for target.
+moveit_lerp_planner_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 moveit_lerp_planner_plugin
+.PHONY : moveit_lerp_planner_plugin
+
+# fast build rule for target.
+moveit_lerp_planner_plugin/fast:
+	$(MAKE) -f doc/creating_moveit_plugins/lerp_motion_planner/CMakeFiles/moveit_lerp_planner_plugin.dir/build.make doc/creating_moveit_plugins/lerp_motion_planner/CMakeFiles/moveit_lerp_planner_plugin.dir/build
+.PHONY : moveit_lerp_planner_plugin/fast
+
+#=============================================================================
+# Target rules for targets named moveit_cpp_tutorial
+
+# Build rule for target.
+moveit_cpp_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 moveit_cpp_tutorial
+.PHONY : moveit_cpp_tutorial
+
+# fast build rule for target.
+moveit_cpp_tutorial/fast:
+	$(MAKE) -f doc/moveit_cpp/CMakeFiles/moveit_cpp_tutorial.dir/build.make doc/moveit_cpp/CMakeFiles/moveit_cpp_tutorial.dir/build
+.PHONY : moveit_cpp_tutorial/fast
 
 # Help Target
 help:
@@ -2110,8 +2305,23 @@ help:
 	@echo "... state_display_tutorial"
 	@echo "... interactivity_utils"
 	@echo "... pick_place_tutorial"
+	@echo "... subframes_tutorial"
 	@echo "... cylinder_segment"
 	@echo "... bag_publisher_maintain_time"
+	@echo "... clean_test_results_moveit_tutorials"
+	@echo "... _run_tests_moveit_tutorials_gtest_tests_tutorial"
+	@echo "... run_tests_moveit_tutorials"
+	@echo "... tests_tutorial"
+	@echo "... _run_tests_moveit_tutorials_gtest"
+	@echo "... _run_tests_moveit_tutorials"
+	@echo "... run_tests_moveit_tutorials_gtest"
+	@echo "... run_tests_moveit_tutorials_gtest_tests_tutorial"
+	@echo "... controller_manager_example"
+	@echo "... trajopt_example"
+	@echo "... lerp_example"
+	@echo "... moveit_tutorials"
+	@echo "... moveit_lerp_planner_plugin"
+	@echo "... moveit_cpp_tutorial"
 .PHONY : help
 
 

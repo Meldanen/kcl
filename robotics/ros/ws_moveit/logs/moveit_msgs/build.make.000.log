@@ -1,0 +1,746 @@
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_JointLimits[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_JointLimits
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetPlanningScene[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPlanningScene
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_AttachedCollisionObject[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_AttachedCollisionObject
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlanningScene[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningScene
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_DisplayRobotState[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_DisplayRobotState
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupActionFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupActionFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_Grasp[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_Grasp
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_OrientedBoundingBox[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_OrientedBoundingBox
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetPositionIK[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPositionIK
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupActionFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupActionFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteKnownTrajectory[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteKnownTrajectory
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_py[0m
+[  0%] Built target shape_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_RobotState[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_RobotState
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_AllowedCollisionMatrix[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_AllowedCollisionMatrix
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceLocation[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceLocation
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceActionResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceActionResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GenericTrajectory[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GenericTrajectory
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlannerInterfaceDescription[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlannerInterfaceDescription
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_WorkspaceParameters[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_WorkspaceParameters
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupAction[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupAction
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_LinkPadding[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_LinkPadding
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryAction[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryAction
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_VisibilityConstraint[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_VisibilityConstraint
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceActionGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceActionGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GraspPlanning[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GraspPlanning
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceAction[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceAction
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MotionPlanRequest[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MotionPlanRequest
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveItErrorCodes[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveItErrorCodes
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GripperTranslation[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GripperTranslation
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ChangeDriftDimensions[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ChangeDriftDimensions
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetMotionPlan[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetMotionPlan
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_CheckIfRobotStateExistsInWarehouse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CheckIfRobotStateExistsInWarehouse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ApplyPlanningScene[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ApplyPlanningScene
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_CartesianTrajectoryPoint[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CartesianTrajectoryPoint
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MotionPlanResponse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MotionPlanResponse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_RobotTrajectory[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_RobotTrajectory
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_AllowedCollisionEntry[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_AllowedCollisionEntry
+[35m[1mScanning dependencies of target octomap_msgs_generate_messages_py[0m
+[  0%] Built target octomap_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_BoundingVolume[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_BoundingVolume
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PositionConstraint[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PositionConstraint
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetPlannerParams[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPlannerParams
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ConstraintEvalResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ConstraintEvalResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ContactInformation[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ContactInformation
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlaceActionFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceActionFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetStateValidity[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetStateValidity
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_DisplayTrajectory[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_DisplayTrajectory
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_DeleteRobotStateFromWarehouse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_DeleteRobotStateFromWarehouse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_OrientationConstraint[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_OrientationConstraint
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_SaveMap[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_SaveMap
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[  0%] Built target actionlib_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_LinkScale[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_LinkScale
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_RenameRobotStateInWarehouse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_RenameRobotStateInWarehouse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_CostSource[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CostSource
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_Constraints[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_Constraints
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlanningOptions[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningOptions
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[  0%] Built target trajectory_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupActionResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupActionResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_SetPlannerParams[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_SetPlannerParams
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_CartesianPoint[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CartesianPoint
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PositionIKRequest[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PositionIKRequest
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupAction[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupAction
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_KinematicSolverInfo[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_KinematicSolverInfo
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlanningSceneWorld[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningSceneWorld
+[35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_py[0m
+[  0%] Built target object_recognition_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_CollisionObject[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CollisionObject
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupActionGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupActionGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetPositionFK[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPositionFK
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MotionPlanDetailedResponse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MotionPlanDetailedResponse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ListRobotStatesInWarehouse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ListRobotStatesInWarehouse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlannerParams[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlannerParams
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupActionGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupActionGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_CartesianTrajectory[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CartesianTrajectory
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetCartesianPath[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetCartesianPath
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PlanningSceneComponents[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningSceneComponents
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupFeedback[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupFeedback
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_QueryPlannerInterfaces[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_QueryPlannerInterfaces
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_SaveRobotStateToWarehouse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_SaveRobotStateToWarehouse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ChangeControlDimensions[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ChangeControlDimensions
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_PickupGoal[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupGoal
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_ObjectColor[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ObjectColor
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_JointConstraint[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_JointConstraint
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_MoveGroupActionResult[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupActionResult
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_TrajectoryConstraints[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_TrajectoryConstraints
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_GetRobotStateFromWarehouse[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetRobotStateFromWarehouse
+[35m[1mScanning dependencies of target _moveit_msgs_generate_messages_check_deps_LoadMap[0m
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_LoadMap
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[  0%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[  0%] Built target trajectory_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_lisp[0m
+[  0%] Built target object_recognition_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_lisp[0m
+[  0%] Built target shape_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target octomap_msgs_generate_messages_lisp[0m
+[  0%] Built target octomap_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_cpp[0m
+[  0%] Built target shape_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[  0%] Built target trajectory_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target octomap_msgs_generate_messages_cpp[0m
+[  0%] Built target octomap_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_cpp[0m
+[  0%] Built target object_recognition_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[  0%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_eus[0m
+[  0%] Built target shape_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_eus[0m
+[  0%] Built target object_recognition_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  0%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[  0%] Built target trajectory_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target octomap_msgs_generate_messages_eus[0m
+[  0%] Built target octomap_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_nodejs[0m
+[  0%] Built target shape_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_nodejs[0m
+[  0%] Built target object_recognition_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target octomap_msgs_generate_messages_nodejs[0m
+[  0%] Built target octomap_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[  0%] Built target trajectory_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target moveit_msgs_generate_messages_py[0m
+[  0%] [34m[1mGenerating Python from MSG moveit_msgs/CostSource[0m
+[  0%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceActionResult[0m
+[  0%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceLocation[0m
+[  1%] [34m[1mGenerating Python from MSG moveit_msgs/PlanningOptions[0m
+[  1%] [34m[1mGenerating Python from MSG moveit_msgs/BoundingVolume[0m
+[  1%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceFeedback[0m
+[  1%] [34m[1mGenerating Python from MSG moveit_msgs/ConstraintEvalResult[0m
+[  1%] [34m[1mGenerating Python from MSG moveit_msgs/PositionConstraint[0m
+[  2%] [34m[1mGenerating Python from MSG moveit_msgs/PlanningSceneWorld[0m
+[  2%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupAction[0m
+[  2%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupActionResult[0m
+[  2%] [34m[1mGenerating Python from MSG moveit_msgs/PickupGoal[0m
+[  2%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryActionResult[0m
+[  3%] [34m[1mGenerating Python from MSG moveit_msgs/MotionPlanResponse[0m
+[  3%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupGoal[0m
+[  3%] [34m[1mGenerating Python from MSG moveit_msgs/PlanningSceneComponents[0m
+[  3%] [34m[1mGenerating Python from MSG moveit_msgs/LinkScale[0m
+[  3%] [34m[1mGenerating Python from MSG moveit_msgs/JointConstraint[0m
+[  4%] [34m[1mGenerating Python from MSG moveit_msgs/CartesianTrajectoryPoint[0m
+[  4%] [34m[1mGenerating Python from MSG moveit_msgs/OrientedBoundingBox[0m
+[  4%] [34m[1mGenerating Python from MSG moveit_msgs/Constraints[0m
+[  4%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceActionGoal[0m
+[  4%] [34m[1mGenerating Python from MSG moveit_msgs/PositionIKRequest[0m
+[  5%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceActionFeedback[0m
+[  5%] [34m[1mGenerating Python from MSG moveit_msgs/AllowedCollisionEntry[0m
+[  5%] [34m[1mGenerating Python from MSG moveit_msgs/Grasp[0m
+[  5%] [34m[1mGenerating Python from MSG moveit_msgs/PickupResult[0m
+[  6%] [34m[1mGenerating Python from MSG moveit_msgs/AllowedCollisionMatrix[0m
+[  6%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupResult[0m
+[  6%] [34m[1mGenerating Python from MSG moveit_msgs/CartesianTrajectory[0m
+[  6%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceAction[0m
+[  6%] [34m[1mGenerating Python from MSG moveit_msgs/PickupActionGoal[0m
+[  7%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryFeedback[0m
+[  7%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupFeedback[0m
+[  7%] [34m[1mGenerating Python from MSG moveit_msgs/PlannerParams[0m
+[  7%] [34m[1mGenerating Python from MSG moveit_msgs/CollisionObject[0m
+[  7%] [34m[1mGenerating Python from MSG moveit_msgs/PickupActionFeedback[0m
+[  8%] [34m[1mGenerating Python from MSG moveit_msgs/DisplayTrajectory[0m
+[  8%] [34m[1mGenerating Python from MSG moveit_msgs/PlannerInterfaceDescription[0m
+[  8%] [34m[1mGenerating Python from MSG moveit_msgs/VisibilityConstraint[0m
+[  8%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryAction[0m
+[  8%] [34m[1mGenerating Python from MSG moveit_msgs/RobotState[0m
+[  9%] [34m[1mGenerating Python from MSG moveit_msgs/DisplayRobotState[0m
+[  9%] [34m[1mGenerating Python from MSG moveit_msgs/CartesianPoint[0m
+[  9%] [34m[1mGenerating Python from MSG moveit_msgs/RobotTrajectory[0m
+[  9%] [34m[1mGenerating Python from MSG moveit_msgs/LinkPadding[0m
+[  9%] [34m[1mGenerating Python from MSG moveit_msgs/PlanningScene[0m
+[ 10%] [34m[1mGenerating Python from MSG moveit_msgs/AttachedCollisionObject[0m
+[ 10%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceGoal[0m
+[ 10%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryGoal[0m
+[ 10%] [34m[1mGenerating Python from MSG moveit_msgs/ObjectColor[0m
+[ 11%] [34m[1mGenerating Python from MSG moveit_msgs/ContactInformation[0m
+[ 11%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryActionGoal[0m
+[ 11%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupActionGoal[0m
+[ 11%] [34m[1mGenerating Python from MSG moveit_msgs/PlaceResult[0m
+[ 11%] [34m[1mGenerating Python from MSG moveit_msgs/OrientationConstraint[0m
+[ 12%] [34m[1mGenerating Python from MSG moveit_msgs/PickupAction[0m
+[ 12%] [34m[1mGenerating Python from MSG moveit_msgs/GripperTranslation[0m
+[ 12%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryResult[0m
+[ 12%] [34m[1mGenerating Python from MSG moveit_msgs/WorkspaceParameters[0m
+[ 12%] [34m[1mGenerating Python from MSG moveit_msgs/MoveGroupActionFeedback[0m
+[ 13%] [34m[1mGenerating Python from MSG moveit_msgs/GenericTrajectory[0m
+[ 13%] [34m[1mGenerating Python from MSG moveit_msgs/ExecuteTrajectoryActionFeedback[0m
+[ 13%] [34m[1mGenerating Python from MSG moveit_msgs/PickupFeedback[0m
+[ 13%] [34m[1mGenerating Python from MSG moveit_msgs/JointLimits[0m
+[ 13%] [34m[1mGenerating Python from MSG moveit_msgs/MotionPlanDetailedResponse[0m
+[ 14%] [34m[1mGenerating Python from MSG moveit_msgs/KinematicSolverInfo[0m
+[ 14%] [34m[1mGenerating Python from MSG moveit_msgs/PickupActionResult[0m
+[ 14%] [34m[1mGenerating Python from MSG moveit_msgs/MotionPlanRequest[0m
+[ 14%] [34m[1mGenerating Python from MSG moveit_msgs/MoveItErrorCodes[0m
+[ 14%] [34m[1mGenerating Python from MSG moveit_msgs/TrajectoryConstraints[0m
+[ 15%] [34m[1mGenerating Python code from SRV moveit_msgs/QueryPlannerInterfaces[0m
+[ 15%] [34m[1mGenerating Python code from SRV moveit_msgs/GetPositionFK[0m
+[ 15%] [34m[1mGenerating Python code from SRV moveit_msgs/GetRobotStateFromWarehouse[0m
+[ 15%] [34m[1mGenerating Python code from SRV moveit_msgs/RenameRobotStateInWarehouse[0m
+[ 16%] [34m[1mGenerating Python code from SRV moveit_msgs/ApplyPlanningScene[0m
+[ 16%] [34m[1mGenerating Python code from SRV moveit_msgs/GetPlannerParams[0m
+[ 16%] [34m[1mGenerating Python code from SRV moveit_msgs/GetCartesianPath[0m
+[ 16%] [34m[1mGenerating Python code from SRV moveit_msgs/GraspPlanning[0m
+[ 16%] [34m[1mGenerating Python code from SRV moveit_msgs/GetMotionPlan[0m
+[ 17%] [34m[1mGenerating Python code from SRV moveit_msgs/SetPlannerParams[0m
+[ 17%] [34m[1mGenerating Python code from SRV moveit_msgs/DeleteRobotStateFromWarehouse[0m
+[ 17%] [34m[1mGenerating Python code from SRV moveit_msgs/GetPositionIK[0m
+[ 17%] [34m[1mGenerating Python code from SRV moveit_msgs/ChangeControlDimensions[0m
+[ 17%] [34m[1mGenerating Python code from SRV moveit_msgs/LoadMap[0m
+[ 18%] [34m[1mGenerating Python code from SRV moveit_msgs/ChangeDriftDimensions[0m
+[ 18%] [34m[1mGenerating Python code from SRV moveit_msgs/ListRobotStatesInWarehouse[0m
+[ 18%] [34m[1mGenerating Python code from SRV moveit_msgs/GetPlanningScene[0m
+[ 18%] [34m[1mGenerating Python code from SRV moveit_msgs/SaveMap[0m
+[ 18%] [34m[1mGenerating Python code from SRV moveit_msgs/ExecuteKnownTrajectory[0m
+[ 19%] [34m[1mGenerating Python code from SRV moveit_msgs/GetStateValidity[0m
+[ 19%] [34m[1mGenerating Python code from SRV moveit_msgs/CheckIfRobotStateExistsInWarehouse[0m
+[ 19%] [34m[1mGenerating Python code from SRV moveit_msgs/SaveRobotStateToWarehouse[0m
+[ 19%] [34m[1mGenerating Python msg __init__.py for moveit_msgs[0m
+[ 20%] [34m[1mGenerating Python srv __init__.py for moveit_msgs[0m
+[ 20%] Built target moveit_msgs_generate_messages_py
+[35m[1mScanning dependencies of target moveit_msgs_generate_messages_lisp[0m
+[ 20%] [34m[1mGenerating Lisp code from moveit_msgs/CostSource.msg[0m
+[ 20%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceActionResult.msg[0m
+[ 20%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceLocation.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from moveit_msgs/PlanningOptions.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from moveit_msgs/BoundingVolume.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceFeedback.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from moveit_msgs/ConstraintEvalResult.msg[0m
+[ 22%] [34m[1mGenerating Lisp code from moveit_msgs/PositionConstraint.msg[0m
+[ 22%] [34m[1mGenerating Lisp code from moveit_msgs/PlanningSceneWorld.msg[0m
+[ 22%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupAction.msg[0m
+[ 22%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupActionResult.msg[0m
+[ 22%] [34m[1mGenerating Lisp code from moveit_msgs/PickupGoal.msg[0m
+[ 23%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryActionResult.msg[0m
+[ 23%] [34m[1mGenerating Lisp code from moveit_msgs/MotionPlanResponse.msg[0m
+[ 23%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupGoal.msg[0m
+[ 23%] [34m[1mGenerating Lisp code from moveit_msgs/PlanningSceneComponents.msg[0m
+[ 23%] [34m[1mGenerating Lisp code from moveit_msgs/LinkScale.msg[0m
+[ 24%] [34m[1mGenerating Lisp code from moveit_msgs/JointConstraint.msg[0m
+[ 24%] [34m[1mGenerating Lisp code from moveit_msgs/CartesianTrajectoryPoint.msg[0m
+[ 24%] [34m[1mGenerating Lisp code from moveit_msgs/OrientedBoundingBox.msg[0m
+[ 24%] [34m[1mGenerating Lisp code from moveit_msgs/Constraints.msg[0m
+[ 24%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceActionGoal.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from moveit_msgs/PositionIKRequest.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceActionFeedback.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from moveit_msgs/AllowedCollisionEntry.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from moveit_msgs/Grasp.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from moveit_msgs/PickupResult.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from moveit_msgs/AllowedCollisionMatrix.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupResult.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from moveit_msgs/CartesianTrajectory.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceAction.msg[0m
+[ 27%] [34m[1mGenerating Lisp code from moveit_msgs/PickupActionGoal.msg[0m
+[ 27%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryFeedback.msg[0m
+[ 27%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupFeedback.msg[0m
+[ 27%] [34m[1mGenerating Lisp code from moveit_msgs/PlannerParams.msg[0m
+[ 27%] [34m[1mGenerating Lisp code from moveit_msgs/CollisionObject.msg[0m
+[ 28%] [34m[1mGenerating Lisp code from moveit_msgs/PickupActionFeedback.msg[0m
+[ 28%] [34m[1mGenerating Lisp code from moveit_msgs/DisplayTrajectory.msg[0m
+[ 28%] [34m[1mGenerating Lisp code from moveit_msgs/PlannerInterfaceDescription.msg[0m
+[ 28%] [34m[1mGenerating Lisp code from moveit_msgs/VisibilityConstraint.msg[0m
+[ 28%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryAction.msg[0m
+[ 29%] [34m[1mGenerating Lisp code from moveit_msgs/RobotState.msg[0m
+[ 29%] [34m[1mGenerating Lisp code from moveit_msgs/DisplayRobotState.msg[0m
+[ 29%] [34m[1mGenerating Lisp code from moveit_msgs/CartesianPoint.msg[0m
+[ 29%] [34m[1mGenerating Lisp code from moveit_msgs/RobotTrajectory.msg[0m
+[ 29%] [34m[1mGenerating Lisp code from moveit_msgs/LinkPadding.msg[0m
+[ 30%] [34m[1mGenerating Lisp code from moveit_msgs/PlanningScene.msg[0m
+[ 30%] [34m[1mGenerating Lisp code from moveit_msgs/AttachedCollisionObject.msg[0m
+[ 30%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceGoal.msg[0m
+[ 30%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryGoal.msg[0m
+[ 30%] [34m[1mGenerating Lisp code from moveit_msgs/ObjectColor.msg[0m
+[ 31%] [34m[1mGenerating Lisp code from moveit_msgs/ContactInformation.msg[0m
+[ 31%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryActionGoal.msg[0m
+[ 31%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupActionGoal.msg[0m
+[ 31%] [34m[1mGenerating Lisp code from moveit_msgs/PlaceResult.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from moveit_msgs/OrientationConstraint.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from moveit_msgs/PickupAction.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from moveit_msgs/GripperTranslation.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryResult.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from moveit_msgs/WorkspaceParameters.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from moveit_msgs/MoveGroupActionFeedback.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from moveit_msgs/GenericTrajectory.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteTrajectoryActionFeedback.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from moveit_msgs/PickupFeedback.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from moveit_msgs/JointLimits.msg[0m
+[ 34%] [34m[1mGenerating Lisp code from moveit_msgs/MotionPlanDetailedResponse.msg[0m
+[ 34%] [34m[1mGenerating Lisp code from moveit_msgs/KinematicSolverInfo.msg[0m
+[ 34%] [34m[1mGenerating Lisp code from moveit_msgs/PickupActionResult.msg[0m
+[ 34%] [34m[1mGenerating Lisp code from moveit_msgs/MotionPlanRequest.msg[0m
+[ 34%] [34m[1mGenerating Lisp code from moveit_msgs/MoveItErrorCodes.msg[0m
+[ 35%] [34m[1mGenerating Lisp code from moveit_msgs/TrajectoryConstraints.msg[0m
+[ 35%] [34m[1mGenerating Lisp code from moveit_msgs/QueryPlannerInterfaces.srv[0m
+[ 35%] [34m[1mGenerating Lisp code from moveit_msgs/GetPositionFK.srv[0m
+[ 35%] [34m[1mGenerating Lisp code from moveit_msgs/GetRobotStateFromWarehouse.srv[0m
+[ 35%] [34m[1mGenerating Lisp code from moveit_msgs/RenameRobotStateInWarehouse.srv[0m
+[ 36%] [34m[1mGenerating Lisp code from moveit_msgs/ApplyPlanningScene.srv[0m
+[ 36%] [34m[1mGenerating Lisp code from moveit_msgs/GetPlannerParams.srv[0m
+[ 36%] [34m[1mGenerating Lisp code from moveit_msgs/GetCartesianPath.srv[0m
+[ 36%] [34m[1mGenerating Lisp code from moveit_msgs/GraspPlanning.srv[0m
+[ 37%] [34m[1mGenerating Lisp code from moveit_msgs/GetMotionPlan.srv[0m
+[ 37%] [34m[1mGenerating Lisp code from moveit_msgs/SetPlannerParams.srv[0m
+[ 37%] [34m[1mGenerating Lisp code from moveit_msgs/DeleteRobotStateFromWarehouse.srv[0m
+[ 37%] [34m[1mGenerating Lisp code from moveit_msgs/GetPositionIK.srv[0m
+[ 37%] [34m[1mGenerating Lisp code from moveit_msgs/ChangeControlDimensions.srv[0m
+[ 38%] [34m[1mGenerating Lisp code from moveit_msgs/LoadMap.srv[0m
+[ 38%] [34m[1mGenerating Lisp code from moveit_msgs/ChangeDriftDimensions.srv[0m
+[ 38%] [34m[1mGenerating Lisp code from moveit_msgs/ListRobotStatesInWarehouse.srv[0m
+[ 38%] [34m[1mGenerating Lisp code from moveit_msgs/GetPlanningScene.srv[0m
+[ 38%] [34m[1mGenerating Lisp code from moveit_msgs/SaveMap.srv[0m
+[ 39%] [34m[1mGenerating Lisp code from moveit_msgs/ExecuteKnownTrajectory.srv[0m
+[ 39%] [34m[1mGenerating Lisp code from moveit_msgs/GetStateValidity.srv[0m
+[ 39%] [34m[1mGenerating Lisp code from moveit_msgs/CheckIfRobotStateExistsInWarehouse.srv[0m
+[ 39%] [34m[1mGenerating Lisp code from moveit_msgs/SaveRobotStateToWarehouse.srv[0m
+[ 39%] Built target moveit_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target moveit_msgs_generate_messages_cpp[0m
+[ 39%] [34m[1mGenerating C++ code from moveit_msgs/CostSource.msg[0m
+[ 39%] [34m[1mGenerating C++ code from moveit_msgs/PlaceActionResult.msg[0m
+[ 39%] [34m[1mGenerating C++ code from moveit_msgs/PlaceLocation.msg[0m
+[ 40%] [34m[1mGenerating C++ code from moveit_msgs/PlanningOptions.msg[0m
+[ 40%] [34m[1mGenerating C++ code from moveit_msgs/BoundingVolume.msg[0m
+[ 40%] [34m[1mGenerating C++ code from moveit_msgs/PlaceFeedback.msg[0m
+[ 40%] [34m[1mGenerating C++ code from moveit_msgs/ConstraintEvalResult.msg[0m
+[ 40%] [34m[1mGenerating C++ code from moveit_msgs/PositionConstraint.msg[0m
+[ 41%] [34m[1mGenerating C++ code from moveit_msgs/PlanningSceneWorld.msg[0m
+[ 41%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupAction.msg[0m
+[ 41%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupActionResult.msg[0m
+[ 41%] [34m[1mGenerating C++ code from moveit_msgs/PickupGoal.msg[0m
+[ 42%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryActionResult.msg[0m
+[ 42%] [34m[1mGenerating C++ code from moveit_msgs/MotionPlanResponse.msg[0m
+[ 42%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupGoal.msg[0m
+[ 42%] [34m[1mGenerating C++ code from moveit_msgs/PlanningSceneComponents.msg[0m
+[ 42%] [34m[1mGenerating C++ code from moveit_msgs/LinkScale.msg[0m
+[ 43%] [34m[1mGenerating C++ code from moveit_msgs/JointConstraint.msg[0m
+[ 43%] [34m[1mGenerating C++ code from moveit_msgs/CartesianTrajectoryPoint.msg[0m
+[ 43%] [34m[1mGenerating C++ code from moveit_msgs/OrientedBoundingBox.msg[0m
+[ 43%] [34m[1mGenerating C++ code from moveit_msgs/Constraints.msg[0m
+[ 43%] [34m[1mGenerating C++ code from moveit_msgs/PlaceActionGoal.msg[0m
+[ 44%] [34m[1mGenerating C++ code from moveit_msgs/PositionIKRequest.msg[0m
+[ 44%] [34m[1mGenerating C++ code from moveit_msgs/PlaceActionFeedback.msg[0m
+[ 44%] [34m[1mGenerating C++ code from moveit_msgs/AllowedCollisionEntry.msg[0m
+[ 44%] [34m[1mGenerating C++ code from moveit_msgs/Grasp.msg[0m
+[ 44%] [34m[1mGenerating C++ code from moveit_msgs/PickupResult.msg[0m
+[ 45%] [34m[1mGenerating C++ code from moveit_msgs/AllowedCollisionMatrix.msg[0m
+[ 45%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupResult.msg[0m
+[ 45%] [34m[1mGenerating C++ code from moveit_msgs/CartesianTrajectory.msg[0m
+[ 45%] [34m[1mGenerating C++ code from moveit_msgs/PlaceAction.msg[0m
+[ 45%] [34m[1mGenerating C++ code from moveit_msgs/PickupActionGoal.msg[0m
+[ 46%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryFeedback.msg[0m
+[ 46%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupFeedback.msg[0m
+[ 46%] [34m[1mGenerating C++ code from moveit_msgs/PlannerParams.msg[0m
+[ 46%] [34m[1mGenerating C++ code from moveit_msgs/CollisionObject.msg[0m
+[ 47%] [34m[1mGenerating C++ code from moveit_msgs/PickupActionFeedback.msg[0m
+[ 47%] [34m[1mGenerating C++ code from moveit_msgs/DisplayTrajectory.msg[0m
+[ 47%] [34m[1mGenerating C++ code from moveit_msgs/PlannerInterfaceDescription.msg[0m
+[ 47%] [34m[1mGenerating C++ code from moveit_msgs/VisibilityConstraint.msg[0m
+[ 47%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryAction.msg[0m
+[ 48%] [34m[1mGenerating C++ code from moveit_msgs/RobotState.msg[0m
+[ 48%] [34m[1mGenerating C++ code from moveit_msgs/DisplayRobotState.msg[0m
+[ 48%] [34m[1mGenerating C++ code from moveit_msgs/CartesianPoint.msg[0m
+[ 48%] [34m[1mGenerating C++ code from moveit_msgs/RobotTrajectory.msg[0m
+[ 48%] [34m[1mGenerating C++ code from moveit_msgs/LinkPadding.msg[0m
+[ 50%] [34m[1mGenerating C++ code from moveit_msgs/PlanningScene.msg[0m
+[ 50%] [34m[1mGenerating C++ code from moveit_msgs/AttachedCollisionObject.msg[0m
+[ 50%] [34m[1mGenerating C++ code from moveit_msgs/PlaceGoal.msg[0m
+[ 50%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryGoal.msg[0m
+[ 50%] [34m[1mGenerating C++ code from moveit_msgs/ObjectColor.msg[0m
+[ 51%] [34m[1mGenerating C++ code from moveit_msgs/ContactInformation.msg[0m
+[ 51%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryActionGoal.msg[0m
+[ 51%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupActionGoal.msg[0m
+[ 51%] [34m[1mGenerating C++ code from moveit_msgs/PlaceResult.msg[0m
+[ 51%] [34m[1mGenerating C++ code from moveit_msgs/OrientationConstraint.msg[0m
+[ 52%] [34m[1mGenerating C++ code from moveit_msgs/PickupAction.msg[0m
+[ 52%] [34m[1mGenerating C++ code from moveit_msgs/GripperTranslation.msg[0m
+[ 52%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryResult.msg[0m
+[ 52%] [34m[1mGenerating C++ code from moveit_msgs/WorkspaceParameters.msg[0m
+[ 53%] [34m[1mGenerating C++ code from moveit_msgs/MoveGroupActionFeedback.msg[0m
+[ 53%] [34m[1mGenerating C++ code from moveit_msgs/GenericTrajectory.msg[0m
+[ 53%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteTrajectoryActionFeedback.msg[0m
+[ 53%] [34m[1mGenerating C++ code from moveit_msgs/PickupFeedback.msg[0m
+[ 53%] [34m[1mGenerating C++ code from moveit_msgs/JointLimits.msg[0m
+[ 54%] [34m[1mGenerating C++ code from moveit_msgs/MotionPlanDetailedResponse.msg[0m
+[ 54%] [34m[1mGenerating C++ code from moveit_msgs/KinematicSolverInfo.msg[0m
+[ 54%] [34m[1mGenerating C++ code from moveit_msgs/PickupActionResult.msg[0m
+[ 54%] [34m[1mGenerating C++ code from moveit_msgs/MotionPlanRequest.msg[0m
+[ 54%] [34m[1mGenerating C++ code from moveit_msgs/MoveItErrorCodes.msg[0m
+[ 55%] [34m[1mGenerating C++ code from moveit_msgs/TrajectoryConstraints.msg[0m
+[ 55%] [34m[1mGenerating C++ code from moveit_msgs/QueryPlannerInterfaces.srv[0m
+[ 55%] [34m[1mGenerating C++ code from moveit_msgs/GetPositionFK.srv[0m
+[ 55%] [34m[1mGenerating C++ code from moveit_msgs/GetRobotStateFromWarehouse.srv[0m
+[ 55%] [34m[1mGenerating C++ code from moveit_msgs/RenameRobotStateInWarehouse.srv[0m
+[ 56%] [34m[1mGenerating C++ code from moveit_msgs/ApplyPlanningScene.srv[0m
+[ 56%] [34m[1mGenerating C++ code from moveit_msgs/GetPlannerParams.srv[0m
+[ 56%] [34m[1mGenerating C++ code from moveit_msgs/GetCartesianPath.srv[0m
+[ 56%] [34m[1mGenerating C++ code from moveit_msgs/GraspPlanning.srv[0m
+[ 56%] [34m[1mGenerating C++ code from moveit_msgs/GetMotionPlan.srv[0m
+[ 57%] [34m[1mGenerating C++ code from moveit_msgs/SetPlannerParams.srv[0m
+[ 57%] [34m[1mGenerating C++ code from moveit_msgs/DeleteRobotStateFromWarehouse.srv[0m
+[ 57%] [34m[1mGenerating C++ code from moveit_msgs/GetPositionIK.srv[0m
+[ 57%] [34m[1mGenerating C++ code from moveit_msgs/ChangeControlDimensions.srv[0m
+[ 58%] [34m[1mGenerating C++ code from moveit_msgs/LoadMap.srv[0m
+[ 58%] [34m[1mGenerating C++ code from moveit_msgs/ChangeDriftDimensions.srv[0m
+[ 58%] [34m[1mGenerating C++ code from moveit_msgs/ListRobotStatesInWarehouse.srv[0m
+[ 58%] [34m[1mGenerating C++ code from moveit_msgs/GetPlanningScene.srv[0m
+[ 58%] [34m[1mGenerating C++ code from moveit_msgs/SaveMap.srv[0m
+[ 59%] [34m[1mGenerating C++ code from moveit_msgs/ExecuteKnownTrajectory.srv[0m
+[ 59%] [34m[1mGenerating C++ code from moveit_msgs/GetStateValidity.srv[0m
+[ 59%] [34m[1mGenerating C++ code from moveit_msgs/CheckIfRobotStateExistsInWarehouse.srv[0m
+[ 59%] [34m[1mGenerating C++ code from moveit_msgs/SaveRobotStateToWarehouse.srv[0m
+[ 59%] Built target moveit_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target moveit_msgs_generate_messages_eus[0m
+[ 59%] [34m[1mGenerating EusLisp code from moveit_msgs/CostSource.msg[0m
+[ 60%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceActionResult.msg[0m
+[ 60%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceLocation.msg[0m
+[ 60%] [34m[1mGenerating EusLisp code from moveit_msgs/PlanningOptions.msg[0m
+[ 60%] [34m[1mGenerating EusLisp code from moveit_msgs/BoundingVolume.msg[0m
+[ 60%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceFeedback.msg[0m
+[ 61%] [34m[1mGenerating EusLisp code from moveit_msgs/ConstraintEvalResult.msg[0m
+[ 61%] [34m[1mGenerating EusLisp code from moveit_msgs/PositionConstraint.msg[0m
+[ 61%] [34m[1mGenerating EusLisp code from moveit_msgs/PlanningSceneWorld.msg[0m
+[ 61%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupAction.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupActionResult.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupGoal.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryActionResult.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from moveit_msgs/MotionPlanResponse.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupGoal.msg[0m
+[ 63%] [34m[1mGenerating EusLisp code from moveit_msgs/PlanningSceneComponents.msg[0m
+[ 63%] [34m[1mGenerating EusLisp code from moveit_msgs/LinkScale.msg[0m
+[ 63%] [34m[1mGenerating EusLisp code from moveit_msgs/JointConstraint.msg[0m
+[ 63%] [34m[1mGenerating EusLisp code from moveit_msgs/CartesianTrajectoryPoint.msg[0m
+[ 63%] [34m[1mGenerating EusLisp code from moveit_msgs/OrientedBoundingBox.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from moveit_msgs/Constraints.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceActionGoal.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from moveit_msgs/PositionIKRequest.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceActionFeedback.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from moveit_msgs/AllowedCollisionEntry.msg[0m
+[ 65%] [34m[1mGenerating EusLisp code from moveit_msgs/Grasp.msg[0m
+[ 65%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupResult.msg[0m
+[ 65%] [34m[1mGenerating EusLisp code from moveit_msgs/AllowedCollisionMatrix.msg[0m
+[ 65%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupResult.msg[0m
+[ 65%] [34m[1mGenerating EusLisp code from moveit_msgs/CartesianTrajectory.msg[0m
+[ 66%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceAction.msg[0m
+[ 66%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupActionGoal.msg[0m
+[ 66%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryFeedback.msg[0m
+[ 66%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupFeedback.msg[0m
+[ 67%] [34m[1mGenerating EusLisp code from moveit_msgs/PlannerParams.msg[0m
+[ 67%] [34m[1mGenerating EusLisp code from moveit_msgs/CollisionObject.msg[0m
+[ 67%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupActionFeedback.msg[0m
+[ 67%] [34m[1mGenerating EusLisp code from moveit_msgs/DisplayTrajectory.msg[0m
+[ 67%] [34m[1mGenerating EusLisp code from moveit_msgs/PlannerInterfaceDescription.msg[0m
+[ 68%] [34m[1mGenerating EusLisp code from moveit_msgs/VisibilityConstraint.msg[0m
+[ 68%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryAction.msg[0m
+[ 68%] [34m[1mGenerating EusLisp code from moveit_msgs/RobotState.msg[0m
+[ 68%] [34m[1mGenerating EusLisp code from moveit_msgs/DisplayRobotState.msg[0m
+[ 68%] [34m[1mGenerating EusLisp code from moveit_msgs/CartesianPoint.msg[0m
+[ 69%] [34m[1mGenerating EusLisp code from moveit_msgs/RobotTrajectory.msg[0m
+[ 69%] [34m[1mGenerating EusLisp code from moveit_msgs/LinkPadding.msg[0m
+[ 69%] [34m[1mGenerating EusLisp code from moveit_msgs/PlanningScene.msg[0m
+[ 69%] [34m[1mGenerating EusLisp code from moveit_msgs/AttachedCollisionObject.msg[0m
+[ 69%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceGoal.msg[0m
+[ 70%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryGoal.msg[0m
+[ 70%] [34m[1mGenerating EusLisp code from moveit_msgs/ObjectColor.msg[0m
+[ 70%] [34m[1mGenerating EusLisp code from moveit_msgs/ContactInformation.msg[0m
+[ 70%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryActionGoal.msg[0m
+[ 70%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupActionGoal.msg[0m
+[ 71%] [34m[1mGenerating EusLisp code from moveit_msgs/PlaceResult.msg[0m
+[ 71%] [34m[1mGenerating EusLisp code from moveit_msgs/OrientationConstraint.msg[0m
+[ 71%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupAction.msg[0m
+[ 71%] [34m[1mGenerating EusLisp code from moveit_msgs/GripperTranslation.msg[0m
+[ 72%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryResult.msg[0m
+[ 72%] [34m[1mGenerating EusLisp code from moveit_msgs/WorkspaceParameters.msg[0m
+[ 72%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveGroupActionFeedback.msg[0m
+[ 72%] [34m[1mGenerating EusLisp code from moveit_msgs/GenericTrajectory.msg[0m
+[ 72%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteTrajectoryActionFeedback.msg[0m
+[ 73%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupFeedback.msg[0m
+[ 73%] [34m[1mGenerating EusLisp code from moveit_msgs/JointLimits.msg[0m
+[ 73%] [34m[1mGenerating EusLisp code from moveit_msgs/MotionPlanDetailedResponse.msg[0m
+[ 73%] [34m[1mGenerating EusLisp code from moveit_msgs/KinematicSolverInfo.msg[0m
+[ 73%] [34m[1mGenerating EusLisp code from moveit_msgs/PickupActionResult.msg[0m
+[ 74%] [34m[1mGenerating EusLisp code from moveit_msgs/MotionPlanRequest.msg[0m
+[ 74%] [34m[1mGenerating EusLisp code from moveit_msgs/MoveItErrorCodes.msg[0m
+[ 74%] [34m[1mGenerating EusLisp code from moveit_msgs/TrajectoryConstraints.msg[0m
+[ 74%] [34m[1mGenerating EusLisp code from moveit_msgs/QueryPlannerInterfaces.srv[0m
+[ 74%] [34m[1mGenerating EusLisp code from moveit_msgs/GetPositionFK.srv[0m
+[ 75%] [34m[1mGenerating EusLisp code from moveit_msgs/GetRobotStateFromWarehouse.srv[0m
+[ 75%] [34m[1mGenerating EusLisp code from moveit_msgs/RenameRobotStateInWarehouse.srv[0m
+[ 75%] [34m[1mGenerating EusLisp code from moveit_msgs/ApplyPlanningScene.srv[0m
+[ 75%] [34m[1mGenerating EusLisp code from moveit_msgs/GetPlannerParams.srv[0m
+[ 75%] [34m[1mGenerating EusLisp code from moveit_msgs/GetCartesianPath.srv[0m
+[ 76%] [34m[1mGenerating EusLisp code from moveit_msgs/GraspPlanning.srv[0m
+[ 76%] [34m[1mGenerating EusLisp code from moveit_msgs/GetMotionPlan.srv[0m
+[ 76%] [34m[1mGenerating EusLisp code from moveit_msgs/SetPlannerParams.srv[0m
+[ 76%] [34m[1mGenerating EusLisp code from moveit_msgs/DeleteRobotStateFromWarehouse.srv[0m
+[ 77%] [34m[1mGenerating EusLisp code from moveit_msgs/GetPositionIK.srv[0m
+[ 77%] [34m[1mGenerating EusLisp code from moveit_msgs/ChangeControlDimensions.srv[0m
+[ 77%] [34m[1mGenerating EusLisp code from moveit_msgs/LoadMap.srv[0m
+[ 77%] [34m[1mGenerating EusLisp code from moveit_msgs/ChangeDriftDimensions.srv[0m
+[ 77%] [34m[1mGenerating EusLisp code from moveit_msgs/ListRobotStatesInWarehouse.srv[0m
+[ 78%] [34m[1mGenerating EusLisp code from moveit_msgs/GetPlanningScene.srv[0m
+[ 78%] [34m[1mGenerating EusLisp code from moveit_msgs/SaveMap.srv[0m
+[ 78%] [34m[1mGenerating EusLisp code from moveit_msgs/ExecuteKnownTrajectory.srv[0m
+[ 78%] [34m[1mGenerating EusLisp code from moveit_msgs/GetStateValidity.srv[0m
+[ 78%] [34m[1mGenerating EusLisp code from moveit_msgs/CheckIfRobotStateExistsInWarehouse.srv[0m
+[ 79%] [34m[1mGenerating EusLisp code from moveit_msgs/SaveRobotStateToWarehouse.srv[0m
+[ 79%] [34m[1mGenerating EusLisp manifest code for moveit_msgs[0m
+[ 79%] Built target moveit_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target moveit_msgs_generate_messages_nodejs[0m
+[ 79%] [34m[1mGenerating Javascript code from moveit_msgs/CostSource.msg[0m
+[ 80%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceActionResult.msg[0m
+[ 80%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceLocation.msg[0m
+[ 80%] [34m[1mGenerating Javascript code from moveit_msgs/PlanningOptions.msg[0m
+[ 80%] [34m[1mGenerating Javascript code from moveit_msgs/BoundingVolume.msg[0m
+[ 81%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceFeedback.msg[0m
+[ 81%] [34m[1mGenerating Javascript code from moveit_msgs/ConstraintEvalResult.msg[0m
+[ 81%] [34m[1mGenerating Javascript code from moveit_msgs/PositionConstraint.msg[0m
+[ 81%] [34m[1mGenerating Javascript code from moveit_msgs/PlanningSceneWorld.msg[0m
+[ 81%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupAction.msg[0m
+[ 82%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupActionResult.msg[0m
+[ 82%] [34m[1mGenerating Javascript code from moveit_msgs/PickupGoal.msg[0m
+[ 82%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryActionResult.msg[0m
+[ 82%] [34m[1mGenerating Javascript code from moveit_msgs/MotionPlanResponse.msg[0m
+[ 82%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupGoal.msg[0m
+[ 83%] [34m[1mGenerating Javascript code from moveit_msgs/PlanningSceneComponents.msg[0m
+[ 83%] [34m[1mGenerating Javascript code from moveit_msgs/LinkScale.msg[0m
+[ 83%] [34m[1mGenerating Javascript code from moveit_msgs/JointConstraint.msg[0m
+[ 83%] [34m[1mGenerating Javascript code from moveit_msgs/CartesianTrajectoryPoint.msg[0m
+[ 83%] [34m[1mGenerating Javascript code from moveit_msgs/OrientedBoundingBox.msg[0m
+[ 84%] [34m[1mGenerating Javascript code from moveit_msgs/Constraints.msg[0m
+[ 84%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceActionGoal.msg[0m
+[ 84%] [34m[1mGenerating Javascript code from moveit_msgs/PositionIKRequest.msg[0m
+[ 84%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceActionFeedback.msg[0m
+[ 84%] [34m[1mGenerating Javascript code from moveit_msgs/AllowedCollisionEntry.msg[0m
+[ 85%] [34m[1mGenerating Javascript code from moveit_msgs/Grasp.msg[0m
+[ 85%] [34m[1mGenerating Javascript code from moveit_msgs/PickupResult.msg[0m
+[ 85%] [34m[1mGenerating Javascript code from moveit_msgs/AllowedCollisionMatrix.msg[0m
+[ 85%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupResult.msg[0m
+[ 86%] [34m[1mGenerating Javascript code from moveit_msgs/CartesianTrajectory.msg[0m
+[ 86%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceAction.msg[0m
+[ 86%] [34m[1mGenerating Javascript code from moveit_msgs/PickupActionGoal.msg[0m
+[ 86%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryFeedback.msg[0m
+[ 86%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupFeedback.msg[0m
+[ 87%] [34m[1mGenerating Javascript code from moveit_msgs/PlannerParams.msg[0m
+[ 87%] [34m[1mGenerating Javascript code from moveit_msgs/CollisionObject.msg[0m
+[ 87%] [34m[1mGenerating Javascript code from moveit_msgs/PickupActionFeedback.msg[0m
+[ 87%] [34m[1mGenerating Javascript code from moveit_msgs/DisplayTrajectory.msg[0m
+[ 87%] [34m[1mGenerating Javascript code from moveit_msgs/PlannerInterfaceDescription.msg[0m
+[ 88%] [34m[1mGenerating Javascript code from moveit_msgs/VisibilityConstraint.msg[0m
+[ 88%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryAction.msg[0m
+[ 88%] [34m[1mGenerating Javascript code from moveit_msgs/RobotState.msg[0m
+[ 88%] [34m[1mGenerating Javascript code from moveit_msgs/DisplayRobotState.msg[0m
+[ 88%] [34m[1mGenerating Javascript code from moveit_msgs/CartesianPoint.msg[0m
+[ 89%] [34m[1mGenerating Javascript code from moveit_msgs/RobotTrajectory.msg[0m
+[ 89%] [34m[1mGenerating Javascript code from moveit_msgs/LinkPadding.msg[0m
+[ 89%] [34m[1mGenerating Javascript code from moveit_msgs/PlanningScene.msg[0m
+[ 89%] [34m[1mGenerating Javascript code from moveit_msgs/AttachedCollisionObject.msg[0m
+[ 89%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceGoal.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryGoal.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from moveit_msgs/ObjectColor.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from moveit_msgs/ContactInformation.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryActionGoal.msg[0m
+[ 91%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupActionGoal.msg[0m
+[ 91%] [34m[1mGenerating Javascript code from moveit_msgs/PlaceResult.msg[0m
+[ 91%] [34m[1mGenerating Javascript code from moveit_msgs/OrientationConstraint.msg[0m
+[ 91%] [34m[1mGenerating Javascript code from moveit_msgs/PickupAction.msg[0m
+[ 91%] [34m[1mGenerating Javascript code from moveit_msgs/GripperTranslation.msg[0m
+[ 92%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryResult.msg[0m
+[ 92%] [34m[1mGenerating Javascript code from moveit_msgs/WorkspaceParameters.msg[0m
+[ 92%] [34m[1mGenerating Javascript code from moveit_msgs/MoveGroupActionFeedback.msg[0m
+[ 92%] [34m[1mGenerating Javascript code from moveit_msgs/GenericTrajectory.msg[0m
+[ 92%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteTrajectoryActionFeedback.msg[0m
+[ 93%] [34m[1mGenerating Javascript code from moveit_msgs/PickupFeedback.msg[0m
+[ 93%] [34m[1mGenerating Javascript code from moveit_msgs/JointLimits.msg[0m
+[ 93%] [34m[1mGenerating Javascript code from moveit_msgs/MotionPlanDetailedResponse.msg[0m
+[ 93%] [34m[1mGenerating Javascript code from moveit_msgs/KinematicSolverInfo.msg[0m
+[ 93%] [34m[1mGenerating Javascript code from moveit_msgs/PickupActionResult.msg[0m
+[ 94%] [34m[1mGenerating Javascript code from moveit_msgs/MotionPlanRequest.msg[0m
+[ 94%] [34m[1mGenerating Javascript code from moveit_msgs/MoveItErrorCodes.msg[0m
+[ 94%] [34m[1mGenerating Javascript code from moveit_msgs/TrajectoryConstraints.msg[0m
+[ 94%] [34m[1mGenerating Javascript code from moveit_msgs/QueryPlannerInterfaces.srv[0m
+[ 94%] [34m[1mGenerating Javascript code from moveit_msgs/GetPositionFK.srv[0m
+[ 95%] [34m[1mGenerating Javascript code from moveit_msgs/GetRobotStateFromWarehouse.srv[0m
+[ 95%] [34m[1mGenerating Javascript code from moveit_msgs/RenameRobotStateInWarehouse.srv[0m
+[ 95%] [34m[1mGenerating Javascript code from moveit_msgs/ApplyPlanningScene.srv[0m
+[ 95%] [34m[1mGenerating Javascript code from moveit_msgs/GetPlannerParams.srv[0m
+[ 96%] [34m[1mGenerating Javascript code from moveit_msgs/GetCartesianPath.srv[0m
+[ 96%] [34m[1mGenerating Javascript code from moveit_msgs/GraspPlanning.srv[0m
+[ 96%] [34m[1mGenerating Javascript code from moveit_msgs/GetMotionPlan.srv[0m
+[ 96%] [34m[1mGenerating Javascript code from moveit_msgs/SetPlannerParams.srv[0m
+[ 96%] [34m[1mGenerating Javascript code from moveit_msgs/DeleteRobotStateFromWarehouse.srv[0m
+[ 97%] [34m[1mGenerating Javascript code from moveit_msgs/GetPositionIK.srv[0m
+[ 97%] [34m[1mGenerating Javascript code from moveit_msgs/ChangeControlDimensions.srv[0m
+[ 97%] [34m[1mGenerating Javascript code from moveit_msgs/LoadMap.srv[0m
+[ 97%] [34m[1mGenerating Javascript code from moveit_msgs/ChangeDriftDimensions.srv[0m
+[ 97%] [34m[1mGenerating Javascript code from moveit_msgs/ListRobotStatesInWarehouse.srv[0m
+[ 98%] [34m[1mGenerating Javascript code from moveit_msgs/GetPlanningScene.srv[0m
+[ 98%] [34m[1mGenerating Javascript code from moveit_msgs/SaveMap.srv[0m
+[ 98%] [34m[1mGenerating Javascript code from moveit_msgs/ExecuteKnownTrajectory.srv[0m
+[ 98%] [34m[1mGenerating Javascript code from moveit_msgs/GetStateValidity.srv[0m
+[ 98%] [34m[1mGenerating Javascript code from moveit_msgs/CheckIfRobotStateExistsInWarehouse.srv[0m
+[100%] [34m[1mGenerating Javascript code from moveit_msgs/SaveRobotStateToWarehouse.srv[0m
+[100%] Built target moveit_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target moveit_msgs_generate_messages[0m
+[100%] Built target moveit_msgs_generate_messages

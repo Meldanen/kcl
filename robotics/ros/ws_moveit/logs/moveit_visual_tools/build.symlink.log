@@ -1,0 +1,5 @@
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_visual_tools.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_visual_tools.pc
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_visual_tools/moveit_visual_tools_demo
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig.cmake
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig-version.cmake

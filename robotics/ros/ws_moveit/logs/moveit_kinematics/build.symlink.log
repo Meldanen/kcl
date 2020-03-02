@@ -1,0 +1,15 @@
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_cached_ik_kinematics_base.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_lma_kinematics_plugin.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_cached_ik_kinematics_plugin.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_srv_kinematics_plugin.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_lma_kinematics_plugin.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_cached_ik_kinematics_base.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_kdl_kinematics_plugin.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_cached_ik_kinematics_plugin.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_kdl_kinematics_plugin.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_srv_kinematics_plugin.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_kinematics.pc
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_kinematics/test_kinematics_plugin
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_kinematics/benchmark_ik
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_kinematics/cmake/moveit_kinematicsConfig-version.cmake
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_kinematics/cmake/moveit_kinematicsConfig.cmake

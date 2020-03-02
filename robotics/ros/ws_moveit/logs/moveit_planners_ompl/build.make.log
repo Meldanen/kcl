@@ -1,0 +1,33 @@
+[35m[1mScanning dependencies of target moveit_planners_ompl_gencfg[0m
+[  4%] [34m[1mGenerating dynamic reconfigure files from ompl_interface/cfg/OMPLDynamicReconfigure.cfg: /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_planners_ompl/include/moveit_planners_ompl/OMPLDynamicReconfigureConfig.h /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_planners_ompl/lib/python2.7/dist-packages/moveit_planners_ompl/cfg/OMPLDynamicReconfigureConfig.py[0m
+Generating reconfiguration files for OMPLDynamicReconfigure in moveit_planners_ompl
+Wrote header file in /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_planners_ompl/include/moveit_planners_ompl/OMPLDynamicReconfigureConfig.h
+[  4%] Built target moveit_planners_ompl_gencfg
+[35m[1mScanning dependencies of target moveit_ompl_interface[0m
+[  8%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/ompl_interface.cpp.o[0m
+[ 13%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/planning_context_manager.cpp.o[0m
+[ 17%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/model_based_planning_context.cpp.o[0m
+[ 21%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/model_based_state_space.cpp.o[0m
+[ 26%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/model_based_state_space_factory.cpp.o[0m
+[ 30%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/joint_model_state_space.cpp.o[0m
+[ 34%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/joint_model_state_space_factory.cpp.o[0m
+[ 39%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/work_space/pose_model_state_space.cpp.o[0m
+[ 43%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/work_space/pose_model_state_space_factory.cpp.o[0m
+[ 47%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/threadsafe_state_storage.cpp.o[0m
+[ 52%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/state_validity_checker.cpp.o[0m
+[ 56%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/projection_evaluators.cpp.o[0m
+[ 60%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/goal_union.cpp.o[0m
+[ 65%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constraints_library.cpp.o[0m
+[ 69%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_sampler.cpp.o[0m
+[ 73%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_valid_state_sampler.cpp.o[0m
+[ 78%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_goal_sampler.cpp.o[0m
+[ 82%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_planners_ompl/lib/libmoveit_ompl_interface.so[0m
+[ 82%] Built target moveit_ompl_interface
+[35m[1mScanning dependencies of target moveit_generate_state_database[0m
+[ 86%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_generate_state_database.dir/scripts/generate_state_database.cpp.o[0m
+[ 91%] [32m[1mLinking CXX executable /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_planners_ompl/lib/moveit_planners_ompl/generate_state_database[0m
+[ 91%] Built target moveit_generate_state_database
+[35m[1mScanning dependencies of target moveit_ompl_planner_plugin[0m
+[ 95%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_planner_plugin.dir/src/ompl_planner_manager.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_planners_ompl/lib/libmoveit_ompl_planner_plugin.so[0m
+[100%] Built target moveit_ompl_planner_plugin

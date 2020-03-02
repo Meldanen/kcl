@@ -1,0 +1,11 @@
+[35m[1mScanning dependencies of target geometric_shapes[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/aabb.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/bodies.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/body_operations.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/mesh_operations.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shape_extents.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shape_operations.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shape_to_marker.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shapes.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/geometric_shapes/lib/libgeometric_shapes.so[0m
+[100%] Built target geometric_shapes
