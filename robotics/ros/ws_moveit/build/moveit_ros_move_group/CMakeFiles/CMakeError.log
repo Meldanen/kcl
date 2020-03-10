@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9c148/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9c148.dir/build.make CMakeFiles/cmTC_9c148.dir/build
+make[1]: Entering directory '/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9c148.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9c148.dir/CheckSymbolExists.c.o   -c /home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9c148
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c148.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9c148.dir/CheckSymbolExists.c.o  -o cmTC_9c148 
+CMakeFiles/cmTC_9c148.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9c148.dir/build.make:97: recipe for target 'cmTC_9c148' failed
+make[1]: *** [cmTC_9c148] Error 1
+make[1]: Leaving directory '/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9c148/fast' failed
+make: *** [cmTC_9c148/fast] Error 2
+
+File /home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_003fe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_003fe.dir/build.make CMakeFiles/cmTC_003fe.dir/build
+make[1]: Entering directory '/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_003fe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_003fe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_003fe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_003fe.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_003fe.dir/CheckFunctionExists.c.o  -o cmTC_003fe -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_003fe.dir/build.make:97: recipe for target 'cmTC_003fe' failed
+make[1]: *** [cmTC_003fe] Error 1
+make[1]: Leaving directory '/home/mikroszolos/kcl/robotics/ros/ws_moveit/build/moveit_ros_move_group/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_003fe/fast' failed
+make: *** [cmTC_003fe/fast] Error 2
+
+

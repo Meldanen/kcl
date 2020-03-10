@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target moveit_robot_interaction[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/moveit_robot_interaction.dir/src/interactive_marker_helpers.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/moveit_robot_interaction.dir/src/kinematic_options.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/moveit_robot_interaction.dir/src/kinematic_options_map.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/moveit_robot_interaction.dir/src/locked_robot_state.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/moveit_robot_interaction.dir/src/interaction_handler.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/moveit_robot_interaction.dir/src/robot_interaction.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_ros_robot_interaction/lib/libmoveit_robot_interaction.so[0m
+[100%] Built target moveit_robot_interaction

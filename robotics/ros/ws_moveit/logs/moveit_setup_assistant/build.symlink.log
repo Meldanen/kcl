@@ -1,0 +1,9 @@
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_setup_assistant_tools.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_setup_assistant_widgets.so
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_setup_assistant_tools.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_setup_assistant_widgets.so.1.0.1
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_setup_assistant.pc
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_setup_assistant/collisions_updater
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_setup_assistant/moveit_setup_assistant
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig-version.cmake
+Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig.cmake

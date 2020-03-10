@@ -1,0 +1,51 @@
+[35m[1mScanning dependencies of target rviz_visual_tools_remote_control_autogen[0m
+[  3%] [34m[1mAutomatic MOC for target rviz_visual_tools_remote_control[0m
+[  3%] Built target rviz_visual_tools_remote_control_autogen
+[35m[1mScanning dependencies of target rviz_visual_tools_gui_autogen[0m
+[  7%] [34m[1mAutomatic MOC for target rviz_visual_tools_gui[0m
+[  7%] Built target rviz_visual_tools_gui_autogen
+[35m[1mScanning dependencies of target rviz_visual_tools_remote_control[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_remote_control.dir/src/remote_control.cpp.o[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_remote_control.dir/rviz_visual_tools_remote_control_autogen/mocs_compilation.cpp.o[0m
+[ 18%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib/librviz_visual_tools_remote_control.so[0m
+[ 18%] Built target rviz_visual_tools_remote_control
+[35m[1mScanning dependencies of target rviz_visual_tools_gui[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_gui.dir/src/rviz_visual_tools_gui.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_gui.dir/src/key_tool.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_gui.dir/src/remote_control.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_gui.dir/rviz_visual_tools_gui_autogen/mocs_compilation.cpp.o[0m
+[ 37%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib/librviz_visual_tools_gui.so[0m
+[ 37%] Built target rviz_visual_tools_gui
+[35m[1mScanning dependencies of target rviz_visual_tools_autogen[0m
+[ 40%] [34m[1mAutomatic MOC for target rviz_visual_tools[0m
+[ 40%] Built target rviz_visual_tools_autogen
+[35m[1mScanning dependencies of target rviz_visual_tools[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools.dir/src/rviz_visual_tools.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools.dir/src/tf_visual_tools.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools.dir/rviz_visual_tools_autogen/mocs_compilation.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib/librviz_visual_tools.so[0m
+[ 55%] Built target rviz_visual_tools
+[35m[1mScanning dependencies of target rviz_visual_tools_demo_autogen[0m
+[ 59%] [34m[1mAutomatic MOC for target rviz_visual_tools_demo[0m
+[ 59%] Built target rviz_visual_tools_demo_autogen
+[35m[1mScanning dependencies of target rviz_visual_tools_imarker_simple_autogen[0m
+[ 62%] [34m[1mAutomatic MOC for target rviz_visual_tools_imarker_simple[0m
+[ 62%] Built target rviz_visual_tools_imarker_simple_autogen
+[35m[1mScanning dependencies of target rviz_visual_tools_demo[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_demo.dir/src/rviz_visual_tools_demo.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_demo.dir/rviz_visual_tools_demo_autogen/mocs_compilation.cpp.o[0m
+[ 74%] [32m[1mLinking CXX executable /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib/rviz_visual_tools/demo[0m
+[ 74%] Built target rviz_visual_tools_demo
+[35m[1mScanning dependencies of target rviz_visual_tools_imarker_simple[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_imarker_simple.dir/src/imarker_simple.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_imarker_simple.dir/rviz_visual_tools_imarker_simple_autogen/mocs_compilation.cpp.o[0m
+[ 85%] [32m[1mLinking CXX shared library /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib/librviz_visual_tools_imarker_simple.so[0m
+[ 85%] Built target rviz_visual_tools_imarker_simple
+[35m[1mScanning dependencies of target rviz_visual_tools_imarker_simple_demo_autogen[0m
+[ 88%] [34m[1mAutomatic MOC for target rviz_visual_tools_imarker_simple_demo[0m
+[ 88%] Built target rviz_visual_tools_imarker_simple_demo_autogen
+[35m[1mScanning dependencies of target rviz_visual_tools_imarker_simple_demo[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_imarker_simple_demo.dir/src/imarker_simple_demo.cpp.o[0m
+[ 96%] [32mBuilding CXX object CMakeFiles/rviz_visual_tools_imarker_simple_demo.dir/rviz_visual_tools_imarker_simple_demo_autogen/mocs_compilation.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/rviz_visual_tools/lib/rviz_visual_tools/imarker_simple_demo[0m
+[100%] Built target rviz_visual_tools_imarker_simple_demo
