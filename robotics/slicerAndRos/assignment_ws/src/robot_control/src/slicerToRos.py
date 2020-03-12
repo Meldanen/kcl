@@ -7,12 +7,13 @@ import geometry_msgs.msg
 from moveit_commander.conversions import pose_to_list
 from ros_igtl_bridge.msg import igtlpoint
 from ros_igtl_bridge.msg import igtltransform
+from NodeTypeEnum import NodeTypeEnum
 
 
-class SlicerToRos():
+class SlicerToRos:
 
     def cbPoint(self, data):
-        rospy.loginfo(rospy.get_caller_id() + " Goal = (%f, %f, %f).", data.pointdata.x, data.pointdata.y,
+        rospy.loginfo(rospy.get_caller_id() + " Position = (%f, %f, %f).", data.pointdata.x, data.pointdata.y,
                       data.pointdata.z)
         self.moveToGoal(data.pointdata.x, data.pointdata.y, data.pointdata.z)
 
@@ -21,9 +22,10 @@ class SlicerToRos():
 
         # Set pose
         poseG = geometry_msgs.msg.Pose()
-        poseG.position.x = x / 1000.0
-        poseG.position.y = y / 1000.0
-        poseG.position.z = z / 1000.0
+        x, y, z = self.getConvertedCoordinates(x, y, z)
+        poseG.position.x = x
+        poseG.position.y = y
+        poseG.position.z = z
         moveGroup.set_pose_target(poseG)
 
         # Execute plan
@@ -36,27 +38,32 @@ class SlicerToRos():
         currentPose = moveGroup.get_current_pose().pose
         return self.allClose(poseG, currentPose, 0.01)
 
+    def getConvertedCoordinates(self, x, y, z):
+        return self.convertCoordinate(x), self.convertCoordinate(y), self.convertCoordinate(z)
+
+    @staticmethod
+    def convertCoordinate(coordinate):
+        return coordinate / 1000.0
+
     def allClose(self, goal, actual, tolerance):
         if type(goal) is list:
             for index in range(len(goal)):
                 if abs(actual[index] - goal[index]) > tolerance:
                     return False
-
         elif type(goal) is geometry_msgs.msg.PoseStamped:
             return self.allClose(goal.pose, actual.pose, tolerance)
 
         elif type(goal) is geometry_msgs.msg.Pose:
             return self.allClose(pose_to_list(goal), pose_to_list(actual), tolerance)
-
         return True
 
-    def importer(self):
+    def start(self):
 
         global pubIgtlTransformOut
 
-        pubIgtlTransformOut = rospy.Publisher('IGTL_TRANSFORM_OUT', igtltransform, queue_size=10)
-        rospy.init_node('igtl_importer', anonymous=True)
-        rospy.Subscriber("IGTL_POINT_IN", igtlpoint, self.cbPoint)
+        pubIgtlTransformOut = rospy.Publisher(NodeTypeEnum.TRANSFORM_OUT.value, igtltransform, queue_size=10)
+        rospy.init_node(NodeTypeEnum.IMPORTER.value, anonymous=True)
+        rospy.Subscriber(NodeTypeEnum.POINT_IN.value, igtlpoint, self.cbPoint)
 
         ## First initialize and instantiate moveit_commander
         moveit_commander.roscpp_initialize(sys.argv)
@@ -70,7 +77,7 @@ class SlicerToRos():
         moveGroup = moveit_commander.MoveGroupCommander(groupName)
 
         ## To display the trajectory of the robot in rviz
-        trajectoryPublisher = rospy.Publisher('/move_group/display_planned_path',
+        trajectoryPublisher = rospy.Publisher(NodeTypeEnum.MOVE_GROUP_PLANNED_PATH.value,
                                               moveit_msgs.msg.DisplayTrajectory,
                                               queue_size=20)
 
@@ -83,5 +90,5 @@ class SlicerToRos():
 
 
 if __name__ == '__main__':
-    jsp = SlicerToRos()
-    jsp.importer()
+    slicerToRos = SlicerToRos()
+    slicerToRos.start()
