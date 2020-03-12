@@ -77,7 +77,7 @@ class SlicerToRos():
         self.robot = robot
         self.scene = scene
         self.moveGroup = moveGroup
-        self.display_trajectory_publisher = trajectoryPublisher
+        self.trajectoryPublisher = trajectoryPublisher
 
         rospy.spin()
 
