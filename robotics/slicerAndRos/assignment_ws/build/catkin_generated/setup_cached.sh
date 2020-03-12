@@ -7,10 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel:/opt/ros/melodic"
-export LD_LIBRARY_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/lib:/opt/ros/melodic/lib"
-export PKG_CONFIG_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig"
+export CMAKE_PREFIX_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/build"
-export PYTHONPATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages"
+export PYTHONPATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/src:/opt/ros/melodic/share"
+export ROS_PACKAGE_PATH="/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/src:$ROS_PACKAGE_PATH"
