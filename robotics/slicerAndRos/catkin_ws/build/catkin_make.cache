@@ -1,2 +1,2 @@
-ROS-IGTL-Bridge
--DOpenIGTLink_DIR:PATH=/home/mikroszolos/igtl/OpenIGTLink-build -DCATKIN_DEVEL_PREFIX=/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/install -G Unix Makefiles
+ROS-IGTL-Bridge:ismr19_control:ismr19_description:ismr19_moveit:ros_bx_robot_bridge:ur5_moveit_config:ur_description
+-DCATKIN_DEVEL_PREFIX=/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/install -G Unix Makefiles

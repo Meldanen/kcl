@@ -1,0 +1,8 @@
+prefix=/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/devel
+
+Name: ismr19_description
+Description: Description of ismr19_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

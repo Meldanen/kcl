@@ -131,7 +131,13 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ur_description/cmake_install.cmake")
   include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ROS-IGTL-Bridge/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ros_bx_robot_bridge/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ur5_moveit_config/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ismr19_description/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ismr19_moveit/cmake_install.cmake")
+  include("/home/mikroszolos/kcl/robotics/slicerAndRos/catkin_ws/build/ismr19_control/cmake_install.cmake")
 
 endif()
 
