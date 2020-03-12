@@ -5,4 +5,4 @@ Description: Description of robot_control
 Version: 0.0.0
 Cflags: -I/usr/include/eigen3
 Libs: -L${prefix}/lib 
-Requires: ismr19_moveit roscpp
+Requires: roscpp

@@ -10,7 +10,7 @@ add_compile_options(-std=c++11)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  ismr19_moveit
+  #ismr19_moveit
   moveit_core
   moveit_visual_tools
   moveit_ros_planning
@@ -114,7 +114,10 @@ find_package(Eigen3 REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES robot_control
-CATKIN_DEPENDS ismr19_moveit roscpp
+#CATKIN_DEPENDS ismr19_moveit roscpp
+#  DEPENDS EIGEN3
+#)
+CATKIN_DEPENDS roscpp
   DEPENDS EIGEN3
 )
 

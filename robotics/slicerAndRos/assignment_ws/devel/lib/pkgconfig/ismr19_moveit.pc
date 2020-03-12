@@ -1,8 +1,0 @@
-prefix=/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel
-
-Name: ismr19_moveit
-Description: Description of ismr19_moveit
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,2 +1,2 @@
-ROS-IGTL-Bridge:ismr19_moveit:panda_moveit_config:robot_control
+ROS-IGTL-Bridge:panda_moveit_config:robot_control
 -DCATKIN_DEVEL_PREFIX=/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mikroszolos/kcl/robotics/slicerAndRos/assignment_ws/install -G Unix Makefiles
