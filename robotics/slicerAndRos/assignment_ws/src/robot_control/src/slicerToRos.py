@@ -54,9 +54,9 @@ class SlicerToRos():
 
         global pubIgtlTransformOut
 
-        pubIgtlTransformOut = rospy.Publisher('transformOut', igtltransform, queue_size=10)
-        rospy.init_node('importer', anonymous=True)
-        rospy.Subscriber("pointIn", igtlpoint, self.cbPoint)
+        pubIgtlTransformOut = rospy.Publisher('IGTL_TRANSFORM_OUT', igtltransform, queue_size=10)
+        rospy.init_node('igtl_importer', anonymous=True)
+        rospy.Subscriber("IGTL_POINT_IN", igtlpoint, self.cbPoint)
 
         ## First initialize and instantiate moveit_commander
         moveit_commander.roscpp_initialize(sys.argv)
