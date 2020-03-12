@@ -21,12 +21,12 @@ class SlicerToRos:
         moveGroup = self.moveGroup
 
         # Set pose
-        poseG = geometry_msgs.msg.Pose()
+        pose = geometry_msgs.msg.Pose()
         x, y, z = self.getConvertedCoordinates(x, y, z)
-        poseG.position.x = x
-        poseG.position.y = y
-        poseG.position.z = z
-        moveGroup.set_pose_target(poseG)
+        pose.position.x = x
+        pose.position.y = y
+        pose.position.z = z
+        moveGroup.set_pose_target(pose)
 
         # Execute plan
         plan = moveGroup.go(wait=True)
@@ -36,7 +36,7 @@ class SlicerToRos:
         moveGroup.clear_pose_targets()
 
         currentPose = moveGroup.get_current_pose().pose
-        return self.allClose(poseG, currentPose, 0.01)
+        return self.allClose(pose, currentPose, 0.01)
 
     def getConvertedCoordinates(self, x, y, z):
         return self.convertCoordinate(x), self.convertCoordinate(y), self.convertCoordinate(z)
