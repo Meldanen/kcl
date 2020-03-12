@@ -1,0 +1,2 @@
+ROS-IGTL-Bridge:ismr19_control:ismr19_moveit:panda_moveit_config
+-DCATKIN_DEVEL_PREFIX=/home/pww/tutorial1_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pww/tutorial1_ws/install -G Unix Makefiles

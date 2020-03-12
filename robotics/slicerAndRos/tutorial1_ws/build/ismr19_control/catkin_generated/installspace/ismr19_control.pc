@@ -1,0 +1,8 @@
+prefix=/home/pww/tutorial1_ws/install
+
+Name: ismr19_control
+Description: Description of ismr19_control
+Version: 0.0.0
+Cflags: -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: ismr19_moveit roscpp
