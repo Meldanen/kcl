@@ -284,10 +284,10 @@ class Assignment1Test(ScriptedLoadableModuleTest):
 
     def testLoadAllData(self, directory):
         self.delayDisplay("Starting load data test")
-        self.testLoadLabel(directory + '/r_hippo.nii')
-        self.testLoadLabel(directory + '/ventricles.nii')
-        self.testLoadLabel(directory + '/vessels.nii')
-        self.testLoadLabel(directory + '/cortex.nii')
+        self.testLoadLabel(directory + '/r_hippo.nii.gz')
+        self.testLoadLabel(directory + '/ventricles.nii.gz')
+        self.testLoadLabel(directory + '/vessels.nii.gz')
+        self.testLoadLabel(directory + '/cortex.nii.gz')
         self.testLoadFiducial(directory + '/targets.fcsv')
         self.testLoadFiducial(directory + '/entries.fcsv')
         self.delayDisplay('testLoadAllData passed!')
@@ -296,6 +296,7 @@ class Assignment1Test(ScriptedLoadableModuleTest):
         self.assertTrue(slicer.util.loadMarkupsFiducialList(path))
 
     def testLoadLabel(self, path):
+        klel = slicer.util.loadLabelVolume(path)
         self.assertTrue(slicer.util.loadLabelVolume(path))
 
     # Slow test
