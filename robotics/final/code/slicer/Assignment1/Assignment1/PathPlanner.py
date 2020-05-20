@@ -7,20 +7,20 @@ import SimpleITK as sitk
 
 
 # Hard Constraints
-def applyAllHardConstraints(entries, targets, hippocampus, ventricles, vessels, cortex, specifiedAngle):
+def applyAllHardConstraints(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex, specifiedAngle):
     trajectoryDictionary = {}
     # Filter targets
     entriesAndTargets = preProcessing(entries, hippocampus, targets)
 
     # Create the OBB tree for each area
-    # ventriclesTree, _ = getTree(ventricles)
-    bloodVesselTree, _ = getTree(vessels)
+    bloodVesselsDilateTree, _ = getTree(bloodVesselsDilate)
+    bloodVesselTree, _ = getTree(bloodVessels)
     cortexTree, cortexPolyData = getTree(cortex, (0, 0.5))
     for entry, targets in entriesAndTargets.items():
         for target in targets:
-            # First check if it passes through a ventricle - fastest check
-            # if isPassThroughArea(ventriclesTree, entry, target):
-            #     continue
+            # First check if it passes through a blood vessel dilate - medium speed check
+            if isPassThroughArea(bloodVesselsDilateTree, entry, target):
+                continue
             # Then check if it passes through a blood vessel - medium speed check
             if isPassThroughArea(bloodVesselTree, entry, target):
                 continue

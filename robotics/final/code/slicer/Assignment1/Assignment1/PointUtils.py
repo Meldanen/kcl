@@ -20,7 +20,7 @@ def getFilteredTargets(targets, area):
 
         # get pixel using that index
         pixelValue = area.GetImageData().GetScalarComponentAsDouble(xIndex, yIndex, zIndex, 0)
-        if pixelValue == 1:
+        if pixelValue != 0:
             filteredTargets.append(index)
     return filteredTargets
 
