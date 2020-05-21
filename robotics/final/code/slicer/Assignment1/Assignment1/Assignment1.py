@@ -272,7 +272,7 @@ class Assignment1Test(ScriptedLoadableModuleTest):
 
     def runTest(self):
         self.setUp()
-        self.testLoadAllData("C:\dev\kcl\\robotics\\final\models\slicer\labelMaps")
+        self.testLoadAllData("/home/mikroszolos/dev/kcl/robotics/final/models/slicer/labelMaps")
         self.testGetFilteredHippocampusTargets()
         self.testAvoidBloodVesselsDilateValidPath()
         self.testAvoidBloodVesselsDilateInvalidPath()

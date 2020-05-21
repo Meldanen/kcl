@@ -1,0 +1,8 @@
+prefix=/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel
+
+Name: robot_control
+Description: Description of robot_control
+Version: 0.0.0
+Cflags: -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: roscpp

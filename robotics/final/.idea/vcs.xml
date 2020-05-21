@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/ros/src/ROS-IGTL-Bridge" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code/ros/src/franka_ros" vcs="Git" />
   </component>
 </project>
