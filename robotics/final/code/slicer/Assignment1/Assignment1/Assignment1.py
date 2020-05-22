@@ -254,15 +254,20 @@ class Assignment1Logic(ScriptedLoadableModuleLogic):
         print("first: ", finalTrajectories[0])
         print("last: ", finalTrajectories[1])
         # add to slicer scene to view
-        self.registerToSlicer(trajectoriesForAllHardConstraints)
+        self.registerToSlicer(trajectoriesForAllHardConstraints, finalTrajectories)
         logging.info('Processing completed')
         return True
 
     @staticmethod
-    def registerToSlicer(trajectories):
-        trajectories = PointUtils.convertEntryTargetDictionaryToVtkObject(trajectories)
-        pathNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLModelNode', 'finalTrajectories')
-        pathNode.SetAndObserveMesh(trajectories)
+    def registerToSlicer(trajectories, finalTrajectories):
+        maxTrajectory = PointUtils.convertEntryTargetPairToVtkObject(finalTrajectories[0][1])
+        minTrajectory = PointUtils.convertEntryTargetPairToVtkObject(finalTrajectories[1][1])
+
+        pathNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLModelNode', 'maxDistance')
+        pathNode.SetAndObserveMesh(maxTrajectory)
+
+        pathNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLModelNode', 'leastDistance')
+        pathNode.SetAndObserveMesh(minTrajectory)
 
 
 class Assignment1Test(ScriptedLoadableModuleTest):

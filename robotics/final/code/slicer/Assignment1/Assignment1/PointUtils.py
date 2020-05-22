@@ -65,6 +65,28 @@ def convertEntryTargetDictionaryToVtkObject(entriesAndTargets):
     trajectories.SetLines(lines)
     return trajectories
 
+# Provided code
+def convertEntryTargetPairToVtkObject(entryAndTarget):
+    # we are going to create a poly data defined by a set of points and lines
+    points = vtk.vtkPoints()  # these are our end/start points
+    lines = vtk.vtkCellArray()  # these are the lines connecting them
+
+    entry = entryAndTarget[0]
+    target = entryAndTarget[1]
+    entryId = points.InsertNextPoint(entry[0], entry[1], entry[2])
+    targetInd = points.InsertNextPoint(target[0], target[1], target[2])
+
+    # how to connect my points
+    line = vtk.vtkLine()
+    line.GetPointIds().SetId(0, entryId)
+    line.GetPointIds().SetId(1, targetInd)
+    lines.InsertNextCell(line)
+
+    trajectories = vtk.vtkPolyData()
+    trajectories.SetPoints(points)
+    trajectories.SetLines(lines)
+    return trajectories
+
 
 def convertEntryAndTargetPointsToDictionary(entries, targets):
     trajectories = {}
