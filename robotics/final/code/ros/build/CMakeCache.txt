@@ -266,6 +266,9 @@ EMPY_SCRIPT:STRING=/usr/bin/empy
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
 
+//The directory containing a CMake configuration file for Franka.
+Franka_DIR:PATH=Franka_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
 
@@ -362,6 +365,9 @@ catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
 
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/melodic/share/control_msgs/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 
@@ -379,6 +385,24 @@ franka_description_BINARY_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/co
 
 //Value Computed by CMake
 franka_description_SOURCE_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/franka_ros/franka_description
+
+//Value Computed by CMake
+franka_gripper_BINARY_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/franka_ros/franka_gripper
+
+//Value Computed by CMake
+franka_gripper_SOURCE_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/franka_ros/franka_gripper
+
+//Value Computed by CMake
+franka_msgs_BINARY_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/franka_ros/franka_msgs
+
+//Value Computed by CMake
+franka_msgs_SOURCE_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/franka_ros/franka_msgs
+
+//Value Computed by CMake
+franka_ros_BINARY_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/franka_ros/franka_ros
+
+//Value Computed by CMake
+franka_ros_SOURCE_DIR:STATIC=/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/franka_ros/franka_ros
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
@@ -777,7 +801,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

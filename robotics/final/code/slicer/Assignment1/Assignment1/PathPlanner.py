@@ -142,7 +142,7 @@ def getDistanceOfClosestPointToPath(entry, target, bloodVesselTree, bloodVesslsD
     xTarget, yTarget, zTarget = target[0], target[1], target[2]
     for step in np.arange(0, 1, precision):
         x, y, z = PointUtils.getXYZPointsOnLine(step, xEntry, xTarget, yEntry, yTarget, zEntry, zTarget)
-        distance = getClosestPointDistance(bloodVesseltree, x, y, z)
+        distance = getClosestPointDistance(bloodVesselTree, x, y, z)
         distance += getClosestPointDistance(bloodVesslsDilateTree, x, y, z)
         vector = GeometryUtils.getVectorFromPoints(entry, target)
         minDistance = GeometryUtils.getVectorMagnitude(vector)

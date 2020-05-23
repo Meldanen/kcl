@@ -1,2 +1,2 @@
-ROS-IGTL-Bridge:franka_ros/franka_description:panda_moveit_config:robot_control
+ROS-IGTL-Bridge:panda_moveit_config:robot_control
 -DCATKIN_DEVEL_PREFIX=/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel -DCMAKE_INSTALL_PREFIX=/home/mikroszolos/dev/kcl/robotics/final/code/ros/install -G Unix Makefiles

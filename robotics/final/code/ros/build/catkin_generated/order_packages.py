@@ -2,4 +2,4 @@
 source_root_dir = '/home/mikroszolos/dev/kcl/robotics/final/code/ros/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/melodic'.split(';') if '/opt/ros/melodic' != '' else []
+underlay_workspaces = '/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel;/opt/ros/melodic'.split(';') if '/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel;/opt/ros/melodic' != '' else []

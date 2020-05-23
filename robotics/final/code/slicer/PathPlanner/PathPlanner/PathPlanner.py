@@ -248,7 +248,7 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
                                                                                      bloodVesselsDilate,
                                                                                      bloodVessels, cortex,
                                                                                      angle)
-        finalTrajectories = PathPlannerUtils.getBestTrajectory(trajectoriesForAllHardConstraints, bloodVessels, bloodVesslsDilate, 0.01)
+        finalTrajectories = PathPlannerUtils.getBestTrajectory(trajectoriesForAllHardConstraints, bloodVessels, bloodVesselsDilate, 0.01)
         endTime = time.time()
         print('All together: ', endTime - startTime, 'seconds')
         print("first: ", finalTrajectories[0])

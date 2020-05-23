@@ -126,7 +126,7 @@ def getSortedPathsAccordingToDistance(entriesAndTargets, bloodVessels, bloodVess
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             distance = 0
-            distance += getDistanceOfClosestPointToPath(entry, target, bloodVesseltree, bloodVesslsDilateTree, precision)
+            distance += getDistanceOfClosestPointToPath(entry, target, bloodVesselTree, bloodVesslsDilateTree, precision)
             key = float(distance)
             if key in sortedPointsAccordingToDistance.keys():
                 sortedPointsAccordingToDistance[key].append([entry, target])
