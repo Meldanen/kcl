@@ -112,20 +112,21 @@ def isValidAngle(tree, polyData, entry, target, specifiedAngle):
 
 
 # Soft Constraint
-def getBestTrajectory(entriesAndTargets, area, precision):
-    tree, _ = getTree(area)
-    sortedPointsAccordingToDistance = getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision)
+def getBestTrajectory(entriesAndTargets, bloodVessels, bloodVesslsDilate, precision):
+    sortedPointsAccordingToDistance = getSortedPathsAccordingToDistance(entriesAndTargets, bloodVessels, bloodVesslsDilate, precision)
     mostDistance = sortedPointsAccordingToDistance[0]
     leastDistance = sortedPointsAccordingToDistance[-1]
     return mostDistance, leastDistance
 
 
-def getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision):
+def getSortedPathsAccordingToDistance(entriesAndTargets, bloodVessels, bloodVesslsDilate, precision):
+    bloodVesselTree, _ = getTree(bloodVessels)
+    bloodVesslsDilateTree, _ = getTree(bloodVesslsDilate)
     sortedPointsAccordingToDistance = {}
     for entry, targets in entriesAndTargets.items():
         for target in targets:
             distance = 0
-            distance += getDistanceOfClosestPointToPath(entry, target, tree, precision)
+            distance += getDistanceOfClosestPointToPath(entry, target, bloodVesseltree, bloodVesslsDilateTree, precision)
             key = float(distance)
             if key in sortedPointsAccordingToDistance.keys():
                 sortedPointsAccordingToDistance[key].append([entry, target])
@@ -135,13 +136,14 @@ def getSortedPathsAccordingToDistance(entriesAndTargets, tree, precision):
     return sortedPointsAccordingToDistance
 
 
-def getDistanceOfClosestPointToPath(entry, target, tree, precision):
+def getDistanceOfClosestPointToPath(entry, target, bloodVesselTree, bloodVesslsDilateTree, precision):
     minDistance = 0
     xEntry, yEntry, zEntry = entry[0], entry[1], entry[2]
     xTarget, yTarget, zTarget = target[0], target[1], target[2]
     for step in np.arange(0, 1, precision):
         x, y, z = PointUtils.getXYZPointsOnLine(step, xEntry, xTarget, yEntry, yTarget, zEntry, zTarget)
-        distance = getClosestPointDistance(tree, x, y, z)
+        distance = getClosestPointDistance(bloodVesseltree, x, y, z)
+        distance += getClosestPointDistance(bloodVesslsDilateTree, x, y, z)
         vector = GeometryUtils.getVectorFromPoints(entry, target)
         minDistance = GeometryUtils.getVectorMagnitude(vector)
         if distance > 0 and distance < minDistance:
