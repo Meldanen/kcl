@@ -219,29 +219,8 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
 
         logging.info('Processing started')
 
-        # uncomment to see one-by-one
-        # startTime = time.time()
-        # PointUtils.getFilteredTargets(targets, hippocampus)
-        # endTime = time.time()
-        # print('Filtered targets time: ', endTime - startTime, 'seconds')
-        #
-        # entriesAndTargets = PointUtils.getTrajectoryDictionary(entries,
-        #                                                        PointUtils.convertMarkupNodeToPoints(targets))
-        #
-        # startTime = time.time()
-        # PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, ventricles)
-        # endTime = time.time()
-        # print('Avoid area - Ventricles: ', endTime - startTime, 'seconds')
-        #
-        # startTime = time.time()
-        # PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
-        # endTime = time.time()
-        # print('Avoid area - Blood Vessels: ', endTime - startTime, 'seconds')
-        #
-        # startTime = time.time()
-        # PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, angle)
-        # endTime = time.time()
-        # print('Use only specified angle: ', endTime - startTime, 'seconds')
+        # uncomment to see one-by-one timings
+        # self.timeEachComponent(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex, angle)
 
         startTime = time.time()
         trajectoriesForAllHardConstraints = PathPlannerUtils.applyAllHardConstraints(entries, targets, hippocampus,
@@ -252,8 +231,7 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
                                                                        bloodVesselsDilate, 0.01)
         endTime = time.time()
         print('All together: ', endTime - startTime, 'seconds')
-        print("first: ", finalTrajectories[0])
-        print("last: ", finalTrajectories[1])
+
         # add to slicer scene to view
         self.registerToSlicer(finalTrajectories)
         logging.info('Processing completed')
@@ -272,6 +250,35 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
     def createAndRegisterFiducial(self, coordinates, label):
         fudicualNode = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', label)
         fudicualNode.AddFiducialFromArray(coordinates)
+
+    # Helps to see how much time each component takes on its own. Could have probably been an automated test instead
+    @staticmethod
+    def timeEachComponent(self, entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex,
+                          angle):
+        startTime = time.time()
+        PointUtils.getFilteredTargets(targets, hippocampus)
+        endTime = time.time()
+        print('Filtered targets time: ', endTime - startTime, 'seconds')
+
+        entriesAndTargets = PointUtils.getTrajectoryDictionary(entries,
+                                                               PointUtils.convertMarkupNodeToPoints(targets))
+
+        startTime = time.time()
+        PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
+        endTime = time.time()
+        print('Avoid area - Blood Vessels Dilate: ', endTime - startTime, 'seconds')
+
+        startTime = time.time()
+        PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
+        endTime = time.time()
+        print('Avoid area - Blood Vessels: ', endTime - startTime, 'seconds')
+
+        startTime = time.time()
+        PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, angle)
+        endTime = time.time()
+        print('Use only specified angle: ', endTime - startTime, 'seconds')
+        endTime = time.time()
+        print('All together: ', endTime - startTime, 'seconds')
 
 
 class PathPlannerTest(ScriptedLoadableModuleTest):
