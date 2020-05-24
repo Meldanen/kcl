@@ -112,7 +112,7 @@ def isValidAngle(tree, polyData, entry, target, specifiedAngle):
 
 
 # Soft Constraint
-def getBestTrajectory(entriesAndTargets, bloodVessels, bloodVesslsDilate, precision):
+def getBestAndWorstTrajectory(entriesAndTargets, bloodVessels, bloodVesslsDilate, precision):
     sortedPointsAccordingToDistance = getSortedPathsAccordingToDistance(entriesAndTargets, bloodVessels, bloodVesslsDilate, precision)
     mostDistance = sortedPointsAccordingToDistance[0]
     leastDistance = sortedPointsAccordingToDistance[-1]
