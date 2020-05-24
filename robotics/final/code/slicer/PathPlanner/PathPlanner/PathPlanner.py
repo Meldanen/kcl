@@ -227,18 +227,18 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
                                                                                      bloodVesselsDilate,
                                                                                      bloodVessels, cortex,
                                                                                      angle)
-        finalTrajectories = PathPlannerUtils.getBestAndWorstTrajectory(trajectoriesForAllHardConstraints, bloodVessels,
+        bestAndWorstPair = PathPlannerUtils.getBestAndWorstTrajectory(trajectoriesForAllHardConstraints, bloodVessels,
                                                                        bloodVesselsDilate, 0.01)
         endTime = time.time()
         print('All together: ', endTime - startTime, 'seconds')
 
         # add to slicer scene to view
-        self.registerToSlicer(finalTrajectories)
+        self.registerToSlicer(bestAndWorstPair)
         logging.info('Processing completed')
         return True
 
-    def registerToSlicer(self, finalTrajectories):
-        maxTrajectory = finalTrajectories[0][1]
+    def registerToSlicer(self, bestAndWorstPair):
+        maxTrajectory = bestAndWorstPair[0][1]
         self.registerEntryTargetPair(maxTrajectory)
 
         # minTrajectory = PointUtils.convertEntryTargetPairToVtkObject(finalTrajectories[1][1])
@@ -252,7 +252,6 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
         fudicualNode.AddFiducialFromArray(coordinates)
 
     # Helps to see how much time each component takes on its own. Could have probably been an automated test instead
-    @staticmethod
     def timeEachComponent(self, entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex,
                           angle):
         startTime = time.time()
@@ -368,14 +367,14 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         entriesAndTargets = {(196.989, 131.913, 32.491): [[150.0, 128.0, 114.0]]}
         result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
         self.assertTrue(len(result) > 0)
-        self.delayDisplay('testAvoidVentriclesValidPath passed!')
+        self.delayDisplay('testAvoidBloodVesselsDilateValidPath passed!')
 
     def testAvoidBloodVesselsDilateInvalidPath(self):
         bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
         entriesAndTargets = {(205.327, 107.823, 58.771): [[158.0, 133.0, 82.0]]}
         result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
         self.assertTrue(len(result) == 0)
-        self.delayDisplay('testAvoidVentriclesInvalidPath passed!')
+        self.delayDisplay('testAvoidBloodVesselsDilateInvalidPath passed!')
 
     def testAvoidBloodVesselsValidPath(self):
         bloodVessels = self.getNode(self.VESSEL_NODE_LABEL)
