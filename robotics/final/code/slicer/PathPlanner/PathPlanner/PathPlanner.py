@@ -285,14 +285,14 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.testLoadAllData(directory)
         self.testGetFilteredHippocampusValidTargets()
         self.testGetFilteredHippocampusInvalidTargets()
-        # self.testAvoidBloodVesselsDilateValidPath()
-        # self.testAvoidBloodVesselsDilateInvalidPath()
-        # self.testAvoidBloodVesselsValidPath()
-        # self.testAvoidBloodVesselsInvalidPath()
-        # self.testAngleValidPath()
-        # self.testAngleInvalidPath()
-        # self.testCountRejectedTrajectories(True)  # slow test
-        # self.testAllTogether()  # slow test
+        self.testAvoidBloodVesselsDilateValidPath()
+        self.testAvoidBloodVesselsDilateInvalidPath()
+        self.testAvoidBloodVesselsValidPath()
+        self.testAvoidBloodVesselsInvalidPath()
+        self.testAngleValidPath()
+        self.testAngleInvalidPath()
+        self.testCountRejectedTrajectories(True)  # slow test
+        self.testAllTogether()  # slow test
         self.delayDisplay('Finished testing')
         self.setUp()  # to reclear data
 
