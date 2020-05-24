@@ -276,13 +276,21 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
 
 class PathPlannerTest(ScriptedLoadableModuleTest):
 
+    def __init__(self):
+        self.DIRECTORY = "C:\dev\kcl\\robotics\\final\models\slicer\labelMaps"
+        self.TARGETS_NODE_LABEL = "targets"
+        self.ENTRIES_NODE_LABEL = "entries"
+        self.CORTEX_NODE_LABEL = "cortexLabelMap"
+        self.VESSEL_NODE_LABEL = "vesselLabelMap"
+        self.HIPPOCAMPUS_NODE_LABEL = "hippoLabelMap"
+        self.VESSEL_DILATE_NODE_LABEL = "vesselDilateLabelMap"
+
     def setUp(self):
         slicer.mrmlScene.Clear(0)
 
     def runTest(self):
         self.setUp()
-        directory = "C:\dev\kcl\\robotics\\final\models\slicer\labelMaps"
-        self.testLoadAllData(directory)
+        self.testLoadAllData(self.DIRECTORY)
         self.testGetFilteredHippocampusValidTargets()
         self.testGetFilteredHippocampusInvalidTargets()
         self.testAvoidBloodVesselsDilateValidPath()
@@ -310,18 +318,17 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.assertTrue(slicer.util.loadMarkupsFiducialList(path))
 
     def testLoadLabel(self, path):
-        asd = slicer.util.loadLabelVolume(path)
         self.assertTrue(slicer.util.loadLabelVolume(path))
 
     # Slow test
     # This is just to make sure all constraints run together. It doesn't actually validate the results
     def testAllTogether(self):
-        hippocampus = self.getNode("hippoLabelMap")
-        bloodVesselsDilate = self.getNode("vesselDilateLabelMap")
-        bloodVessels = self.getNode("vesselLabelMap")
-        cortex = self.getNode("cortexLabelMap")
-        entries = self.getNode("entries")
-        targets = self.getNode("targets")
+        hippocampus = self.getNode(self.HIPPOCAMPUS_NODE_LABEL)
+        bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
+        bloodVessels = self.getNode(self.VESSEL_NODE_LABEL)
+        cortex = self.getNode(self.CORTEX_NODE_LABEL)
+        entries = self.getNode(self.ENTRIES_NODE_LABEL)
+        targets = self.getNode(self.TARGETS_NODE_LABEL)
         angle = 55
         trajectoriesForAllHardConstraints = PathPlannerUtils.applyAllHardConstraints(entries, targets, hippocampus,
                                                                                      bloodVesselsDilate,
@@ -334,14 +341,14 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.delayDisplay('testAllTogether passed!')
 
     def testGetFilteredHippocampusValidTargets(self):
-        hippocampus = self.getNode("hippoLabelMap")
-        targets = self.getNode("targets")
+        hippocampus = self.getNode(self.HIPPOCAMPUS_NODE_LABEL)
+        targets = self.getNode(self.TARGETS_NODE_LABEL)
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
         self.assertTrue(targets.GetNumberOfMarkups() > len(filteredTargets))
         self.delayDisplay('testGetFilteredHippocampusValidTargets passed!')
 
     def testGetFilteredHippocampusInvalidTargets(self):
-        hippocampus = self.getNode("hippoLabelMap")
+        hippocampus = self.getNode(self.HIPPOCAMPUS_NODE_LABEL)
         coordinates = [0, 1, 2]
         targets = slicer.vtkMRMLMarkupsFiducialNode()
         targets.AddFiducialFromArray(coordinates)
@@ -350,42 +357,42 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.delayDisplay('testGetFilteredHippocampusInvalidTargets passed!')
 
     def testAvoidBloodVesselsDilateValidPath(self):
-        bloodVesselsDilate = self.getNode("vesselDilateLabelMap")
+        bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
         entriesAndTargets = {(196.989, 131.913, 32.491): [[150.0, 128.0, 114.0]]}
         result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidVentriclesValidPath passed!')
 
     def testAvoidBloodVesselsDilateInvalidPath(self):
-        bloodVesselsDilate = self.getNode("vesselDilateLabelMap")
+        bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
         entriesAndTargets = {(205.327, 107.823, 58.771): [[158.0, 133.0, 82.0]]}
         result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidVentriclesInvalidPath passed!')
 
     def testAvoidBloodVesselsValidPath(self):
-        vessels = self.getNode("vesselLabelMap")
+        bloodVessels = self.getNode(self.VESSEL_NODE_LABEL)
         entriesAndTargets = {(196.989, 131.913, 32.491): [[150.0, 128.0, 114.0]]}
-        result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, vessels)
+        result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAvoidBloodVesselsValidPath passed!')
 
     def testAvoidBloodVesselsInvalidPath(self):
-        vessels = self.getNode("vesselLabelMap")
+        bloodVessels = self.getNode(self.VESSEL_NODE_LABEL)
         entriesAndTargets = {(212.09, 147.385, 76.878): [[158.0, 133.0, 82.0]]}
-        result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, vessels)
+        result = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
         self.assertTrue(len(result) == 0)
         self.delayDisplay('testAvoidBloodVesselsInvalidPath passed!')
 
     def testAngleValidPath(self):
-        cortex = self.getNode("cortexLabelMap")
+        cortex = self.getNode(self.CORTEX_NODE_LABEL)
         entriesAndTargets = {(196.989, 131.913, 32.491): [[150.0, 128.0, 114.0]]}
         result = PathPlannerUtils.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) > 0)
         self.delayDisplay('testAngleValidPath passed!')
 
     def testAngleInvalidPath(self):
-        cortex = self.getNode("cortexLabelMap")
+        cortex = self.getNode(self.CORTEX_NODE_LABEL)
         entriesAndTargets = {(208.654, 134.777, 61.762): [[162.0, 128.0, 106.0]]}
         result = PathPlannerUtils.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, 55)
         self.assertTrue(len(result) == 0)
@@ -393,12 +400,12 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
 
     # Slow test
     def testCountRejectedTrajectories(self, printOutput):
-        hippocampus = self.getNode("hippoLabelMap")
-        bloodVesselsDilate = self.getNode("vesselDilateLabelMap")
-        bloodVessels = self.getNode("vesselLabelMap")
-        cortex = self.getNode("cortexLabelMap")
-        entries = self.getNode("entries")
-        targets = self.getNode("targets")
+        hippocampus = self.getNode(self.HIPPOCAMPUS_NODE_LABEL)
+        bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
+        bloodVessels = self.getNode(self.VESSEL_NODE_LABEL)
+        cortex = self.getNode(self.CORTEX_NODE_LABEL)
+        entries = self.getNode(self.ENTRIES_NODE_LABEL)
+        targets = self.getNode(self.TARGETS_NODE_LABEL)
         angle = 55
         total = entries.GetNumberOfMarkups() * targets.GetNumberOfMarkups()
         if printOutput:
