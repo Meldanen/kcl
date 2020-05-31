@@ -6,7 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/igtlimage.h
+/home/pww/igtl/OpenIGTLink-build/igtlConfigure.h
+
+/home/pww/igtl/OpenIGTLink-build/igtlTypeConfig.h
+
+/home/pww/igtl/OpenIGTLink/Source/igtlMath.h
+igtlWin32Header.h
+/home/pww/igtl/OpenIGTLink/Source/igtlWin32Header.h
+
+/home/pww/igtl/OpenIGTLink/Source/igtlTypes.h
+igtlTypeConfig.h
+/home/pww/igtl/OpenIGTLink/Source/igtlTypeConfig.h
+
+/home/pww/igtl/OpenIGTLink/Source/igtlWin32Header.h
+igtlConfigure.h
+/home/pww/igtl/OpenIGTLink/Source/igtlConfigure.h
+windows.h
+-
+
+/home/pww/ros_test/devel/include/ros_igtl_bridge/igtlimage.h
 string
 -
 vector
@@ -22,7 +40,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/igtlpoint.h
+/home/pww/ros_test/devel/include/ros_igtl_bridge/igtlpoint.h
 string
 -
 vector
@@ -40,7 +58,7 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/igtlpointcloud.h
+/home/pww/ros_test/devel/include/ros_igtl_bridge/igtlpointcloud.h
 string
 -
 vector
@@ -58,7 +76,7 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/igtlpolydata.h
+/home/pww/ros_test/devel/include/ros_igtl_bridge/igtlpolydata.h
 string
 -
 vector
@@ -84,7 +102,7 @@ ros_igtl_bridge/vector.h
 ros_igtl_bridge/vector.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/igtlstring.h
+/home/pww/ros_test/devel/include/ros_igtl_bridge/igtlstring.h
 string
 -
 vector
@@ -100,7 +118,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/igtltransform.h
+/home/pww/ros_test/devel/include/ros_igtl_bridge/igtltransform.h
 string
 -
 vector
@@ -118,7 +136,7 @@ ros/message_operations.h
 geometry_msgs/Transform.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include/ros_igtl_bridge/vector.h
+/home/pww/ros_test/devel/include/ros_igtl_bridge/vector.h
 string
 -
 vector
@@ -134,9 +152,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ReadOCTFile.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ReadOCTFile.h
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ShowPolyData.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ShowPolyData.h
 vtkPointData.h
 -
 vtkSmartPointer.h
@@ -180,21 +198,21 @@ vtkTextProperty.h
 vtkTextActor.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_test.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_test.h
 ros/ros.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros/ros.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros/ros.h
 ros_igtl_bridge/igtltransform.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtltransform.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtltransform.h
 ros_igtl_bridge/igtlpoint.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlpoint.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlpoint.h
 ros_igtl_bridge/igtlpointcloud.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlpointcloud.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlpointcloud.h
 ros_igtl_bridge/igtlpolydata.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlpolydata.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlpolydata.h
 ros_igtl_bridge/igtlimage.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlimage.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlimage.h
 ros_igtl_bridge/igtlstring.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlstring.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/include/ros_igtl_bridge/igtlstring.h
 cstdlib
 -
 cstring
@@ -212,19 +230,19 @@ vtkPolyData.h
 vtkSmartPointer.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/main_test.cpp
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/main_test.cpp
 ros_igtl_test.h
 -
 
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/ros_igtl_test.cpp
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/ros_igtl_test.cpp
 ros_igtl_test.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/ros_igtl_test.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/ros_igtl_test.h
 ShowPolyData.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/ShowPolyData.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/ShowPolyData.h
 ReadOCTFile.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/ReadOCTFile.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/ReadOCTFile.h
 igtlMath.h
-/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/testing/igtlMath.h
+/home/pww/ros_test/src/ROS-IGTL-Bridge/testing/igtlMath.h
 vtkCellArray.h
 -
 vtkIdList.h
@@ -254,24 +272,6 @@ vtkTransform.h
 vtkPolyDataReader.h
 -
 igtlTypes.h
--
-
-/home/mikroszolos/optigtllink/OpenIGTLink-build/igtlConfigure.h
-
-/home/mikroszolos/optigtllink/OpenIGTLink-build/igtlTypeConfig.h
-
-/home/mikroszolos/optigtllink/OpenIGTLink/Source/igtlMath.h
-igtlWin32Header.h
-/home/mikroszolos/optigtllink/OpenIGTLink/Source/igtlWin32Header.h
-
-/home/mikroszolos/optigtllink/OpenIGTLink/Source/igtlTypes.h
-igtlTypeConfig.h
-/home/mikroszolos/optigtllink/OpenIGTLink/Source/igtlTypeConfig.h
-
-/home/mikroszolos/optigtllink/OpenIGTLink/Source/igtlWin32Header.h
-igtlConfigure.h
-/home/mikroszolos/optigtllink/OpenIGTLink/Source/igtlConfigure.h
-windows.h
 -
 
 /opt/ros/melodic/include/geometry_msgs/Point.h

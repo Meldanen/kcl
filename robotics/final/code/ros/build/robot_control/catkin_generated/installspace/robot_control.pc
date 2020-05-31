@@ -1,4 +1,4 @@
-prefix=/home/mikroszolos/dev/kcl/robotics/final/code/ros/install
+prefix=/home/pww/ros_test/install
 
 Name: robot_control
 Description: Description of robot_control

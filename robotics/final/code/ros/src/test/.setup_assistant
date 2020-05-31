@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ismr19_description
+    relative_path: urdf/ismr19.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur5.srdf
+  CONFIG:
+    author_name: ioannis
+    author_email: gavos000@hotmail.com
+    generated_timestamp: 1590465438

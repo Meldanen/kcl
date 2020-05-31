@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/usr/include/eigen3".split(';') if "/usr/incl
 PROJECT_CATKIN_DEPENDS = "roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "robot_control"
-PROJECT_SPACE_DIR = "/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel"
+PROJECT_SPACE_DIR = "/home/pww/ros_test/devel"
 PROJECT_VERSION = "0.0.0"

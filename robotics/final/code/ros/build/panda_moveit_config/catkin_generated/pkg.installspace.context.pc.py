@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "panda_moveit_config"
-PROJECT_SPACE_DIR = "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install"
+PROJECT_SPACE_DIR = "/home/pww/ros_test/install"
 PROJECT_VERSION = "0.7.3"

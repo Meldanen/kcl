@@ -67,14 +67,14 @@ set(panda_moveit_config_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(panda_moveit_config_SOURCE_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/panda_moveit_config)
-  set(panda_moveit_config_DEVEL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/devel)
+  set(panda_moveit_config_SOURCE_PREFIX /home/pww/ros_test/src/panda_moveit_config)
+  set(panda_moveit_config_DEVEL_PREFIX /home/pww/ros_test/devel)
   set(panda_moveit_config_INSTALL_PREFIX "")
   set(panda_moveit_config_PREFIX ${panda_moveit_config_DEVEL_PREFIX})
 else()
   set(panda_moveit_config_SOURCE_PREFIX "")
   set(panda_moveit_config_DEVEL_PREFIX "")
-  set(panda_moveit_config_INSTALL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/install)
+  set(panda_moveit_config_INSTALL_PREFIX /home/pww/ros_test/install)
   set(panda_moveit_config_PREFIX ${panda_moveit_config_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mikroszolos/dev/kcl/robotics/final/code/ros/install/lib;/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/pww/ros_test/install/lib;/home/pww/ros_test/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

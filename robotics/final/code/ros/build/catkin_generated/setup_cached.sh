@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/mikroszolos/dev/kcl/robotics/final/code/ros/build"
+export PWD="/home/pww/ros_test/build"

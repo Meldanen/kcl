@@ -5,11 +5,14 @@ import rospy
 import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
+import numpy as np
 import math
 import tf
 from math import pi
 from moveit_commander.conversions import pose_to_list
 from geometry_msgs.msg import Transform
+from visualization_msgs.msg import Marker
+from visualization_msgs.msg import MarkerArray
 from std_msgs.msg import String
 from ros_igtl_bridge.msg import igtlpoint
 from ros_igtl_bridge.msg import igtlstring
@@ -22,23 +25,194 @@ class importer():
     def cb_point(self,data):
 
         if data.name == 'Entry':
-            rospy.loginfo(rospy.get_caller_id() + " Entry = (%f, %f, %f).", data.pointdata.x, data.pointdata.y, data.pointdata.z)
-            self.go_to_pose_goal(data.pointdata.x,data.pointdata.y,data.pointdata.z)
+	       self.validEntry = True
+               rospy.loginfo(rospy.get_caller_id() + " Entry = (%f, %f, %f).", data.pointdata.x, data.pointdata.y, data.pointdata.z)
+               self.entry.position.x = data.pointdata.x/1000.0
+               self.entry.position.y = data.pointdata.y/1000.0
+               self.entry.position.z = data.pointdata.z/1000.0
+               # self.go_to_pose_goal(data.pointdata.x,data.pointdata.y,data.pointdata.z)
         elif data.name == 'Target':
-            rospy.loginfo(rospy.get_caller_id() + " Target = (%f, %f, %f).", data.pointdata.x, data.pointdata.y, data.pointdata.z)
-            self.plan_cartesian_path(data.pointdata.x,data.pointdata.y,data.pointdata.z)
+	       self.validTarget = True
+               rospy.loginfo(rospy.get_caller_id() + " Target = (%f, %f, %f).", data.pointdata.x, data.pointdata.y, data.pointdata.z)
+	       self.target.position.x = data.pointdata.x/1000.0
+	       self.target.position.y = data.pointdata.y/1000.0
+	       self.target.position.z = data.pointdata.z/1000.0
+               # self.plan_cartesian_path(data.pointdata.x,data.pointdata.y,data.pointdata.z)
+	if (self.validEntry and self.validTarget):
+	       # if (self.validMarkers == False) :
+			# self.show_marker() 			  
+    
+	       if (self.execute()):
+			self.show_marker() 
+			self.validEntry = False
+			self.validTarget = False
+
+    def show_marker(self):
+	self.markerArray
+	m1 = Marker()
+	m2 = Marker()
+	m3 = Marker()
+	m1.header.frame_id = "base_link"
+	m2.header.frame_id = "base_link"
+	m3.header.frame_id = "base_link"
+	m1.header.stamp = rospy.Time.now()
+	m2.header.stamp = rospy.Time.now()
+	m3.header.stamp = rospy.Time.now()
+	m1.type = 2
+	m2.type = 2
+	m3.type = m3.MESH_RESOURCE
+	m3.mesh_resource = "package://robot_control/src/CortexModel.stl"
+	m1.action = m1.ADD
+	m2.action = m2.ADD
+	m3.action = m3.ADD
+	m1.ns = "Entry"
+	m2.ns = "Target"
+	m2.ns = "Cortex"
+	m1.lifetime = rospy.Duration.from_sec(999)
+	m2.lifetime = rospy.Duration.from_sec(999)
+	m3.lifetime = rospy.Duration.from_sec(999)
+	m1.pose.position.x = self.entry.position.x
+	m2.pose.position.x = self.target.position.x
+	m1.pose.position.y = self.entry.position.y
+	m2.pose.position.y = self.target.position.y
+	m1.pose.position.z = self.entry.position.z
+	m2.pose.position.z = self.target.position.z
+
+	m3.pose.position.x = 0.28778
+	m3.pose.position.y = 0.13778
+	m3.pose.position.z = 0.20744
+
+	m1.pose.orientation.w = 1.0
+	m2.pose.orientation.w = 1.0
+	m1.pose.orientation.x = 0.0
+	m2.pose.orientation.x = 0.0
+	m1.pose.orientation.y = 0.0
+	m2.pose.orientation.y = 0.0
+	m1.pose.orientation.z = 0.0
+	m2.pose.orientation.z = 0.0
+
+	m3.pose.orientation.w = 1.0
+	m3.pose.orientation.x = 0.0
+	m3.pose.orientation.y = 0.0
+	m3.pose.orientation.z = 0.0
+
+	m1.scale.x = 0.02
+	m1.scale.y = 0.02
+	m1.scale.z = 0.02
+
+	m2.scale.x = 0.02
+	m2.scale.y = 0.02
+	m2.scale.z = 0.02
+
+	m3.scale.x = 0.001
+	m3.scale.y = 0.001
+	m3.scale.z = 0.001
+
+	m1.color.a = 1.0
+	m1.color.r = 0.0
+	m1.color.g = 0.5
+	m1.color.b = 0.5
+
+	m2.color.a = 1.0
+	m2.color.r = 0.0
+	m2.color.g = 0.0
+	m2.color.b = 1.0
+
+	m3.color.a = 0.3
+	m3.color.r = 0.0
+	m3.color.g = 1.0
+	m3.color.b = 0.0
+
+	# m2.id = 0
+	self.markerArray.markers.append(m1)
+	self.markerArray.markers.append(m2)
+	# self.pub_Marker.publish(self.markerArray)
+	self.validMarkers = True
+	self.pub_entryMarker.publish(m1)
+	self.pub_targetMarker.publish(m2)
+	self.pub_cortexMarker.publish(m3)
+
+
+
+
+
+
+    def execute(self):
+        vectorET = [self.target.position.x - self.entry.position.x,self.target.position.y - self.entry.position.y,self.target.position.z - self.entry.position.z]
+        vectorET = vectorET/self.magnitudeVector(vectorET)
+        vectorO = [0.0,1.0,0.0]
+        vectorX = np.cross(vectorO,vectorET)
+        vectorY = np.cross(vectorET,vectorX)
+        orientationMatrix = np.mat([[vectorX[0],vectorY[0],vectorET[0]],[vectorX[1],vectorY[1],vectorET[1]],[vectorX[2],vectorY[2],vectorET[2]]])
+        w,x,y,z = self.mat2quat(orientationMatrix)
+        self.go_to_pose_entry(w,x,y,z)
+	asnwer = raw_input("procced to Target? Press Enter")
+        self.plan_cartesian_path(w,x,y,z)
+	return True
+
+    def magnitudeVector(self,vector):
+        magnitude = np.sqrt(vector[0]**2+vector[1]**2+vector[2]**2)
+        return magnitude
+
+    def mat2quat(self,t):
+        #   Adapted from "robotic toolbox for python"
+        #   Convert homogeneous transform to a unit-quaternion
+        #   Return a unit quaternion corresponding to the rotational part of the
+        #   homogeneous transform t.
+
+        qs = np.sqrt(np.trace(t)+1)/2.0
+        kx = t[2,1] - t[1,2]    # Oz - Ay
+        ky = t[0,2] - t[2,0]    # Ax - Nz
+        kz = t[1,0] - t[0,1]    # Ny - Ox
+        if (t[0,0] >= t[1,1]) and (t[0,0] >= t[2,2]):
+            kx1 = t[0,0] - t[1,1] - t[2,2] + 1      # Nx - Oy - Az + 1
+            ky1 = t[1,0] + t[0,1]           # Ny + Ox
+            kz1 = t[2,0] + t[0,2]           # Nz + Ax
+            add = (kx >= 0)
+        elif (t[1,1] >= t[2,2]):
+            kx1 = t[1,0] + t[0,1]           # Ny + Ox
+            ky1 = t[1,1] - t[0,0] - t[2,2] + 1  # Oy - Nx - Az + 1
+            kz1 = t[2,1] + t[1,2]           # Oz + Ay
+            add = (ky >= 0)
+        else:
+            kx1 = t[2,0] + t[0,2]           # Nz + Ax
+            ky1 = t[2,1] + t[1,2]           # Oz + Ay
+            kz1 = t[2,2] - t[0,0] - t[1,1] + 1  # Az - Nx - Oy + 1
+            add = (kz >= 0)
+        if add:
+            kx = kx + kx1
+            ky = ky + ky1
+            kz = kz + kz1
+        else:
+            kx = kx - kx1
+            ky = ky - ky1
+            kz = kz - kz1
+        kv = np.matrix([kx, ky, kz])
+        nm = np.linalg.norm( kv )
+        if nm == 0:
+            e0 = 1.0
+            q = np.matrix([0.0, 0.0, 0.0])
+        else:
+            e0 = qs
+            q = (np.sqrt(1 - qs**2) / nm) * kv
+        return e0, q[0,0], q[0,1], q[0,2]
+
+
     def cb_string(self,data):
         pass
 
-    def go_to_pose_goal(self,x,y,z):
+    def go_to_pose_entry(self,w,x,y,z):
         move_group = self.move_group
 
 
         pose_goal = geometry_msgs.msg.Pose()
-        #pose_goal.orientation.w = 1.0
-        pose_goal.position.x = x/1000.0
-        pose_goal.position.y = y/1000.0
-        pose_goal.position.z = z/1000.0
+	pose_goal.orientation.x = x
+	pose_goal.orientation.y = y
+	pose_goal.orientation.z = z
+        pose_goal.orientation.w = w
+        pose_goal.position.x = self.entry.position.x
+        pose_goal.position.y = self.entry.position.y
+        pose_goal.position.z = self.entry.position.z
         print(pose_goal.position.x)
         move_group.set_pose_target(pose_goal)
 
@@ -53,10 +227,11 @@ class importer():
         current_pose = move_group.get_current_pose().pose
         return self.all_close(pose_goal, current_pose, 0.01)
 
-    def plan_cartesian_path(self,x,y,z, scale=10):
+    def plan_cartesian_path(self,w,x,y,z):
         # Copy class variables to local variables to make the web tutorials more clear.
         # In practice, you should use the class variables directly unless you have a good
         # reason not to.
+        scale = 10
         move_group = self.move_group
 
         ## BEGIN_SUB_TUTORIAL plan_cartesian_path
@@ -72,18 +247,22 @@ class importer():
 	xTarget = wpose.position.x
 	yTarget = wpose.position.y
 	zTarget = wpose.position.z
-	xEntry = x/1000.0
-	yEntry = y/1000.0
-	zEntry = z/1000.0
+	xEntry = self.target.position.x
+	yEntry = self.target.position.y
+	zEntry = self.target.position.z
 	for step in range(scale):
-		xEnd = xEntry + (step/scale)*(xTarget-xEntry)
-		yEnd = yEntry + (step/scale)*(yTarget-yEntry)
-		zEnd = zEntry + (step/scale)*(zTarget-zEntry)
-        	wpose.position.x = xEnd
-        	wpose.position.y = yEnd
-		wpose.position.z = zEnd
-		rospy.loginfo(wpose)
-        	waypoints.append(copy.deepcopy(wpose))
+            xEnd = xEntry + (step/scale)*(xTarget-xEntry)
+            yEnd = yEntry + (step/scale)*(yTarget-yEntry)
+	    zEnd = zEntry + (step/scale)*(zTarget-zEntry)
+	    wpose.orientation.x = x
+	    wpose.orientation.y = y
+	    wpose.orientation.z = z
+	    wpose.orientation.w = w
+            wpose.position.x = xEnd
+            wpose.position.y = yEnd
+            wpose.position.z = zEnd
+	    rospy.loginfo(wpose)
+            waypoints.append(copy.deepcopy(wpose))
 
 
         # We want the Cartsesian path to be interpolated at a resolution of 1 cm
@@ -171,7 +350,10 @@ class importer():
         global pub_igtl_transform_out
 
         pub_igtl_transform_out = rospy.Publisher('IGTL_TRANSFORM_OUT', igtltransform, queue_size=10)
-
+	# self.pub_Marker = rospy.Publisher('marker_entry', MarkerArray, queue_size=10)
+	self.pub_entryMarker = rospy.Publisher('marker_entry', Marker, queue_size=1)
+	self.pub_targetMarker = rospy.Publisher('marker_target', Marker, queue_size=1)
+	self.pub_cortexMarker = rospy.Publisher('marker_cortex', Marker, queue_size=1)
         # In ROS, nodes are uniquely named. If two nodes with the same
         # node are launched, the previous one is kicked off. The
         # anonymous=True flag means that rospy will choose a unique
@@ -203,7 +385,7 @@ class importer():
         ## If you are using a different robot, change this value to the name of your robot
         ## arm planning group.
         ## This interface can be used to plan and execute motions:
-        group_name = "panda_arm"
+        group_name = "ur5"
         move_group = moveit_commander.MoveGroupCommander(group_name)
 
         ## Create a `DisplayTrajectory`_ ROS publisher which is used to display
@@ -218,6 +400,12 @@ class importer():
         self.scene = scene
         self.move_group = move_group
         self.display_trajectory_publisher = display_trajectory_publisher
+	self.entry = geometry_msgs.msg.Pose()
+	self.target = geometry_msgs.msg.Pose()
+	self.validEntry = False
+	self.validTarget = False
+	self.validMarkers = False
+	self.markerArray = MarkerArray()
         #self.planning_frame = planning_frame
         #self.eef_link = eef_link
         #self.group_names = group_names

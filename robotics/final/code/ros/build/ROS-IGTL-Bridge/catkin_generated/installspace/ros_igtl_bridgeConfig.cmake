@@ -67,14 +67,14 @@ set(ros_igtl_bridge_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ros_igtl_bridge_SOURCE_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge)
-  set(ros_igtl_bridge_DEVEL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/devel)
+  set(ros_igtl_bridge_SOURCE_PREFIX /home/pww/ros_test/src/ROS-IGTL-Bridge)
+  set(ros_igtl_bridge_DEVEL_PREFIX /home/pww/ros_test/devel)
   set(ros_igtl_bridge_INSTALL_PREFIX "")
   set(ros_igtl_bridge_PREFIX ${ros_igtl_bridge_DEVEL_PREFIX})
 else()
   set(ros_igtl_bridge_SOURCE_PREFIX "")
   set(ros_igtl_bridge_DEVEL_PREFIX "")
-  set(ros_igtl_bridge_INSTALL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/install)
+  set(ros_igtl_bridge_INSTALL_PREFIX /home/pww/ros_test/install)
   set(ros_igtl_bridge_PREFIX ${ros_igtl_bridge_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mikroszolos/dev/kcl/robotics/final/code/ros/install/lib;/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/pww/ros_test/install/lib;/home/pww/ros_test/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

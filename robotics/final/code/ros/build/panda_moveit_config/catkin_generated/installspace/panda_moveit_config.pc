@@ -1,4 +1,4 @@
-prefix=/home/mikroszolos/dev/kcl/robotics/final/code/ros/install
+prefix=/home/pww/ros_test/install
 
 Name: panda_moveit_config
 Description: Description of panda_moveit_config
