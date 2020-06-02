@@ -6,12 +6,14 @@
 1.	Launch Slicer 4.8.1
 2.	Go to your favourite IGTLink extension (SlicerIGT in this case)
 3.	Create a connection with Slicer as the server on port 18944
+4.  Check that the current status is is set to "WAIT"
 ### ROS Part
 1.	Start the VM (if using one. I run this on Ubuntu, so it was not required) with the ap-propriate configuration for two-way communication
 2.	Launch the bridge file of the ros_igtl_bridge 
 3.	Choose to run as client
-4.	Set IP to the appropriate IP found by writing “ifconfig” in your terminal
-5.	Set port to 18944
+4.	Set IP to the appropriate IP found by writing “ifconfig” in your terminal. The IP is expected to be set in the bridge.launch file but you can comment this part out if you want to change it everytime
+5.	Set port to 18944. The IP is expected to be set in the bridge.launch file but you can comment this part out if you want to change it everytime
+6.  If you check Slicer, the status should have changed to "ON"
 
 A connection should be now established.
 
