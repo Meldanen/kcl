@@ -39,7 +39,7 @@ A connection should be now established.
 1.	Go back to slicer
 2.	Go to IGT -> IGTLinkIF
 3.	Scroll down to I/O Configuration
-4.	Click on “Entry” both “Target” (if you used the supplied scene) and click send
+4.	Click send for both “Entry” and “Target”
 5.  The robot should now move to the entry point and you should be prompted to click "enter" on the terminal to proceed to the target point. 
 
 Note: You need to send both points for the robot to begin the operation
@@ -55,9 +55,9 @@ The whole pipeline is a multistep process. Most parts require some manual observ
 7.	We use the ‘harden’ functionality on Slicer to have a correct representation of the structures/points and send the correct entry-target points to ROS.
 8.	We load the cortex (converted to .stl format using Slicer) as a marker node to RVIZ through RVIZ’s interface, using a scale factor of 0.001 to match Slicer’s and ROS’ measurements. 
 9.	The cortex’s origin point in RVIZ is set according to the bounding box created during the calibration step. Once we ensure that the robot is placed correctly around the structure, we can start sending our entry and target point.
-10.	We go again to IGT in Slicer and click “Send” on the “Entry” and "Target" points. We should now be able to see the robot’s end effector moving to the entry point in RVIZ (Figure 7: Robot's end effector at entry point (RVIZ)). The “Entry” point is loaded as a cyan marker. The robot will not move unless both points are sent.
-11.	At the same time, we can check the Slicer scene to confirm that the end effector is at the correct entry point. This is shown by the yellow background around the optimal entry position (Figure 2: End effector at entry point (view 1))
-12.	There should now be a prompt in the terminal to press "enter" to proceed to the target point. After doing this, we should now see the robot’s end effector moving to the target point from the entry point in a straight line (Figure 8: Robot's end effector at target point (RVIZ)). The “Target” point is loaded as a blue marker.
-13.	At the same time, we can check the Slicer scene to confirm that the end effector is at the correct target point. This is shown by the yellow background around the optimal target position Figure 4: End effector at target point (view 1)
+10.	We go again to IGT in Slicer and click “Send” on the “Entry” and "Target" points. We should now be able to see the robot’s end effector moving to the entry point in RVIZ. The “Entry” point is loaded as a cyan marker. The robot will not move unless both points are sent.
+11.	At the same time, we can check the Slicer scene to confirm that the end effector is at the correct entry point. This is shown by the yellow background around the optimal entry position.
+12.	There should now be a prompt in the terminal to press "enter" to proceed to the target point. After doing this, we should be able to see the robot’s end effector moving to the target point from the entry point in a straight line . The “Target” point is loaded as a blue marker.
+13.	At the same time, we can check the Slicer scene to confirm that the end effector is at the correct target point. This is shown by the yellow background around the optimal target position.
 
 These should be all the steps required to perform the whole pipeline. Scenes of these steps and saved models can be found within the repository under the “models and scenes” folders.
