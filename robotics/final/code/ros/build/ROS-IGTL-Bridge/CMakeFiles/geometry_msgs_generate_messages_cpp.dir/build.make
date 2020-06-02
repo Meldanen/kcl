@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pww/ros_test/src
+CMAKE_SOURCE_DIR = /home/mikroszolos/dev/kcl/robotics/final/code/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pww/ros_test/build
+CMAKE_BINARY_DIR = /home/mikroszolos/dev/kcl/robotics/final/code/ros/build
 
 # Utility rule file for geometry_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build: geomet
 .PHONY : ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 
 ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	cd /home/pww/ros_test/build/ROS-IGTL-Bridge && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ROS-IGTL-Bridge && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 
 ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend:
-	cd /home/pww/ros_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pww/ros_test/src /home/pww/ros_test/src/ROS-IGTL-Bridge /home/pww/ros_test/build /home/pww/ros_test/build/ROS-IGTL-Bridge /home/pww/ros_test/build/ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mikroszolos/dev/kcl/robotics/final/code/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mikroszolos/dev/kcl/robotics/final/code/ros/src /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge /home/mikroszolos/dev/kcl/robotics/final/code/ros/build /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ROS-IGTL-Bridge /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ROS-IGTL-Bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 

@@ -1,4 +1,4 @@
-prefix=/home/pww/ros_test/devel
+prefix=/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel
 
 Name: ismr19_moveit
 Description: Description of ismr19_moveit

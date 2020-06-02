@@ -67,14 +67,14 @@ set(ros_igtl_bridge_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ros_igtl_bridge_SOURCE_PREFIX /home/pww/ros_test/src/ROS-IGTL-Bridge)
-  set(ros_igtl_bridge_DEVEL_PREFIX /home/pww/ros_test/devel)
+  set(ros_igtl_bridge_SOURCE_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge)
+  set(ros_igtl_bridge_DEVEL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/devel)
   set(ros_igtl_bridge_INSTALL_PREFIX "")
   set(ros_igtl_bridge_PREFIX ${ros_igtl_bridge_DEVEL_PREFIX})
 else()
   set(ros_igtl_bridge_SOURCE_PREFIX "")
   set(ros_igtl_bridge_DEVEL_PREFIX "")
-  set(ros_igtl_bridge_INSTALL_PREFIX /home/pww/ros_test/install)
+  set(ros_igtl_bridge_INSTALL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/install)
   set(ros_igtl_bridge_PREFIX ${ros_igtl_bridge_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ros_igtl_bridge_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/pww/ros_test/devel/include;/home/pww/ros_test/src/ROS-IGTL-Bridge/include;/usr/include/vtk-6.3;/usr/include/freetype2;/usr/include;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include;/usr/lib/x86_64-linux-gnu/openmpi/include;/usr/include/python2.7;/usr/include/x86_64-linux-gnu;/usr/include/hdf5/openmpi;/usr/include/libxml2;/usr/include/jsoncpp;/usr/include/tcl;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include/opencv " STREQUAL " ")
+if(NOT "/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include;/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/include;/usr/include/vtk-6.3;/usr/include/freetype2;/usr/include;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include;/usr/lib/x86_64-linux-gnu/openmpi/include;/usr/include/python2.7;/usr/include/x86_64-linux-gnu;/usr/include/hdf5/openmpi;/usr/include/libxml2;/usr/include/jsoncpp;/usr/include/tcl;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include/opencv " STREQUAL " ")
   set(ros_igtl_bridge_INCLUDE_DIRS "")
-  set(_include_dirs "/home/pww/ros_test/devel/include;/home/pww/ros_test/src/ROS-IGTL-Bridge/include;/usr/include/vtk-6.3;/usr/include/freetype2;/usr/include;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include;/usr/lib/x86_64-linux-gnu/openmpi/include;/usr/include/python2.7;/usr/include/x86_64-linux-gnu;/usr/include/hdf5/openmpi;/usr/include/libxml2;/usr/include/jsoncpp;/usr/include/tcl;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include/opencv")
+  set(_include_dirs "/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/include;/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/include;/usr/include/vtk-6.3;/usr/include/freetype2;/usr/include;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include;/usr/lib/x86_64-linux-gnu/openmpi/include;/usr/include/python2.7;/usr/include/x86_64-linux-gnu;/usr/include/hdf5/openmpi;/usr/include/libxml2;/usr/include/jsoncpp;/usr/include/tcl;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include/opencv")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://github.com/openigtlink/ROS-IGTL-Bridge " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/pww/ros_test/devel/include;/home/pww/ros_test/src/ROS-IGTL-Bridge/
         message(FATAL_ERROR "Project 'ros_igtl_bridge' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ros_igtl_bridge' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/pww/ros_test/src/ROS-IGTL-Bridge/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ros_igtl_bridge' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ROS-IGTL-Bridge/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ros_igtl_bridge_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pww/ros_test/devel/lib;/home/pww/ros_test/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

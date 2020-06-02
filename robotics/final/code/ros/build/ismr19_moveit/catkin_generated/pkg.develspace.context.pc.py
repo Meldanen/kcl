@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ismr19_moveit"
-PROJECT_SPACE_DIR = "/home/pww/ros_test/devel"
+PROJECT_SPACE_DIR = "/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel"
 PROJECT_VERSION = "0.3.0"

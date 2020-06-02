@@ -8,8 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros_igtl_bridge_lib.dir/src/rib_converter_string.cpp.o"
   "CMakeFiles/ros_igtl_bridge_lib.dir/src/rib_converter_transform.cpp.o"
   "CMakeFiles/ros_igtl_bridge_lib.dir/src/ros_igtl_bridge.cpp.o"
-  "/home/pww/ros_test/devel/lib/libros_igtl_bridge_lib.pdb"
-  "/home/pww/ros_test/devel/lib/libros_igtl_bridge_lib.so"
+  "/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/lib/libros_igtl_bridge_lib.pdb"
+  "/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/lib/libros_igtl_bridge_lib.so"
 )
 
 # Per-language clean rules from dependency scanning.

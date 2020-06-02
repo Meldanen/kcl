@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pww/ros_test/src
+CMAKE_SOURCE_DIR = /home/mikroszolos/dev/kcl/robotics/final/code/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pww/ros_test/build
+CMAKE_BINARY_DIR = /home/mikroszolos/dev/kcl/robotics/final/code/ros/build
 
 # Utility rule file for clean_test_results_ur5_moveit_config.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/pww/ros_test/build
 include ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/progress.make
 
 ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config:
-	cd /home/pww/ros_test/build/ur5_moveit_config && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/pww/ros_test/build/test_results/ur5_moveit_config
+	cd /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ur5_moveit_config && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/test_results/ur5_moveit_config
 
 clean_test_results_ur5_moveit_config: ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config
 clean_test_results_ur5_moveit_config: ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/build.make
@@ -67,10 +67,10 @@ ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/build: cle
 .PHONY : ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/build
 
 ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/clean:
-	cd /home/pww/ros_test/build/ur5_moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ur5_moveit_config.dir/cmake_clean.cmake
+	cd /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ur5_moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ur5_moveit_config.dir/cmake_clean.cmake
 .PHONY : ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/clean
 
 ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/depend:
-	cd /home/pww/ros_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pww/ros_test/src /home/pww/ros_test/src/ur5_moveit_config /home/pww/ros_test/build /home/pww/ros_test/build/ur5_moveit_config /home/pww/ros_test/build/ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mikroszolos/dev/kcl/robotics/final/code/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mikroszolos/dev/kcl/robotics/final/code/ros/src /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ur5_moveit_config /home/mikroszolos/dev/kcl/robotics/final/code/ros/build /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ur5_moveit_config /home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur5_moveit_config/CMakeFiles/clean_test_results_ur5_moveit_config.dir/depend
 

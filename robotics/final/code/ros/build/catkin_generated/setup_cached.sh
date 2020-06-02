@@ -7,4 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/pww/ros_test/build"
+export CMAKE_PREFIX_PATH="/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/lib:$LD_LIBRARY_PATH"
+export PWD="/home/mikroszolos/dev/kcl/robotics/final/code/ros/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/mikroszolos/dev/kcl/robotics/final/code/ros/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/mikroszolos/dev/kcl/robotics/final/code/ros/src:$ROS_PACKAGE_PATH"

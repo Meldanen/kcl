@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include;/usr/include/vtk-6.3;/usr/i
 PROJECT_CATKIN_DEPENDS = "message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ros_igtl_bridge"
-PROJECT_SPACE_DIR = "/home/pww/ros_test/install"
+PROJECT_SPACE_DIR = "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install"
 PROJECT_VERSION = "1.0.0"

@@ -1,4 +1,4 @@
-prefix=/home/pww/ros_test/install
+prefix=/home/mikroszolos/dev/kcl/robotics/final/code/ros/install
 
 Name: ur5_moveit_config
 Description: Description of ur5_moveit_config

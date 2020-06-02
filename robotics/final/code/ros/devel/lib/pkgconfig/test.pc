@@ -1,8 +1,0 @@
-prefix=/home/pww/ros_test/devel
-
-Name: test
-Description: Description of test
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

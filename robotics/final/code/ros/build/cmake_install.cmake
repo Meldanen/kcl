@@ -1,8 +1,8 @@
-# Install script for directory: /home/pww/ros_test/src
+# Install script for directory: /home/mikroszolos/dev/kcl/robotics/final/code/ros/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pww/ros_test/install")
+  set(CMAKE_INSTALL_PREFIX "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,96 +49,94 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pww/ros_test/install/_setup_util.py")
+   "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pww/ros_test/install" TYPE PROGRAM FILES "/home/pww/ros_test/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install" TYPE PROGRAM FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pww/ros_test/install/env.sh")
+   "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pww/ros_test/install" TYPE PROGRAM FILES "/home/pww/ros_test/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install" TYPE PROGRAM FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pww/ros_test/install/setup.bash;/home/pww/ros_test/install/local_setup.bash")
+   "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/setup.bash;/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pww/ros_test/install" TYPE FILE FILES
-    "/home/pww/ros_test/build/catkin_generated/installspace/setup.bash"
-    "/home/pww/ros_test/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install" TYPE FILE FILES
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/setup.bash"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pww/ros_test/install/setup.sh;/home/pww/ros_test/install/local_setup.sh")
+   "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/setup.sh;/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pww/ros_test/install" TYPE FILE FILES
-    "/home/pww/ros_test/build/catkin_generated/installspace/setup.sh"
-    "/home/pww/ros_test/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install" TYPE FILE FILES
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/setup.sh"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pww/ros_test/install/setup.zsh;/home/pww/ros_test/install/local_setup.zsh")
+   "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/setup.zsh;/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pww/ros_test/install" TYPE FILE FILES
-    "/home/pww/ros_test/build/catkin_generated/installspace/setup.zsh"
-    "/home/pww/ros_test/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install" TYPE FILE FILES
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/setup.zsh"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pww/ros_test/install/.rosinstall")
+   "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pww/ros_test/install" TYPE FILE FILES "/home/pww/ros_test/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install" TYPE FILE FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pww/ros_test/build/gtest/cmake_install.cmake")
-  include("/home/pww/ros_test/build/panda_moveit_config/cmake_install.cmake")
-  include("/home/pww/ros_test/build/ur_description/cmake_install.cmake")
-  include("/home/pww/ros_test/build/ROS-IGTL-Bridge/cmake_install.cmake")
-  include("/home/pww/ros_test/build/robot_control/cmake_install.cmake")
-  include("/home/pww/ros_test/build/ur5_moveit_config/cmake_install.cmake")
-  include("/home/pww/ros_test/build/ismr19_description/cmake_install.cmake")
-  include("/home/pww/ros_test/build/ismr19_moveit/cmake_install.cmake")
-  include("/home/pww/ros_test/build/test/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/gtest/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ur_description/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ROS-IGTL-Bridge/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/robot_control/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ur5_moveit_config/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_description/cmake_install.cmake")
+  include("/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_moveit/cmake_install.cmake")
 
 endif()
 
@@ -150,5 +148,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pww/ros_test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

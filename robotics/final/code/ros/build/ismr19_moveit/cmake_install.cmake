@@ -1,8 +1,8 @@
-# Install script for directory: /home/pww/ros_test/src/ismr19_moveit
+# Install script for directory: /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_moveit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pww/ros_test/install")
+  set(CMAKE_INSTALL_PREFIX "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pww/ros_test/build/ismr19_moveit/catkin_generated/installspace/ismr19_moveit.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_moveit/catkin_generated/installspace/ismr19_moveit.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit/cmake" TYPE FILE FILES
-    "/home/pww/ros_test/build/ismr19_moveit/catkin_generated/installspace/ismr19_moveitConfig.cmake"
-    "/home/pww/ros_test/build/ismr19_moveit/catkin_generated/installspace/ismr19_moveitConfig-version.cmake"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_moveit/catkin_generated/installspace/ismr19_moveitConfig.cmake"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_moveit/catkin_generated/installspace/ismr19_moveitConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit" TYPE FILE FILES "/home/pww/ros_test/src/ismr19_moveit/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit" TYPE FILE FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_moveit/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit" TYPE DIRECTORY FILES "/home/pww/ros_test/src/ismr19_moveit/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit" TYPE DIRECTORY FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_moveit/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit" TYPE DIRECTORY FILES "/home/pww/ros_test/src/ismr19_moveit/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_moveit" TYPE DIRECTORY FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_moveit/config")
 endif()
 

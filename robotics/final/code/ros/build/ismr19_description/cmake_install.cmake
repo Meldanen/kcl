@@ -1,8 +1,8 @@
-# Install script for directory: /home/pww/ros_test/src/ismr19_description
+# Install script for directory: /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pww/ros_test/install")
+  set(CMAKE_INSTALL_PREFIX "/home/mikroszolos/dev/kcl/robotics/final/code/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pww/ros_test/build/ismr19_description/catkin_generated/installspace/ismr19_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_description/catkin_generated/installspace/ismr19_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_description/cmake" TYPE FILE FILES
-    "/home/pww/ros_test/build/ismr19_description/catkin_generated/installspace/ismr19_descriptionConfig.cmake"
-    "/home/pww/ros_test/build/ismr19_description/catkin_generated/installspace/ismr19_descriptionConfig-version.cmake"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_description/catkin_generated/installspace/ismr19_descriptionConfig.cmake"
+    "/home/mikroszolos/dev/kcl/robotics/final/code/ros/build/ismr19_description/catkin_generated/installspace/ismr19_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_description" TYPE FILE FILES "/home/pww/ros_test/src/ismr19_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ismr19_description" TYPE FILE FILES "/home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_description/package.xml")
 endif()
 

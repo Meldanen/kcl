@@ -67,14 +67,14 @@ set(ismr19_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ismr19_description_SOURCE_PREFIX /home/pww/ros_test/src/ismr19_description)
-  set(ismr19_description_DEVEL_PREFIX /home/pww/ros_test/devel)
+  set(ismr19_description_SOURCE_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/src/ismr19_description)
+  set(ismr19_description_DEVEL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/devel)
   set(ismr19_description_INSTALL_PREFIX "")
   set(ismr19_description_PREFIX ${ismr19_description_DEVEL_PREFIX})
 else()
   set(ismr19_description_SOURCE_PREFIX "")
   set(ismr19_description_DEVEL_PREFIX "")
-  set(ismr19_description_INSTALL_PREFIX /home/pww/ros_test/install)
+  set(ismr19_description_INSTALL_PREFIX /home/mikroszolos/dev/kcl/robotics/final/code/ros/install)
   set(ismr19_description_PREFIX ${ismr19_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pww/ros_test/install/lib;/home/pww/ros_test/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/mikroszolos/dev/kcl/robotics/final/code/ros/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
