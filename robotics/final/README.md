@@ -60,4 +60,6 @@ The whole pipeline is a multistep process. Most parts require some manual observ
 12.	There should now be a prompt in the terminal to press "enter" to proceed to the target point. After doing this, we should be able to see the robot’s end effector moving to the target point from the entry point in a straight line . The “Target” point is loaded as a blue marker.
 13.	At the same time, we can check the Slicer scene to confirm that the end effector is at the correct target point. This is shown by the yellow background around the optimal target position.
 
-These should be all the steps required to perform the whole pipeline. Scenes of these steps and saved models can be found within the repository under the “models and scenes” folders.
+These should be all the steps required to perform the whole pipeline. Scenes of these steps and saved models can be found within the repository under the “models and scenes” folders
+
+You can check the report for a more detailed explanation on how the different parts of the pipeline work.
