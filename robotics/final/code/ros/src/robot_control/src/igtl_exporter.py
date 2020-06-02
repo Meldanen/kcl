@@ -44,21 +44,6 @@ def igtl_exporter():
     group_name = "ur5"
     move_group = moveit_commander.MoveGroupCommander(group_name)
 
-    ## Create a `DisplayTrajectory`_ ROS publisher which is used to display
-    ## trajectories in Rviz:
-    # display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path',
-    #                                                   moveit_msgs.msg.DisplayTrajectory,
-    #                                                   queue_size=20)
-
-    # Misc variables
-    #self.box_name = ''
-   # self.robot = robot
-   # self.scene = scene
-   # self.move_group = move_group
-   # self.display_trajectory_publisher = display_trajectory_publisher
-    #self.planning_frame = planning_frame
-    #self.eef_link = eef_link
-    #self.group_names = group_names
 
     listener = tf.TransformListener()
     rate = rospy.Rate(10) # 10hz
