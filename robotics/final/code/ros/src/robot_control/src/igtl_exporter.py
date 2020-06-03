@@ -22,10 +22,8 @@ def igtl_exporter():
 
     rospy.init_node('igtl_exporter', anonymous=True)
     pub_igtl_point_out = rospy.Publisher('IGTL_POINT_OUT',igtlpoint,queue_size=10)
-    #pub_igtl_transform_out = rospy.Publisher('IGTL_TRANSFORM_OUT', igtltransform, queue_size=10)    
 
     moveit_commander.roscpp_initialize(sys.argv)
-    #rospy.init_node('move_group_python_interface_tutorial', anonymous=True)
 
     ## Instantiate a `RobotCommander`_ object. Provides information such as the robot's
     ## kinematic model and the robot's current joint states
@@ -36,10 +34,7 @@ def igtl_exporter():
     scene = moveit_commander.PlanningSceneInterface()
 
     ## Instantiate a `MoveGroupCommander`_ object.  This object is an interface
-    ## to a planning group (group of joints).  In this tutorial the group is the primary
-    ## arm joints in the Panda robot, so we set the group's name to "panda_arm".
-    ## If you are using a different robot, change this value to the name of your robot
-    ## arm planning group.
+    ## to a planning group (group of joints).
     ## This interface can be used to plan and execute motions:
     group_name = "ur5"
     move_group = moveit_commander.MoveGroupCommander(group_name)
@@ -47,27 +42,24 @@ def igtl_exporter():
 
     listener = tf.TransformListener()
     rate = rospy.Rate(10) # 10hz
-    
-    
-	
 
-    
+
+
+
+
     while not rospy.is_shutdown():
         wpose = move_group.get_current_pose().pose
-    	end = Point()
-    	end.x = wpose.position.x*1000
-    	end.y = wpose.position.y*1000
-    	end.z = wpose.position.z*1000
-	end_effector = igtlpoint()
-	end_effector.name = "Pose"
-	end_effector.pointdata = end
+        end = Point()
+        end.x = wpose.position.x*1000
+        end.y = wpose.position.y*1000
+        end.z = wpose.position.z*1000
+        end_effector = igtlpoint()
+        end_effector.name = "Pose"
+        end_effector.pointdata = end
         pub_igtl_point_out.publish(end_effector)
-	rospy.loginfo(end_effector)
-        #log_str = "igtl_exporter %s" % rospy.get_time()
-        #rospy.loginfo(log_str)
-        #pub.publish(log_str)
+        rospy.loginfo(end_effector)
         rate.sleep()
-        
+
 
 if __name__ == '__main__':
 
