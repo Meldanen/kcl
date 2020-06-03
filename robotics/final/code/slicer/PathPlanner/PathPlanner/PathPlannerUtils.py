@@ -7,7 +7,7 @@ import SimpleITK as sitk
 
 
 # Hard Constraints
-def applyAllHardConstraints(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex, specifiedAngle):
+def applyAllHardConstraints(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex, specifiedAngle, distanceThreshold):
     trajectoryDictionary = {}
     # Filter targets
     entriesAndTargets = preProcessing(entries, hippocampus, targets)
@@ -18,7 +18,10 @@ def applyAllHardConstraints(entries, targets, hippocampus, bloodVesselsDilate, b
     cortexTree, cortexPolyData = getTree(cortex, (0, 0.5))
     for entry, targets in entriesAndTargets.items():
         for target in targets:
-            # First check if it passes through a blood vessel dilate - medium speed check
+            # Check if it the trajectory is below a certain length - fast check
+            if isMoreThanDistanceThreshold(entry, target, distanceThreshold):
+                continue
+            # Then check if it passes through a blood vessel - medium speed check
             if isPassThroughArea(bloodVesselsDilateTree, entry, target):
                 continue
             # Then check if it passes through a blood vessel - medium speed check
@@ -40,6 +43,25 @@ def preProcessing(entries, hippocampus, targets):
     filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
     return PointUtils.convertEntryAndTargetPointsToDictionary(entries, filteredTargets)
 
+
+# Checks if the trajectory is below the threshold
+def getTrajectoriesOfMaximumLength(entriesAndTargets, distanceThreshold):
+    trajectoryDictionary = {}
+    for entry, targets in entriesAndTargets.items():
+        for target in targets:
+            if not isMoreThanDistanceThreshold(entry, target, distanceThreshold):
+                key = tuple(entry)
+                if key in trajectoryDictionary:
+                    trajectoryDictionary[key].append(target)
+                else:
+                    trajectoryDictionary[key] = [target]
+    return trajectoryDictionary
+
+def isMoreThanDistanceThreshold(entry, target, distanceThreshold):
+    trianglePoints = vtk.vtkPoints()
+    trianglePointsId = vtk.vtkIdList()
+    return False
+    # return tree.IntersectWithLine(entry, target, trianglePoints, trianglePointsId) != 0
 
 # Checks if the trajectory passes through an undesired area
 def getTrajectoriesAvoidingArea(entriesAndTargets, area):

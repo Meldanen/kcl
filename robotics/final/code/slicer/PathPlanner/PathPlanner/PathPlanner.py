@@ -140,6 +140,15 @@ class PathPlannerWidget(ScriptedLoadableModuleWidget):
         self.angleSlider.setToolTip("The angle value for entering the cortex")
         parametersFormLayout.addRow("Entry/Target angle", self.angleSlider)
 
+
+        self.distanceThreshold = ctk.ctkSliderWidget()
+        self.distanceThreshold.singleStep = 1
+        self.distanceThreshold.minimum = 0
+        self.distanceThreshold.maximum = 9999
+        self.distanceThreshold.value = 9999
+        self.distanceThreshold.setToolTip("Set maximum incision value")
+        parametersFormLayout.addRow("Maximum trajectory length", self.distanceThreshold)
+
         #
         # Apply Button
         #
@@ -173,7 +182,8 @@ class PathPlannerWidget(ScriptedLoadableModuleWidget):
                   self.cortexSelector.currentNode(),
                   self.entrySelector.currentNode(),
                   self.targetSelector.currentNode(),
-                  self.angleSlider.value)
+                  self.angleSlider.value,
+                  self.distanceThreshold.value)
 
 
 #
@@ -182,7 +192,7 @@ class PathPlannerWidget(ScriptedLoadableModuleWidget):
 
 class PathPlannerLogic(ScriptedLoadableModuleLogic):
 
-    def isValidInputOutputData(self, hippocampus, bloodVesselsDilate, bloodVessels, cortex, entries, targets, angle):
+    def isValidInputOutputData(self, hippocampus, bloodVesselsDilate, bloodVessels, cortex, entries, targets, angle, distanceThreshold):
         """Validates if the output is not the same as input
         """
         if not hippocampus:
@@ -206,27 +216,30 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
         if not angle:
             logging.debug('No valid angle selected')
             return False
+        if not distanceThreshold:
+            logging.debug('No valid maximum trajectory distance selected')
+            return False
         return True
 
-    def run(self, hippocampus, bloodVesselsDilate, bloodVessels, cortex, entries, targets, angle):
+    def run(self, hippocampus, bloodVesselsDilate, bloodVessels, cortex, entries, targets, angle, distanceThreshold):
         """
         Run the actual algorithm
         """
         if not self.isValidInputOutputData(hippocampus, bloodVesselsDilate, bloodVessels, cortex, entries, targets,
-                                           angle):
+                                           angle, distanceThreshold):
             slicer.util.errorDisplay('Invalid input.')
             return False
 
         logging.info('Processing started')
 
         # uncomment to see one-by-one timings
-        # self.timeEachComponent(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex, angle)
+        # self.timeEachComponent(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex, angle, distanceThreshold)
 
         startTime = time.time()
         trajectoriesForAllHardConstraints = PathPlannerUtils.applyAllHardConstraints(entries, targets, hippocampus,
                                                                                      bloodVesselsDilate,
                                                                                      bloodVessels, cortex,
-                                                                                     angle)
+                                                                                     angle, distanceThreshold)
         bestAndWorstPair = PathPlannerUtils.getBestAndWorstTrajectory(trajectoriesForAllHardConstraints, bloodVessels,
                                                                        bloodVesselsDilate, 0.01)
         endTime = time.time()
@@ -253,7 +266,7 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
 
     # Helps to see how much time each component takes on its own. Could have probably been an automated test instead
     def timeEachComponent(self, entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex,
-                          angle):
+                          angle, distanceThreshold):
         startTime = time.time()
         PointUtils.getFilteredTargets(targets, hippocampus)
         endTime = time.time()
@@ -263,17 +276,22 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
                                                                PointUtils.convertMarkupNodeToPoints(targets))
 
         startTime = time.time()
-        PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
+        PathPlannerUtils.getTrajectoriesOfMaximumLength(entriesAndTargets, distanceThreshold)
+        endTime = time.time()
+        print('Maximum trajectory: ', endTime - startTime, 'seconds')
+
+        startTime = time.time()
+        PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVesselsDilate)
         endTime = time.time()
         print('Avoid area - Blood Vessels Dilate: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        PathPlanner.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
+        PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
         endTime = time.time()
         print('Avoid area - Blood Vessels: ', endTime - startTime, 'seconds')
 
         startTime = time.time()
-        PathPlanner.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, angle)
+        PathPlannerUtils.getTrajectoriesWithSpecifiedAngle(entriesAndTargets, cortex, angle)
         endTime = time.time()
         print('Use only specified angle: ', endTime - startTime, 'seconds')
         endTime = time.time()
@@ -283,7 +301,7 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
 class PathPlannerTest(ScriptedLoadableModuleTest):
 
     def __init__(self):
-        self.DIRECTORY = "C:\dev\kcl\\robotics\\final\models\slicer\labelMaps"
+        self.DIRECTORY = "C:\dev\kcl\\robotics\\final\models and scenes"
         self.TARGETS_NODE_LABEL = "targets"
         self.ENTRIES_NODE_LABEL = "entries"
         self.CORTEX_NODE_LABEL = "cortexLabelMap"
@@ -299,6 +317,8 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.testLoadAllData(self.DIRECTORY)
         self.testGetFilteredHippocampusValidTargets()
         self.testGetFilteredHippocampusInvalidTargets()
+        self.testFilterTrajectoriesBelowDistanceThreshold()
+        self.testFilterTrajectoriesAboveDistanceThreshold()
         self.testAvoidBloodVesselsDilateValidPath()
         self.testAvoidBloodVesselsDilateInvalidPath()
         self.testAvoidBloodVesselsValidPath()
@@ -361,6 +381,20 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         filteredTargets = PointUtils.getFilteredTargets(targets, hippocampus)
         self.assertTrue(len(filteredTargets) == 0)
         self.delayDisplay('testGetFilteredHippocampusInvalidTargets passed!')
+
+    def testFilterTrajectoriesBelowDistanceThreshold(self):
+        entriesAndTargets = {(196.989, 131.913, 32.491): [[150.0, 128.0, 114.0]]}
+        threshold = 9999
+        result = PathPlannerUtils.getTrajectoriesOfMaximumLength(entriesAndTargets, threshold)
+        self.assertTrue(len(result) > 0)
+        self.delayDisplay('testFilterTrajectoriesBelowDistanceThreshold passed!')
+
+    def testFilterTrajectoriesAboveDistanceThreshold(self):
+        entriesAndTargets = {(196.989, 131.913, 32.491): [[150.0, 128.0, 114.0]]}
+        threshold = 0
+        result = PathPlannerUtils.getTrajectoriesOfMaximumLength(entriesAndTargets, threshold)
+        self.assertTrue(len(result) == 0)
+        self.delayDisplay('testFilterTrajectoriesAboveDistanceThreshold passed!')
 
     def testAvoidBloodVesselsDilateValidPath(self):
         bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
