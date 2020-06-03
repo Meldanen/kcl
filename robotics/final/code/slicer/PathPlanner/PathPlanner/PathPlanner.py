@@ -304,10 +304,10 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.DIRECTORY = "C:\dev\kcl\\robotics\\final\models and scenes"
         self.TARGETS_NODE_LABEL = "targets"
         self.ENTRIES_NODE_LABEL = "entries"
-        self.CORTEX_NODE_LABEL = "cortexLabelMap"
-        self.VESSEL_NODE_LABEL = "vesselLabelMap"
-        self.HIPPOCAMPUS_NODE_LABEL = "hippoLabelMap"
-        self.VESSEL_DILATE_NODE_LABEL = "vesselDilateLabelMap"
+        self.CORTEX_NODE_LABEL = "CortexLabelMap"
+        self.VESSEL_NODE_LABEL = "VesselsLabelMap"
+        self.HIPPOCAMPUS_NODE_LABEL = "HippoLabelMap"
+        self.VESSEL_DILATE_NODE_LABEL = "VesselsDilatedLabelMap"
 
     def setUp(self):
         slicer.mrmlScene.Clear(0)
@@ -325,17 +325,16 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.testAvoidBloodVesselsInvalidPath()
         self.testAngleValidPath()
         self.testAngleInvalidPath()
-        self.testCountRejectedTrajectories(True)  # slow test
-        self.testAllTogether()  # slow test
+        # self.testUnnecessaryTests()
         self.delayDisplay('Finished testing')
         self.setUp()  # to reclear data
 
     def testLoadAllData(self, directory):
         self.delayDisplay("Starting load data test")
-        self.testLoadLabel(directory + '/hippoLabelMap.nii.gz')
-        self.testLoadLabel(directory + '/vesselLabelMap.nii.gz')
-        self.testLoadLabel(directory + '/vesselDilateLabelMap.nii.gz')
-        self.testLoadLabel(directory + '/cortexLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/HippoLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/VesselsLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/VesselsDilatedLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/CortexLabelMap.nii.gz')
         self.testLoadFiducial(directory + '/targets.fcsv')
         self.testLoadFiducial(directory + '/entries.fcsv')
         self.delayDisplay('testLoadAllData passed!')
@@ -345,6 +344,12 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
 
     def testLoadLabel(self, path):
         self.assertTrue(slicer.util.loadLabelVolume(path))
+
+    # They don't really test anything. Mostly used for sanity checking
+    # Values rejected for count rejected tests might need some adjustments
+    def testUnnecessaryTests(self):
+        self.testCountRejectedTrajectories(True)  # slow test
+        self.testAllTogether()  # slow test
 
     # Slow test
     # This is just to make sure all constraints run together. It doesn't actually validate the results
@@ -447,12 +452,13 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         entries = self.getNode(self.ENTRIES_NODE_LABEL)
         targets = self.getNode(self.TARGETS_NODE_LABEL)
         angle = 55
+        distanceThreshold = 60
         total = entries.GetNumberOfMarkups() * targets.GetNumberOfMarkups()
         if printOutput:
             print("Total: ", total)
         self.testCountRejectedTrajectoriesForHippocampus(entries, targets, hippocampus, total, printOutput)
         self.testCountRejectedByHardConstraints(entries, targets, hippocampus, bloodVesselsDilate, bloodVessels, cortex,
-                                                angle, total, printOutput)
+                                                angle, distanceThreshold, total, printOutput)
         self.delayDisplay('testCountRejectedTrajectories passed!')
 
     def testCountRejectedTrajectoriesForHippocampus(self, entries, targets, hippocampus, total, printOutput):
@@ -469,10 +475,12 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
 
     def testCountRejectedByHardConstraints(self, entries, targets, hippocampus, bloodVesselsDilate, bloodVessels,
                                            cortex,
-                                           angle, total, printOutput):
+                                           angle, distanceThreshold, total, printOutput):
         entriesAndTargets = PointUtils.convertEntryAndTargetPointsToDictionary(entries,
                                                                                PointUtils.convertMarkupNodeToPoints(
                                                                                    targets))
+        self.testCountRejectedTrajectoriesForDistanceThreshold(entriesAndTargets, distanceThreshold, total,
+                                                                printOutput)
         self.testCountRejectedTrajectoriesForBloodVesselsDilate(entriesAndTargets, bloodVesselsDilate, total,
                                                                 printOutput)
         self.testCountRejectedTrajectoriesForBloodVessels(entriesAndTargets, bloodVessels, total, printOutput)
@@ -482,19 +490,19 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
                                                            cortex,
                                                            angle, total, printOutput)
 
-    def testCountRejectedTrajectoriesForBloodVessels(self, entriesAndTargets, bloodVessels, total, printOutput):
+    def testCountRejectedTrajectoriesForDistanceThreshold(self, entriesAndTargets, distanceThreshold, total, printOutput):
         startTime = time.time()
-        filteredForBloodVessels = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
+        filteredForDistance = PathPlannerUtils.getTrajectoriesOfMaximumLength(entriesAndTargets, distanceThreshold)
         endTime = time.time()
-        totalTrajectoriesFilteringBloodVessels = 0
-        for _, targetValues in filteredForBloodVessels.items():
-            totalTrajectoriesFilteringBloodVessels += len(targetValues)
+        totalTrajectoriesFilteredForDistance = 0
+        for _, targetValues in filteredForDistance.items():
+            totalTrajectoriesFilteredForDistance += len(targetValues)
         if printOutput:
-            print('Filtering for blood vessels total time: ', endTime - startTime, 'seconds')
-            print("Total accepted filtering blood vessels: ", totalTrajectoriesFilteringBloodVessels)
-            print("Total rejected filtering blood vessels: ", total - totalTrajectoriesFilteringBloodVessels)
-        self.assertTrue(total - totalTrajectoriesFilteringBloodVessels == 68206)
-        self.delayDisplay('testCountRejectedTrajectoriesForBloodVessels passed!')
+            print('Filtering for distance total time: ', endTime - startTime, 'seconds')
+            print("Total accepted filtering distance: ", totalTrajectoriesFilteredForDistance)
+            print("Total rejected filtering distance: ", total - totalTrajectoriesFilteredForDistance)
+        self.assertTrue(total - totalTrajectoriesFilteredForDistance == 65395)
+        self.delayDisplay('testCountRejectedTrajectoriesForDistanceThreshold passed!')
 
     def testCountRejectedTrajectoriesForBloodVesselsDilate(self, entriesAndTargets, bloodVesselsDilate, total,
                                                            printOutput):
@@ -511,6 +519,20 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
                   total - totalTrajectoriesFilteringBloodVesselsDilate)
         self.assertTrue(total - totalTrajectoriesFilteringBloodVesselsDilate == 9033)
         self.delayDisplay('testCountRejectedTrajectoriesForBloodVesselsDilate passed!')
+
+    def testCountRejectedTrajectoriesForBloodVessels(self, entriesAndTargets, bloodVessels, total, printOutput):
+        startTime = time.time()
+        filteredForBloodVessels = PathPlannerUtils.getTrajectoriesAvoidingArea(entriesAndTargets, bloodVessels)
+        endTime = time.time()
+        totalTrajectoriesFilteringBloodVessels = 0
+        for _, targetValues in filteredForBloodVessels.items():
+            totalTrajectoriesFilteringBloodVessels += len(targetValues)
+        if printOutput:
+            print('Filtering for blood vessels total time: ', endTime - startTime, 'seconds')
+            print("Total accepted filtering blood vessels: ", totalTrajectoriesFilteringBloodVessels)
+            print("Total rejected filtering blood vessels: ", total - totalTrajectoriesFilteringBloodVessels)
+        self.assertTrue(total - totalTrajectoriesFilteringBloodVessels == 68206)
+        self.delayDisplay('testCountRejectedTrajectoriesForBloodVessels passed!')
 
     def testCountRejectedTrajectoriesForAngle(self, entriesAndTargets, cortex, angle, total, printOutput):
         startTime = time.time()

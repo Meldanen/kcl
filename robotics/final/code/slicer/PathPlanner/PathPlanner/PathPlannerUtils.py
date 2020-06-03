@@ -57,11 +57,11 @@ def getTrajectoriesOfMaximumLength(entriesAndTargets, distanceThreshold):
                     trajectoryDictionary[key] = [target]
     return trajectoryDictionary
 
+
 def isMoreThanDistanceThreshold(entry, target, distanceThreshold):
-    trianglePoints = vtk.vtkPoints()
-    trianglePointsId = vtk.vtkIdList()
-    return False
-    # return tree.IntersectWithLine(entry, target, trianglePoints, trianglePointsId) != 0
+    vector = GeometryUtils.getVectorFromPoints(entry, target)
+    trajectoryLength = GeometryUtils.getVectorMagnitude(vector)
+    return trajectoryLength > distanceThreshold
 
 # Checks if the trajectory passes through an undesired area
 def getTrajectoriesAvoidingArea(entriesAndTargets, area):
