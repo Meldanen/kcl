@@ -9,13 +9,13 @@
 4.  Check that the current status is set to "WAIT"
 ### ROS Part
 1.	Start the VM (if using one. I run this on Ubuntu, so it was not required) with the ap-propriate configuration for two-way communication
-2.	Launch the bridge file of the ros_igtl_bridge 
-3.	Choose to run as client
-4.	Set IP to the appropriate IP found by writing “ifconfig” in your terminal. The IP is expected to be set in the bridge.launch file but you can comment this part out if you want to change it everytime
-5.	Set port to 18944. The IP is expected to be set in the bridge.launch file but you can comment this part out if you want to change it everytime
-6.  If you check Slicer, the status should have changed to "ON"
+2.	Adjust the IP in ros_igtl_bridge/bridge.launch to your IP by typing ifconfig in a ter-minal and copying that IP
+3.	Adjust the port in ros_igtl_bridge/bridge.launch to the one specified in Slicer (18944 in this case)
+4.	Enter roslaunch ros_igtl_bridge bridge.launch
+5.	If you check Slicer, the status should have changed to "ON"
 
 A connection should be now established.
+Alternatively, you can comment out the configuration in the bridge.launch file if you prefer to set them on the command line
 
 ### Sending data from Slicer to ROS
 ### Step 1:
