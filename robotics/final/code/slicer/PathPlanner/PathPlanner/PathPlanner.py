@@ -301,13 +301,13 @@ class PathPlannerLogic(ScriptedLoadableModuleLogic):
 class PathPlannerTest(ScriptedLoadableModuleTest):
 
     def __init__(self):
-        self.DIRECTORY = "C:\dev\kcl\\robotics\\final\models and scenes"
+        self.DIRECTORY = "C:\dev\kcl\\robotics\\final\models and scenes\\tests"
         self.TARGETS_NODE_LABEL = "targets"
         self.ENTRIES_NODE_LABEL = "entries"
-        self.CORTEX_NODE_LABEL = "CortexLabelMap"
-        self.VESSEL_NODE_LABEL = "VesselsLabelMap"
-        self.HIPPOCAMPUS_NODE_LABEL = "HippoLabelMap"
-        self.VESSEL_DILATE_NODE_LABEL = "VesselsDilatedLabelMap"
+        self.CORTEX_NODE_LABEL = "cortexLabelMap"
+        self.VESSEL_NODE_LABEL = "vesselLabelMap"
+        self.HIPPOCAMPUS_NODE_LABEL = "hippoLabelMap"
+        self.VESSEL_DILATE_NODE_LABEL = "vesselDilateLabelMap"
 
     def setUp(self):
         slicer.mrmlScene.Clear(0)
@@ -331,10 +331,10 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
 
     def testLoadAllData(self, directory):
         self.delayDisplay("Starting load data test")
-        self.testLoadLabel(directory + '/HippoLabelMap.nii.gz')
-        self.testLoadLabel(directory + '/VesselsLabelMap.nii.gz')
-        self.testLoadLabel(directory + '/VesselsDilatedLabelMap.nii.gz')
-        self.testLoadLabel(directory + '/CortexLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/hippoLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/vesselLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/vesselDilateLabelMap.nii.gz')
+        self.testLoadLabel(directory + '/cortexLabelMap.nii.gz')
         self.testLoadFiducial(directory + '/targets.fcsv')
         self.testLoadFiducial(directory + '/entries.fcsv')
         self.delayDisplay('testLoadAllData passed!')
@@ -444,6 +444,8 @@ class PathPlannerTest(ScriptedLoadableModuleTest):
         self.delayDisplay('testAngleInvalidPath passed!')
 
     # Slow test
+    # In theory this "test" is wrong as it uses real data files but I've used it for sanity checks and to optimise
+    # the order in which each constraint should run
     def testCountRejectedTrajectories(self, printOutput):
         hippocampus = self.getNode(self.HIPPOCAMPUS_NODE_LABEL)
         bloodVesselsDilate = self.getNode(self.VESSEL_DILATE_NODE_LABEL)
