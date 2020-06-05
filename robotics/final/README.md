@@ -48,7 +48,7 @@ Note: You need to send both points for the robot to begin the operation
 The whole pipeline is a multistep process. Most parts require some manual observations, and this serves to provide extra safety/protection, assuming this would be translated to a real-life scenario. The steps required to run it are as follows:
 1.	We launch Slicer and load all our volumes (critical structures, cortex and entry-target points)
 2.	We convert the critical structures from “.vtk” format to labelMaps/markupFiducials using Slicer’s “Model to Label Map” module using as reference volumes the labelMaps given from the previous coursework.
-3.	We run our PathPlanner algorithm in order to calculate and save the best entry-target pair. Our scene should now resemble figures 2-4 (without the yellow background on the entry-target points)
+3.	We run our PathPlanner algorithm in order to calculate and save the best entry-target pair. Our scene should now resemble 
 4.	We then initialise the connection and launch our robot in RVIZ as described previously.
 5.	We then start the calibration process as mentioned in the Calibration (to translate points between ROS and Slicer) section of the report.
 6.	Then using the resulting transformation matrix, we transform the critical structures, cortex and entry-target points of Slicer to match the workspace of ROS. 
