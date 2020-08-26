@@ -1,1 +1,0 @@
-/home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/moveit_jog_arm/share/moveit_jog_arm/cmake/moveit_jog_armConfig.cmake

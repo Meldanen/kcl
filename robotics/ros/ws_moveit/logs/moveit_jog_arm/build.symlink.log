@@ -1,7 +1,0 @@
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libjog_arm_cpp_api.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_jog_arm.pc
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_jog_arm/jog_server
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_jog_arm/spacenav_to_twist
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_jog_arm/cpp_interface_example
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_jog_arm/cmake/moveit_jog_armConfig.cmake
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_jog_arm/cmake/moveit_jog_armConfig-version.cmake

@@ -1,6 +1,0 @@
-devel_space: /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel
-install: false
-install_space: /home/mikroszolos/kcl/robotics/ros/ws_moveit/install
-profile: default
-source_space: /home/mikroszolos/kcl/robotics/ros/ws_moveit/src
-workspace: /home/mikroszolos/kcl/robotics/ros/ws_moveit

@@ -1,6 +1,0 @@
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_ros_occupancy_map_monitor.so.1.0.1
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_ros_occupancy_map_monitor.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_ros_occupancy_map_monitor.pc
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/moveit_ros_occupancy_map_monitor/moveit_ros_occupancy_map_server
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_ros_occupancy_map_monitor/cmake/moveit_ros_occupancy_map_monitorConfig.cmake
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_ros_occupancy_map_monitor/cmake/moveit_ros_occupancy_map_monitorConfig-version.cmake

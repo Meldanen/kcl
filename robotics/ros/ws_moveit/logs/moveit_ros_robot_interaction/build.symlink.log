@@ -1,5 +1,0 @@
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_robot_interaction.so.1.0.1
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/libmoveit_robot_interaction.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/moveit_ros_robot_interaction.pc
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig.cmake
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig-version.cmake

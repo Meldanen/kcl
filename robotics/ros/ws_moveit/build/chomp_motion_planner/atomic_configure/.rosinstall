@@ -1,2 +1,0 @@
-- setup-file:
-    local-name: /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/.private/chomp_motion_planner/setup.sh

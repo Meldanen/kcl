@@ -1,8 +1,0 @@
-prefix=C:/kcl/robotics/ros/catkin_ws/devel
-
-Name: ur_driver
-Description: Description of ur_driver
-Version: 1.2.1
-Cflags: -IC:/kcl/robotics/ros/catkin_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: dynamic_reconfigure

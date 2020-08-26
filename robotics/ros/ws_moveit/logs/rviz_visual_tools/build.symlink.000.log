@@ -1,9 +1,0 @@
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/librviz_visual_tools_remote_control.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/librviz_visual_tools_gui.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/librviz_visual_tools_imarker_simple.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/librviz_visual_tools.so
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/pkgconfig/rviz_visual_tools.pc
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/rviz_visual_tools/imarker_simple_demo
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/lib/rviz_visual_tools/demo
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/rviz_visual_tools/cmake/rviz_visual_toolsConfig-version.cmake
-Symlinking /home/mikroszolos/kcl/robotics/ros/ws_moveit/devel/share/rviz_visual_tools/cmake/rviz_visual_toolsConfig.cmake
